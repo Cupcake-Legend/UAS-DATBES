@@ -53,5 +53,17 @@ namespace CELIKOOR_LIB
 
 
         }
+
+        public static int JalankanPerintahDML(string sql)
+        {
+            Koneksi k = new Koneksi();
+            MySqlCommand c = new MySqlCommand(sql, k.KoneksiDB);
+            int hasil =c.ExecuteNonQuery();
+
+            return hasil;
+
+
+        }
+
     }
 }
