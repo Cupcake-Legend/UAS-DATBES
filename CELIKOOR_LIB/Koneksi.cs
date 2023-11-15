@@ -17,7 +17,7 @@ namespace CELIKOOR_LIB
         {
             Configuration myConf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             ConfigurationSectionGroup userSettings = myConf.SectionGroups["userSettings"];
-            var settingsSection = userSettings.Sections["CinemaProject.db"] as ClientSettingsSection;
+            var settingsSection = userSettings.Sections["CELIKOOR_PINKMAN.db"] as ClientSettingsSection;
 
             string DbServer = settingsSection.Settings.Get("DbServer").Value.ValueXml.InnerText;
             string DbName = settingsSection.Settings.Get("DbName").Value.ValueXml.InnerText;
