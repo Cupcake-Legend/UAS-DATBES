@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMenu";
-            this.Text = "Celikoor";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.ResumeLayout(false);
 
