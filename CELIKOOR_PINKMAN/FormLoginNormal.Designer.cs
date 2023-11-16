@@ -34,7 +34,7 @@
             this.labelJudul = new System.Windows.Forms.Label();
             this.panelJudul = new System.Windows.Forms.Panel();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.linkLabelAccount = new System.Windows.Forms.LinkLabel();
+            this.linkLabelRegisterNow = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
@@ -98,16 +98,16 @@
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
             // 
-            // linkLabelAccount
+            // linkLabelRegisterNow
             // 
-            this.linkLabelAccount.AutoSize = true;
-            this.linkLabelAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelAccount.Location = new System.Drawing.Point(280, 280);
-            this.linkLabelAccount.Name = "linkLabelAccount";
-            this.linkLabelAccount.Size = new System.Drawing.Size(130, 25);
-            this.linkLabelAccount.TabIndex = 0;
-            this.linkLabelAccount.TabStop = true;
-            this.linkLabelAccount.Text = "Register now?";
+            this.linkLabelRegisterNow.AutoSize = true;
+            this.linkLabelRegisterNow.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegisterNow.Location = new System.Drawing.Point(280, 280);
+            this.linkLabelRegisterNow.Name = "linkLabelRegisterNow";
+            this.linkLabelRegisterNow.Size = new System.Drawing.Size(130, 25);
+            this.linkLabelRegisterNow.TabIndex = 0;
+            this.linkLabelRegisterNow.TabStop = true;
+            this.linkLabelRegisterNow.Text = "Register now?";
             // 
             // label1
             // 
@@ -154,7 +154,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(684, 376);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.linkLabelAccount);
+            this.Controls.Add(this.linkLabelRegisterNow);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.panelJudul);
             this.Controls.Add(this.textBoxPassword);
@@ -184,7 +184,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelJudul;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.LinkLabel linkLabelAccount;
+        private System.Windows.Forms.LinkLabel linkLabelRegisterNow;
         private System.Windows.Forms.Label label1;
     }
 }

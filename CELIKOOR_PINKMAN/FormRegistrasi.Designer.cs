@@ -204,6 +204,11 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.SystemColors.ScrollBar;
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(200, 209);
             this.dateTimePicker1.Name = "dateTimePicker1";
