@@ -1,6 +1,6 @@
 ﻿namespace CELIKOOR_PINKMAN
 {
-    partial class Form1
+    partial class FormMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormMenu";
+            this.Text = "Celikoor";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.ResumeLayout(false);
 
         }
