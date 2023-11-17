@@ -16,5 +16,20 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+
+        private void panelJudul_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormRegistrasi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

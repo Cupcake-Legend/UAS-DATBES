@@ -79,8 +79,17 @@
     <Compile Include="FormRegistrasi.Designer.cs">
       <DependentUpon>FormRegistrasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Controls\TextBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\TextBoxControl.Designer.cs">
+      <DependentUpon>TextBoxControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLoginNormal.resx">
       <DependentUpon>FormLoginNormal.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +112,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Controls\TextBoxControl.resx">
+      <DependentUpon>TextBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="db.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>db.Designer.cs</LastGenOutput>
@@ -146,6 +158,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user no fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock no fil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\matey-welcome-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar no fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card no fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome-back 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome-back 3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
