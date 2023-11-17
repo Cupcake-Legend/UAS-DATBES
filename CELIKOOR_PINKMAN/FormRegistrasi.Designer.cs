@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistrasi));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.gradientPanelRegistrasi = new CELIKOOR_PINKMAN.GradientPanel();
             this.panelGarisWelcome = new System.Windows.Forms.Panel();
             this.pictureBoxWelcome = new System.Windows.Forms.PictureBox();
             this.labelIHaveAnAccount = new System.Windows.Forms.Label();
@@ -69,7 +68,6 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelJudul = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.gradientPanelRegistrasi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWelcome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelJudul.SuspendLayout();
@@ -83,42 +81,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNama)).BeginInit();
             this.SuspendLayout();
             // 
-            // gradientPanelRegistrasi
-            // 
-            this.gradientPanelRegistrasi.Angle = 360F;
-            this.gradientPanelRegistrasi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.gradientPanelRegistrasi.BottomColor = System.Drawing.Color.Empty;
-            this.gradientPanelRegistrasi.Controls.Add(this.panelGarisWelcome);
-            this.gradientPanelRegistrasi.Controls.Add(this.pictureBoxWelcome);
-            this.gradientPanelRegistrasi.Controls.Add(this.labelIHaveAnAccount);
-            this.gradientPanelRegistrasi.Controls.Add(this.labelNeverMind);
-            this.gradientPanelRegistrasi.Controls.Add(this.pictureBoxLogo);
-            this.gradientPanelRegistrasi.Controls.Add(this.panelJudul);
-            this.gradientPanelRegistrasi.Controls.Add(this.buttonLogin);
-            this.gradientPanelRegistrasi.Controls.Add(this.labelJudul);
-            this.gradientPanelRegistrasi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gradientPanelRegistrasi.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanelRegistrasi.Name = "gradientPanelRegistrasi";
-            this.gradientPanelRegistrasi.Size = new System.Drawing.Size(1095, 645);
-            this.gradientPanelRegistrasi.TabIndex = 27;
-            this.gradientPanelRegistrasi.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            // 
             // panelGarisWelcome
             // 
-            this.panelGarisWelcome.Location = new System.Drawing.Point(0, 110);
+            this.panelGarisWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panelGarisWelcome.Location = new System.Drawing.Point(0, 125);
             this.panelGarisWelcome.Name = "panelGarisWelcome";
             this.panelGarisWelcome.Size = new System.Drawing.Size(275, 10);
-            this.panelGarisWelcome.TabIndex = 49;
+            this.panelGarisWelcome.TabIndex = 65;
             // 
             // pictureBoxWelcome
             // 
             this.pictureBoxWelcome.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxWelcome.Image = global::CELIKOOR_PINKMAN.Properties.Resources.welcome_back_3;
-            this.pictureBoxWelcome.Location = new System.Drawing.Point(41, 96);
+            this.pictureBoxWelcome.Location = new System.Drawing.Point(41, 111);
             this.pictureBoxWelcome.Name = "pictureBoxWelcome";
             this.pictureBoxWelcome.Size = new System.Drawing.Size(194, 191);
             this.pictureBoxWelcome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxWelcome.TabIndex = 47;
+            this.pictureBoxWelcome.TabIndex = 62;
             this.pictureBoxWelcome.TabStop = false;
             // 
             // labelIHaveAnAccount
@@ -127,10 +106,10 @@
             this.labelIHaveAnAccount.BackColor = System.Drawing.Color.Transparent;
             this.labelIHaveAnAccount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIHaveAnAccount.ForeColor = System.Drawing.Color.White;
-            this.labelIHaveAnAccount.Location = new System.Drawing.Point(60, 375);
+            this.labelIHaveAnAccount.Location = new System.Drawing.Point(60, 390);
             this.labelIHaveAnAccount.Name = "labelIHaveAnAccount";
             this.labelIHaveAnAccount.Size = new System.Drawing.Size(150, 25);
-            this.labelIHaveAnAccount.TabIndex = 48;
+            this.labelIHaveAnAccount.TabIndex = 64;
             this.labelIHaveAnAccount.Text = "I have an account";
             // 
             // labelNeverMind
@@ -139,21 +118,21 @@
             this.labelNeverMind.BackColor = System.Drawing.Color.Transparent;
             this.labelNeverMind.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNeverMind.ForeColor = System.Drawing.Color.White;
-            this.labelNeverMind.Location = new System.Drawing.Point(82, 350);
+            this.labelNeverMind.Location = new System.Drawing.Point(82, 365);
             this.labelNeverMind.Name = "labelNeverMind";
             this.labelNeverMind.Size = new System.Drawing.Size(108, 25);
-            this.labelNeverMind.TabIndex = 47;
+            this.labelNeverMind.TabIndex = 63;
             this.labelNeverMind.Text = "Never mind,";
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(456, 9);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(456, 24);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(104, 92);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 7;
+            this.pictureBoxLogo.TabIndex = 60;
             this.pictureBoxLogo.TabStop = false;
             // 
             // panelJudul
@@ -187,11 +166,10 @@
             this.panelJudul.Controls.Add(this.pictureBoxEmail);
             this.panelJudul.Controls.Add(this.textBoxNama);
             this.panelJudul.Controls.Add(this.pictureBoxNama);
-            this.panelJudul.Location = new System.Drawing.Point(275, 110);
+            this.panelJudul.Location = new System.Drawing.Point(275, 125);
             this.panelJudul.Name = "panelJudul";
             this.panelJudul.Size = new System.Drawing.Size(820, 496);
-            this.panelJudul.TabIndex = 8;
-            this.panelJudul.Paint += new System.Windows.Forms.PaintEventHandler(this.panelJudul_Paint);
+            this.panelJudul.TabIndex = 61;
             // 
             // panelGarisRegistration
             // 
@@ -498,10 +476,10 @@
             this.buttonLogin.BackColor = System.Drawing.Color.White;
             this.buttonLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Black;
-            this.buttonLogin.Location = new System.Drawing.Point(52, 503);
+            this.buttonLogin.Location = new System.Drawing.Point(52, 518);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(169, 45);
-            this.buttonLogin.TabIndex = 0;
+            this.buttonLogin.TabIndex = 58;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
             // 
@@ -511,10 +489,10 @@
             this.labelJudul.BackColor = System.Drawing.Color.Transparent;
             this.labelJudul.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(561, 28);
+            this.labelJudul.Location = new System.Drawing.Point(561, 34);
             this.labelJudul.Name = "labelJudul";
             this.labelJudul.Size = new System.Drawing.Size(479, 54);
-            this.labelJudul.TabIndex = 0;
+            this.labelJudul.TabIndex = 59;
             this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
             // 
             // FormRegistrasi
@@ -522,15 +500,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1095, 645);
-            this.Controls.Add(this.gradientPanelRegistrasi);
+            this.Controls.Add(this.panelGarisWelcome);
+            this.Controls.Add(this.pictureBoxWelcome);
+            this.Controls.Add(this.labelIHaveAnAccount);
+            this.Controls.Add(this.labelNeverMind);
+            this.Controls.Add(this.pictureBoxLogo);
+            this.Controls.Add(this.panelJudul);
+            this.Controls.Add(this.buttonLogin);
+            this.Controls.Add(this.labelJudul);
             this.Name = "FormRegistrasi";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.FormRegistrasi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.gradientPanelRegistrasi.ResumeLayout(false);
-            this.gradientPanelRegistrasi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWelcome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelJudul.ResumeLayout(false);
@@ -544,17 +527,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNama)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelJudul;
-        private System.Windows.Forms.Label labelJudul;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private GradientPanel gradientPanelRegistrasi;
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Panel panelGarisWelcome;
+        private System.Windows.Forms.PictureBox pictureBoxWelcome;
+        private System.Windows.Forms.Label labelIHaveAnAccount;
+        private System.Windows.Forms.Label labelNeverMind;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Panel panelJudul;
+        private System.Windows.Forms.Panel panelGarisRegistration;
         private System.Windows.Forms.Label labelRegistration;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
@@ -582,10 +567,7 @@
         private System.Windows.Forms.PictureBox pictureBoxEmail;
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.PictureBox pictureBoxNama;
-        private System.Windows.Forms.Label labelIHaveAnAccount;
-        private System.Windows.Forms.Label labelNeverMind;
-        private System.Windows.Forms.PictureBox pictureBoxWelcome;
-        private System.Windows.Forms.Panel panelGarisWelcome;
-        private System.Windows.Forms.Panel panelGarisRegistration;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Label labelJudul;
     }
 }

@@ -79,9 +79,6 @@
     <Compile Include="FormRegistrasi.Designer.cs">
       <DependentUpon>FormRegistrasi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradientPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Controls\TextBoxControl.cs">
