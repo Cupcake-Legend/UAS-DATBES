@@ -16,7 +16,7 @@ namespace CELIKOOR_PINKMAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRegistrasi());
+            Application.Run(new FormMenu());
         }
     }
 }
