@@ -26,11 +26,12 @@ namespace CELIKOOR_PINKMAN
             try
             {
                 Koneksi k = new Koneksi();
-                MessageBox.Show("ngetes method jalan ta gak");
+                MessageBox.Show("Connection success");
 
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Connection failed");
 
             }
 
