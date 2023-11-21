@@ -27,17 +27,25 @@ namespace CELIKOOR_PINKMAN
             {
                 Koneksi k = new Koneksi();
                 MessageBox.Show("Connection success");
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Connection failed");
-
             }
+        }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
-            
+        }
 
+        private void labelJudul_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDontHaveAnAccount_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -35,10 +35,10 @@
             this.panelJudul = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.labelJudul2 = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelWelcomeBack = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.pictureBoxWelcome = new System.Windows.Forms.PictureBox();
@@ -113,6 +113,16 @@
             this.labelJudul2.Text = "CINEPLEX";
             this.labelJudul2.UseCompatibleTextRendering = true;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 6);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 7;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -140,20 +150,10 @@
             this.labelWelcomeBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelWelcomeBack.Location = new System.Drawing.Point(58, 151);
             this.labelWelcomeBack.Name = "labelWelcomeBack";
-            this.labelWelcomeBack.Size = new System.Drawing.Size(356, 46);
+            this.labelWelcomeBack.Size = new System.Drawing.Size(350, 45);
             this.labelWelcomeBack.TabIndex = 37;
             this.labelWelcomeBack.Text = "Welcome Back, Staff!";
             this.labelWelcomeBack.Click += new System.EventHandler(this.labelLogin_Click);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 6);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 7;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // pictureBoxPassword
             // 
@@ -179,7 +179,7 @@
             // 
             this.pictureBoxWelcome.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBoxWelcome.Image = global::CELIKOOR_PINKMAN.Properties.Resources.matey_welcome_1;
-            this.pictureBoxWelcome.Location = new System.Drawing.Point(43, 409);
+            this.pictureBoxWelcome.Location = new System.Drawing.Point(43, 460);
             this.pictureBoxWelcome.Name = "pictureBoxWelcome";
             this.pictureBoxWelcome.Size = new System.Drawing.Size(411, 303);
             this.pictureBoxWelcome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(493, 631);
+            this.ClientSize = new System.Drawing.Size(493, 680);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.panelJudul);
