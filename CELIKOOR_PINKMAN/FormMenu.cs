@@ -30,7 +30,7 @@ namespace CELIKOOR_PINKMAN
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Connection failed");
+                MessageBox.Show("Connection failed. Error message: " + ex.Message);
             }
         }
 
