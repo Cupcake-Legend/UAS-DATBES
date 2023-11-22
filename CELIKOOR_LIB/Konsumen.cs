@@ -176,7 +176,7 @@ namespace CELIKOOR_LIB
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
-            if (hasil.Read())
+            if (hasil.Read() == true)
             {
                 /*
                 Konsumen k = new Konsumen((int)hasil.GetValue(0), hasil.GetValue(1).ToString(), hasil.GetValue(2).ToString(),
@@ -185,11 +185,11 @@ namespace CELIKOOR_LIB
 
 
                 Konsumen konsumen = new Konsumen(
-                   (int)hasil.GetValue(0),
+                   (int)(hasil.GetValue(0)),
                    hasil.GetValue(1).ToString(),
                    hasil.GetValue(2).ToString(),
                    hasil.GetValue(3).ToString(),
-                   (char)hasil.GetValue(4),
+                   char.Parse(hasil.GetValue(4).ToString()),
                    DateTime.Parse(hasil.GetValue(5).ToString()),
                    double.Parse(hasil.GetValue(6).ToString()),
                    hasil.GetValue(7).ToString(),
