@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace CELIKOOR_LIB
 {
@@ -125,7 +126,7 @@ namespace CELIKOOR_LIB
         public static bool InsertData(Konsumen konsumen)
         {
             string sql = 
-                "INSERT INTO konsumen(nama, email, no_hp, gender, tgl_lahir, saldo, username, password) " +
+                "INSERT INTO konsumens(nama, email, no_hp, gender, tgl_lahir, saldo, username, password) " +
                 "VALUES ('" + 
                 konsumen.Nama + "', '" +
                 konsumen.Email + "', '" +
@@ -168,6 +169,49 @@ namespace CELIKOOR_LIB
             if (effected == 0) return false;
             else return true;
         }
+
+        public static Konsumen CheckLogin(string username, string password)
+        {
+            string sql = "SELECT * FROM konsumens WHERE username= '" + username + "' AND password='" + password + "'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            if (hasil.Read())
+            {
+                /*
+                Konsumen k = new Konsumen((int)hasil.GetValue(0), hasil.GetValue(1).ToString(), hasil.GetValue(2).ToString(),
+                    hasil.GetValue(3).ToString(), (char)hasil.GetValue(4), (DateTime)hasil.GetValue(5),
+                    (double)hasil.GetValue(6), hasil.GetValue(7).ToString(), hasil.GetValue(8).ToString());*/
+
+
+                Konsumen konsumen = new Konsumen(
+                   (int)hasil.GetValue(0),
+                   hasil.GetValue(1).ToString(),
+                   hasil.GetValue(2).ToString(),
+                   hasil.GetValue(3).ToString(),
+                   (char)hasil.GetValue(4),
+                   DateTime.Parse(hasil.GetValue(5).ToString()),
+                   double.Parse(hasil.GetValue(6).ToString()),
+                   hasil.GetValue(7).ToString(),
+                   hasil.GetValue(8).ToString()
+                   );
+
+
+                return konsumen;
+
+
+            }
+            else
+            {
+                return null;
+            }
+
+
+
+        }
+
+
+
         #endregion
     }
 }

@@ -18,6 +18,14 @@ namespace CELIKOOR_PINKMAN
             InitializeComponent();
         }
 
+        public Konsumen konsumenLogin;
+        public Pegawai pegawaiLogin;
+
+        private void AturMenu()
+        {
+
+        }
+
         private void FormMenu_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -27,6 +35,16 @@ namespace CELIKOOR_PINKMAN
             {
                 Koneksi k = new Koneksi();
                 MessageBox.Show("Connection success");
+                FormLoginNormal frmLogin = new FormLoginNormal();
+                frmLogin.Owner = this;
+                if(frmLogin.ShowDialog() == DialogResult.OK)
+                {
+                    AturMenu();
+
+                }
+
+
+
             }
             catch (Exception ex)
             {

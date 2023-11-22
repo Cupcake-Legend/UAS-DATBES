@@ -41,7 +41,7 @@
             this.labelRegistration = new System.Windows.Forms.Label();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCreate = new System.Windows.Forms.Button();
             this.labelConfirmPassword = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
@@ -142,7 +142,7 @@
             this.panelJudul.Controls.Add(this.labelRegistration);
             this.panelJudul.Controls.Add(this.radioButtonFemale);
             this.panelJudul.Controls.Add(this.radioButtonMale);
-            this.panelJudul.Controls.Add(this.button1);
+            this.panelJudul.Controls.Add(this.buttonCreate);
             this.panelJudul.Controls.Add(this.labelConfirmPassword);
             this.panelJudul.Controls.Add(this.labelPassword);
             this.panelJudul.Controls.Add(this.labelUsername);
@@ -215,17 +215,18 @@
             this.radioButtonMale.Text = "Male";
             this.radioButtonMale.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonCreate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(581, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 45);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Create Account";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreate.ForeColor = System.Drawing.Color.White;
+            this.buttonCreate.Location = new System.Drawing.Point(581, 392);
+            this.buttonCreate.Name = "buttonCreate";
+            this.buttonCreate.Size = new System.Drawing.Size(217, 45);
+            this.buttonCreate.TabIndex = 9;
+            this.buttonCreate.Text = "Create Account";
+            this.buttonCreate.UseVisualStyleBackColor = false;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // labelConfirmPassword
             // 
@@ -482,6 +483,7 @@
             this.buttonLogin.TabIndex = 58;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // labelJudul
             // 
@@ -543,7 +545,7 @@
         private System.Windows.Forms.Label labelRegistration;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Label labelConfirmPassword;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;

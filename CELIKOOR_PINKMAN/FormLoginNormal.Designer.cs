@@ -123,6 +123,7 @@
             this.linkLabelRegisterNow.TabIndex = 21;
             this.linkLabelRegisterNow.TabStop = true;
             this.linkLabelRegisterNow.Text = "Register now";
+            this.linkLabelRegisterNow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegisterNow_LinkClicked);
             // 
             // buttonLogin
             // 
@@ -135,6 +136,7 @@
             this.buttonLogin.TabIndex = 19;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // labelOr
             // 
@@ -201,6 +203,7 @@
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxPassword.Location = new System.Drawing.Point(534, 205);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(284, 34);
             this.textBoxPassword.TabIndex = 18;
             this.textBoxPassword.Text = "Password";
