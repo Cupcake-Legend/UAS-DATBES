@@ -147,6 +147,31 @@ namespace CELIKOOR_LIB
             if (rowsEffected == 0) return false;
             else return true;
         }
+
+        public static Pegawai CheckLogin(string username, string password)
+        {
+            string sql = "SELECT * FROM pegawais WHERE username = '" + username + "' AND password ='" + password + "'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            if (hasil.Read() == true)
+            {
+                Pegawai pegawai = new Pegawai(
+                   (int)hasil.GetValue(0),
+                   hasil.GetValue(1).ToString(),
+                   hasil.GetValue(2).ToString(),
+                   hasil.GetValue(3).ToString(),
+                   hasil.GetValue(4).ToString(),
+                   hasil.GetValue(5).ToString()
+                   );
+
+                return pegawai;
+            }
+            else
+            {
+                return null;
+            }
+        }
         #endregion
     }
 }
