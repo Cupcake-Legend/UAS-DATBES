@@ -142,6 +142,7 @@
             this.buttonLogin.TabIndex = 31;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // labelWelcomeBack
             // 
@@ -204,6 +205,7 @@
             this.Controls.Add(this.pictureBoxUsername);
             this.Controls.Add(this.pictureBoxWelcome);
             this.Name = "FormLoginPegawai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login Pegawai";
             this.panelJudul.ResumeLayout(false);
             this.panelJudul.PerformLayout();

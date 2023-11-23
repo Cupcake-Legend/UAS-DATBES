@@ -21,8 +21,59 @@ namespace CELIKOOR_PINKMAN
         public Konsumen konsumenLogin;
         public Pegawai pegawaiLogin;
 
-        private void AturMenu()
+        public void AturMenu()
         {
+            if(konsumenLogin != null && pegawaiLogin == null)
+            {
+                menuToolStripMenuItem.Visible = true;
+                loginToolStripMenuItem.Visible = false;
+                registerToolStripMenuItem.Visible = false;
+                operatorToolStripMenuItem.Visible=false;
+                kasirToolStripMenuItem.Visible=false;
+                masterToolStripMenuItem.Visible=false;
+
+
+            }
+            else if (konsumenLogin == null && pegawaiLogin != null)
+            {
+                if (pegawaiLogin.Roles == "OPERATOR")
+                {
+                    menuToolStripMenuItem.Visible = true;
+                    loginToolStripMenuItem.Visible = false;
+                    registerToolStripMenuItem.Visible=false;
+                    operatorToolStripMenuItem.Visible = true;
+                    kasirToolStripMenuItem.Visible = false;
+                    masterToolStripMenuItem.Visible = false;
+
+                }
+                else if (pegawaiLogin.Roles == "KASIR")
+                {
+                    menuToolStripMenuItem.Visible = true;
+                    loginToolStripMenuItem.Visible = false;
+                    registerToolStripMenuItem.Visible = false;
+                    operatorToolStripMenuItem.Visible = false;
+                    kasirToolStripMenuItem.Visible = true;
+                    masterToolStripMenuItem.Visible = false;
+
+                }
+                else if (pegawaiLogin.Roles == "ADMIN")
+                {
+                    menuToolStripMenuItem.Visible = true;
+                    loginToolStripMenuItem.Visible = false;
+                    registerToolStripMenuItem.Visible = false;
+                    operatorToolStripMenuItem.Visible = false;
+                    kasirToolStripMenuItem.Visible = false;
+                    masterToolStripMenuItem.Visible = true;
+                }
+            }
+
+            else if(konsumenLogin!= null && pegawaiLogin != null)
+            {
+                konsumenLogin = null;
+                pegawaiLogin = null;
+                MessageBox.Show("Terjadi kesalahan!, Tolong Login ulang!", "Error");
+            }
+
 
         }
 
@@ -63,6 +114,40 @@ namespace CELIKOOR_PINKMAN
         }
 
         private void labelDontHaveAnAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuToolStripMenuItem.Visible = true;
+            loginToolStripMenuItem.Visible = true;
+            registerToolStripMenuItem.Visible = true;
+            MessageBox.Show("Akun sukses logout!");
+
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoginNormal frmLogin = new FormLoginNormal();
+            frmLogin.Owner = this;
+            if (frmLogin.ShowDialog() == DialogResult.OK)
+            {
+                AturMenu();
+
+            }
+
+        }
+
+        private void registerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegistrasi frmRegist = new FormRegistrasi();   
+            frmRegist.Owner = this;
+            frmRegist.ShowDialog();
+
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

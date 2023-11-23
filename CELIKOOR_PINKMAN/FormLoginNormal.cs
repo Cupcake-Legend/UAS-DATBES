@@ -35,9 +35,25 @@ namespace CELIKOOR_PINKMAN
         {
             try
             {
+                FormMenu frm = (FormMenu)this.Owner;
                 if(textBoxUsername.Text == "root" && textBoxPassword.Text == "mysql")
                 {
-                    
+                    if (frm.konsumenLogin == null)
+                    {
+                        FormLoginPegawai formPegawai = new FormLoginPegawai();
+                        formPegawai.Owner = this;
+
+                        if(formPegawai.ShowDialog() == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
+                        
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Silahkan Logout Terlebih dahulu!");
+                    }
                     
 
 
@@ -45,25 +61,32 @@ namespace CELIKOOR_PINKMAN
                 }
                 else
                 {
-                    Koneksi k = new Koneksi();
-                    Konsumen konsumen = Konsumen.CheckLogin(textBoxUsername.Text, textBoxPassword.Text);
-
-                    if(!(konsumen is null))
+                    if(frm.pegawaiLogin == null)
                     {
-                        FormMenu frm = (FormMenu)this.Owner;
-                        frm.konsumenLogin = konsumen;
 
-                        MessageBox.Show("Welcome " + konsumen.Nama);
+                        Koneksi k = new Koneksi();
+                        Konsumen konsumen = Konsumen.CheckLogin(textBoxUsername.Text, textBoxPassword.Text);
 
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
+                        if(!(konsumen is null))
+                        {
+                            frm.konsumenLogin = konsumen;
+
+                            MessageBox.Show("Welcome " + konsumen.Nama);
+
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username tidak ditemukan atau password salah!", "Error");
+                        }
 
                     }
                     else
                     {
-                        MessageBox.Show("Username tidak ditemukan atau password salah!", "Error");
+                        MessageBox.Show("Silahkan Logout Terlebih dahulu!");
                     }
-
                 }
 
 

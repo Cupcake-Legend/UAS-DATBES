@@ -237,6 +237,7 @@
             this.Controls.Add(this.labelDontHaveAnAccount);
             this.Controls.Add(this.labelLoginToYourAccount);
             this.Name = "FormLoginNormal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLoginNormal_Load);
             this.panelJudul.ResumeLayout(false);

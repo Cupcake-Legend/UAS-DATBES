@@ -33,8 +33,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelGarisWelcome = new System.Windows.Forms.Panel();
             this.pictureBoxWelcome = new System.Windows.Forms.PictureBox();
-            this.labelIHaveAnAccount = new System.Windows.Forms.Label();
-            this.labelNeverMind = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelJudul = new System.Windows.Forms.Panel();
             this.panelGarisRegistration = new System.Windows.Forms.Panel();
@@ -65,7 +63,6 @@
             this.pictureBoxEmail = new System.Windows.Forms.PictureBox();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.pictureBoxNama = new System.Windows.Forms.PictureBox();
-            this.buttonLogin = new System.Windows.Forms.Button();
             this.labelJudul = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWelcome)).BeginInit();
@@ -99,30 +96,6 @@
             this.pictureBoxWelcome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxWelcome.TabIndex = 62;
             this.pictureBoxWelcome.TabStop = false;
-            // 
-            // labelIHaveAnAccount
-            // 
-            this.labelIHaveAnAccount.AutoSize = true;
-            this.labelIHaveAnAccount.BackColor = System.Drawing.Color.Transparent;
-            this.labelIHaveAnAccount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIHaveAnAccount.ForeColor = System.Drawing.Color.White;
-            this.labelIHaveAnAccount.Location = new System.Drawing.Point(60, 390);
-            this.labelIHaveAnAccount.Name = "labelIHaveAnAccount";
-            this.labelIHaveAnAccount.Size = new System.Drawing.Size(150, 25);
-            this.labelIHaveAnAccount.TabIndex = 64;
-            this.labelIHaveAnAccount.Text = "I have an account";
-            // 
-            // labelNeverMind
-            // 
-            this.labelNeverMind.AutoSize = true;
-            this.labelNeverMind.BackColor = System.Drawing.Color.Transparent;
-            this.labelNeverMind.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNeverMind.ForeColor = System.Drawing.Color.White;
-            this.labelNeverMind.Location = new System.Drawing.Point(82, 365);
-            this.labelNeverMind.Name = "labelNeverMind";
-            this.labelNeverMind.Size = new System.Drawing.Size(108, 25);
-            this.labelNeverMind.TabIndex = 63;
-            this.labelNeverMind.Text = "Never mind,";
             // 
             // pictureBoxLogo
             // 
@@ -472,19 +445,6 @@
             this.pictureBoxNama.TabIndex = 23;
             this.pictureBoxNama.TabStop = false;
             // 
-            // buttonLogin
-            // 
-            this.buttonLogin.BackColor = System.Drawing.Color.White;
-            this.buttonLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.ForeColor = System.Drawing.Color.Black;
-            this.buttonLogin.Location = new System.Drawing.Point(52, 518);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(169, 45);
-            this.buttonLogin.TabIndex = 58;
-            this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            // 
             // labelJudul
             // 
             this.labelJudul.AutoSize = true;
@@ -506,13 +466,11 @@
             this.ClientSize = new System.Drawing.Size(1095, 645);
             this.Controls.Add(this.panelGarisWelcome);
             this.Controls.Add(this.pictureBoxWelcome);
-            this.Controls.Add(this.labelIHaveAnAccount);
-            this.Controls.Add(this.labelNeverMind);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.panelJudul);
-            this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.labelJudul);
             this.Name = "FormRegistrasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.FormRegistrasi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -537,8 +495,6 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panelGarisWelcome;
         private System.Windows.Forms.PictureBox pictureBoxWelcome;
-        private System.Windows.Forms.Label labelIHaveAnAccount;
-        private System.Windows.Forms.Label labelNeverMind;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelJudul;
         private System.Windows.Forms.Panel panelGarisRegistration;
@@ -569,7 +525,6 @@
         private System.Windows.Forms.PictureBox pictureBoxEmail;
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.PictureBox pictureBoxNama;
-        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelJudul;
     }
 }
