@@ -59,7 +59,7 @@ namespace CELIKOOR_LIB
             else
             {
                 sql = "SELECT * FROM kelompoks " +
-                    "WHERE " + kriteria + " like '%" + nilaiKriteria + "%'";
+                    "WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);

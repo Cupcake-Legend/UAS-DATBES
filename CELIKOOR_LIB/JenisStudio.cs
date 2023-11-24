@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CELIKOOR_LIB
 {
-    public class Genre
+    public class JenisStudio
     {
         #region data members
         private int id;
@@ -15,8 +15,8 @@ namespace CELIKOOR_LIB
         private string deskripsi;
         #endregion
 
-        #region constructor
-        public Genre(int id, string nama, string deskripsi)
+        #region constructors
+        public JenisStudio(int id, string nama, string deskripsi)
         {
             this.Id = id;
             this.Nama = nama;
@@ -31,66 +31,66 @@ namespace CELIKOOR_LIB
         #endregion
 
         #region methods
-        public static Genre SelectDataSingle(string genreID)
+        public static JenisStudio SelectDataSingle(string jenisStudioID)
         {
-            string sql = "SELECT * FROM genres WHERE id = '" + genreID + "'";
+            string sql = "SELECT * FROM jenis_studios WHERE id = '" + jenisStudioID + "'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
-            Genre genre;
+            JenisStudio jenisStudio;
 
             if (hasil.Read())
             {
-                genre = new Genre(
+                jenisStudio = new JenisStudio(
                    (int)hasil.GetValue(0),
                    hasil.GetValue(1).ToString(),
                    hasil.GetValue(2).ToString()
                    );
 
-                return genre;
+                return jenisStudio;
             }
             else throw new Exception("Data tidak ditemukan");
         }
 
-        public static List<Genre> SelectDataList(string kriteria, string nilaiKriteria)
+        public static List<JenisStudio> SelectDataList(string kriteria, string nilaiKriteria)
         {
             string sql;
 
             if (kriteria == "")
             {
-                sql = "SELECT * FROM genres";
+                sql = "SELECT * FROM jenis_studios";
             }
             else
             {
-                sql = "SELECT * FROM genres " +
+                sql = "SELECT * FROM jenis_studios " +
                     "WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
-            List<Genre> listGenres = new List<Genre>();
+            List<JenisStudio> listJenisStudios = new List<JenisStudio>();
 
             while (hasil.Read())
             {
-                Genre genre = new Genre(
+                JenisStudio jenisStudio = new JenisStudio(
                    (int)hasil.GetValue(0),
                    hasil.GetValue(1).ToString(),
                    hasil.GetValue(2).ToString()
                    );
 
-                listGenres.Add(genre);
+                listJenisStudios.Add(jenisStudio);
             }
 
-            return listGenres;
+            return listJenisStudios;
         }
 
-        public static bool InsertData(Genre genre)
+        public static bool InsertData(JenisStudio jenisStudio)
         {
             string sql =
-                "INSERT INTO genres(nama, deskripsi) " +
+                "INSERT INTO jenis_studios(nama, deskripsi) " +
                 "VALUES ('" +
-                genre.Nama + "', '" +
-                genre.Deskripsi + "')";
+                jenisStudio.Nama + "', '" +
+                jenisStudio.Deskripsi + "')";
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);
 
@@ -98,13 +98,13 @@ namespace CELIKOOR_LIB
             else return true;
         }
 
-        public static bool EditData(Genre genre)
+        public static bool EditData(JenisStudio jenisStudio)
         {
             string sql =
-                "UPDATE genres SET " +
-                "nama = '" + genre.Nama + "', " +
-                "deskripsi = '" + genre.Deskripsi + "' " +
-                "WHERE id = '" + genre.Id + "'";
+                "UPDATE jenis_studios SET " +
+                "nama = '" + jenisStudio.Nama + "', " +
+                "deskripsi = '" + jenisStudio.Deskripsi + "' " +
+                "WHERE id = '" + jenisStudio.Id + "'";
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);
 
@@ -112,9 +112,9 @@ namespace CELIKOOR_LIB
             else return true;
         }
 
-        public static bool DeleteData(Genre genre)
+        public static bool DeleteData(JenisStudio jenisStudio)
         {
-            string sql = "DELETE FROM genres WHERE id = '" + genre.Id + "'";
+            string sql = "DELETE FROM jenis_studios WHERE id = '" + jenisStudio.Id + "'";
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);
 
