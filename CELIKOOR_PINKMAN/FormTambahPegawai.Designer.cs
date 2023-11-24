@@ -38,25 +38,25 @@
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.panelJudul = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelNama = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxNama = new System.Windows.Forms.TextBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.pictureBoxEmail = new System.Windows.Forms.PictureBox();
+            this.textBoxNama = new System.Windows.Forms.TextBox();
             this.pictureBoxNama = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelJudul.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNama)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +103,7 @@
             this.buttonCreate.TabIndex = 9;
             this.buttonCreate.Text = "Create Account";
             this.buttonCreate.UseVisualStyleBackColor = false;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // labelPassword
             // 
@@ -165,6 +166,30 @@
             this.panelJudul.Size = new System.Drawing.Size(820, 338);
             this.panelJudul.TabIndex = 68;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ADMIN",
+            "OPERATOR",
+            "KASIR"});
+            this.comboBox1.Location = new System.Drawing.Point(132, 236);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(208, 24);
+            this.comboBox1.TabIndex = 48;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(63, 232);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 25);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Roles :";
+            // 
             // labelNama
             // 
             this.labelNama.AutoSize = true;
@@ -186,6 +211,16 @@
             this.textBoxPassword.Size = new System.Drawing.Size(213, 34);
             this.textBoxPassword.TabIndex = 7;
             // 
+            // pictureBoxPassword
+            // 
+            this.pictureBoxPassword.Image = global::CELIKOOR_PINKMAN.Properties.Resources.padlock_no_fil;
+            this.pictureBoxPassword.Location = new System.Drawing.Point(380, 174);
+            this.pictureBoxPassword.Name = "pictureBoxPassword";
+            this.pictureBoxPassword.Size = new System.Drawing.Size(37, 34);
+            this.pictureBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPassword.TabIndex = 36;
+            this.pictureBoxPassword.TabStop = false;
+            // 
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,6 +229,16 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(213, 34);
             this.textBoxUsername.TabIndex = 6;
+            // 
+            // pictureBoxUsername
+            // 
+            this.pictureBoxUsername.Image = global::CELIKOOR_PINKMAN.Properties.Resources.id_card_no_fill;
+            this.pictureBoxUsername.Location = new System.Drawing.Point(380, 109);
+            this.pictureBoxUsername.Name = "pictureBoxUsername";
+            this.pictureBoxUsername.Size = new System.Drawing.Size(37, 34);
+            this.pictureBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUsername.TabIndex = 35;
+            this.pictureBoxUsername.TabStop = false;
             // 
             // textBoxEmail
             // 
@@ -204,6 +249,16 @@
             this.textBoxEmail.Size = new System.Drawing.Size(210, 34);
             this.textBoxEmail.TabIndex = 1;
             // 
+            // pictureBoxEmail
+            // 
+            this.pictureBoxEmail.Image = global::CELIKOOR_PINKMAN.Properties.Resources.mail;
+            this.pictureBoxEmail.Location = new System.Drawing.Point(20, 169);
+            this.pictureBoxEmail.Name = "pictureBoxEmail";
+            this.pictureBoxEmail.Size = new System.Drawing.Size(37, 34);
+            this.pictureBoxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxEmail.TabIndex = 31;
+            this.pictureBoxEmail.TabStop = false;
+            // 
             // textBoxNama
             // 
             this.textBoxNama.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,6 +267,16 @@
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(210, 34);
             this.textBoxNama.TabIndex = 0;
+            // 
+            // pictureBoxNama
+            // 
+            this.pictureBoxNama.Image = global::CELIKOOR_PINKMAN.Properties.Resources.user_no_fill;
+            this.pictureBoxNama.Location = new System.Drawing.Point(20, 109);
+            this.pictureBoxNama.Name = "pictureBoxNama";
+            this.pictureBoxNama.Size = new System.Drawing.Size(37, 34);
+            this.pictureBoxNama.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNama.TabIndex = 23;
+            this.pictureBoxNama.TabStop = false;
             // 
             // pictureBoxLogo
             // 
@@ -225,66 +290,6 @@
             this.pictureBoxLogo.TabStop = false;
             this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
-            // pictureBoxPassword
-            // 
-            this.pictureBoxPassword.Image = global::CELIKOOR_PINKMAN.Properties.Resources.padlock_no_fil;
-            this.pictureBoxPassword.Location = new System.Drawing.Point(380, 174);
-            this.pictureBoxPassword.Name = "pictureBoxPassword";
-            this.pictureBoxPassword.Size = new System.Drawing.Size(37, 34);
-            this.pictureBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPassword.TabIndex = 36;
-            this.pictureBoxPassword.TabStop = false;
-            // 
-            // pictureBoxUsername
-            // 
-            this.pictureBoxUsername.Image = global::CELIKOOR_PINKMAN.Properties.Resources.id_card_no_fill;
-            this.pictureBoxUsername.Location = new System.Drawing.Point(380, 109);
-            this.pictureBoxUsername.Name = "pictureBoxUsername";
-            this.pictureBoxUsername.Size = new System.Drawing.Size(37, 34);
-            this.pictureBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUsername.TabIndex = 35;
-            this.pictureBoxUsername.TabStop = false;
-            // 
-            // pictureBoxEmail
-            // 
-            this.pictureBoxEmail.Image = global::CELIKOOR_PINKMAN.Properties.Resources.mail;
-            this.pictureBoxEmail.Location = new System.Drawing.Point(20, 169);
-            this.pictureBoxEmail.Name = "pictureBoxEmail";
-            this.pictureBoxEmail.Size = new System.Drawing.Size(37, 34);
-            this.pictureBoxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxEmail.TabIndex = 31;
-            this.pictureBoxEmail.TabStop = false;
-            // 
-            // pictureBoxNama
-            // 
-            this.pictureBoxNama.Image = global::CELIKOOR_PINKMAN.Properties.Resources.user_no_fill;
-            this.pictureBoxNama.Location = new System.Drawing.Point(20, 109);
-            this.pictureBoxNama.Name = "pictureBoxNama";
-            this.pictureBoxNama.Size = new System.Drawing.Size(37, 34);
-            this.pictureBoxNama.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxNama.TabIndex = 23;
-            this.pictureBoxNama.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(63, 232);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 25);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Roles :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 236);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 24);
-            this.comboBox1.TabIndex = 48;
-            // 
             // FormTambahPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -297,11 +302,11 @@
             this.Text = "FormTambahPegawai";
             this.panelJudul.ResumeLayout(false);
             this.panelJudul.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNama)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

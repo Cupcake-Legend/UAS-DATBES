@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDaftarAktor));
             this.buttonTambah = new System.Windows.Forms.Button();
-            this.buttonUbah = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label = new System.Windows.Forms.Label();
@@ -56,17 +55,6 @@
             this.buttonTambah.UseVisualStyleBackColor = true;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
-            // buttonUbah
-            // 
-            this.buttonUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUbah.Location = new System.Drawing.Point(212, 534);
-            this.buttonUbah.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonUbah.Name = "buttonUbah";
-            this.buttonUbah.Size = new System.Drawing.Size(111, 37);
-            this.buttonUbah.TabIndex = 75;
-            this.buttonUbah.Text = "Ubah";
-            this.buttonUbah.UseVisualStyleBackColor = true;
-            // 
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,6 +76,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(479, 194);
             this.dataGridView1.TabIndex = 73;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label
             // 
@@ -163,7 +152,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 598);
             this.Controls.Add(this.buttonTambah);
-            this.Controls.Add(this.buttonUbah);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label);
@@ -171,6 +159,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormDaftarAktor";
             this.Text = "FormDaftarAktor";
+            this.Load += new System.EventHandler(this.FormDaftarAktor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -183,7 +172,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonTambah;
-        private System.Windows.Forms.Button buttonUbah;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label;

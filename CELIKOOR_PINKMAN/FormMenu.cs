@@ -162,40 +162,98 @@ namespace CELIKOOR_PINKMAN
 
         private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDaftarKonsumen frm = new FormDaftarKonsumen();
-            frm.Owner = this;
-            frm.ShowDialog();
+            Form frm = Application.OpenForms["FormDaftarKonsumen"];
+            if (frm == null)
+            {
+                FormDaftarKonsumen frmKonsumen = new FormDaftarKonsumen();
+                frmKonsumen.MdiParent = this;
+                frmKonsumen.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDaftarCinema frm = new FormDaftarCinema();
-            frm.Owner = this;
-            frm.ShowDialog();
+            Form frm = Application.OpenForms["FormDaftarCinema"];
+            if (frm == null)
+            {
+                FormDaftarCinema frmdaftar = new FormDaftarCinema();
+                frmdaftar.MdiParent = this;
+                frmdaftar.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDaftarPegawai frm = new FormDaftarPegawai();
-            frm.Owner = this;
+            Form frm = Application.OpenForms["FormDaftarPegawai"];
+            if (frm == null)
+            {
+                FormDaftarPegawai frmDaftar = new FormDaftarPegawai();
+                frmDaftar.MdiParent = this;
+                frmDaftar.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void kelompokToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDaftarKelompok frm = new FormDaftarKelompok();
-            frm.Owner = this;
-            frm.ShowDialog();
+            Form frm = Application.OpenForms["FormDaftarKelompok"];
+            if (frm == null)
+            {
+                FormDaftarKelompok frmDaftar = new FormDaftarKelompok();
+                frmDaftar.MdiParent = this;
+                frmDaftar.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void genreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDaftarGenre frm = new FormDaftarGenre();
-            frm.Owner = this;
-            frm.ShowDialog();
+            Form frm = Application.OpenForms["FormDaftarGenre"];
+            if (frm == null)
+            {
+                FormDaftarGenre frmDaftar = new FormDaftarGenre();
+                frmDaftar.MdiParent = this;
+                frmDaftar.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void aktorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form frm = Application.OpenForms["FormDaftarAktor"];
+            if (frm == null)
+            {
+                FormDaftarAktor frmDaftar = new FormDaftarAktor();
+                frmDaftar.MdiParent = this;
+                frmDaftar.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
 
         }
     }

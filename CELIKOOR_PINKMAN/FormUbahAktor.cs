@@ -8,13 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CELIKOOR_PINKMAN
 {
-    public partial class FormTambahAktor : Form
+    public partial class FormUbahAktor : Form
     {
-        public FormTambahAktor()
+        public FormUbahAktor()
         {
             InitializeComponent();
         }
@@ -24,36 +23,35 @@ namespace CELIKOOR_PINKMAN
             try
             {
                 char gender;
-                if (radioButtonMale.Checked)
-                {
-                    gender = 'L';
-                }
-                else
+
+                if(radioButtonFemale.Checked)
                 {
                     gender = 'P';
                 }
+                else
+                {
+                    gender = 'L';
+                }
 
                 Aktor a = new Aktor(0, textBoxNama.Text, dateTimePicker1.Value, gender, textBoxAsal.Text);
-                
-
-                Boolean success = Aktor.InsertData(a);
+                Boolean success = Aktor.UpdateData(a);
 
                 if (success)
                 {
-                    MessageBox.Show("Data berhasil ditambahkan!");
-                    this.Close();
+                    MessageBox.Show("Data sukses di update!");
                 }
                 else
                 {
-                    MessageBox.Show("Terjadi kesalahan!");
+                    MessageBox.Show("Data gagal di update!");
                 }
 
 
 
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show("Terjadi kesalahan! Pesan kesalahan: " + ex.Message, "Error");
+
             }
         }
     }

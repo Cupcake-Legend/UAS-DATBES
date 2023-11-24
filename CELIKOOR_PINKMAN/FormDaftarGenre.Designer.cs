@@ -70,6 +70,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(479, 341);
             this.dataGridView1.TabIndex = 63;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label
             // 
@@ -106,6 +107,7 @@
             this.Controls.Add(this.pictureBoxLogo);
             this.Name = "FormDaftarGenre";
             this.Text = "FormDaftarGenre";
+            this.Load += new System.EventHandler(this.FormDaftarGenre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);

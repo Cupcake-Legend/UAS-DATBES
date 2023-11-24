@@ -171,6 +171,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormDaftarStudio";
             this.Text = "FormDaftarStudio";
+            this.Load += new System.EventHandler(this.FormDaftarStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panel1.ResumeLayout(false);

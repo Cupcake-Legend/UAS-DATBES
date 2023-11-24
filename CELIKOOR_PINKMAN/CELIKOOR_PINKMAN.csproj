@@ -163,6 +163,12 @@
     <Compile Include="FormTambahPegawai.Designer.cs">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUbahAktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahAktor.Designer.cs">
+      <DependentUpon>FormUbahAktor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Controls\TextBoxControl.cs">
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahPegawai.resx">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahAktor.resx">
+      <DependentUpon>FormUbahAktor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

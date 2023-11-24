@@ -74,6 +74,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(479, 194);
             this.dataGridView1.TabIndex = 51;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label
             // 
@@ -106,23 +107,23 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(424, 22);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "KodeBarang",
-            "Barcode",
+            "ID",
             "Nama",
-            "HargaJual",
-            "Stok",
-            "KodeKategori"});
+            "Email",
+            "Username"});
             this.comboBox1.Location = new System.Drawing.Point(27, 49);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(424, 24);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -158,6 +159,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormDaftarKonsumen";
             this.Text = "FormDaftarKonsumen";
+            this.Load += new System.EventHandler(this.FormDaftarKonsumen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

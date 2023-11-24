@@ -34,9 +34,9 @@
             this.label = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.textBoxNama = new System.Windows.Forms.TextBox();
+            this.textBoxDeskripsi = new System.Windows.Forms.TextBox();
             this.labelGenre = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.labelId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -88,6 +88,7 @@
             this.buttonSave.TabIndex = 109;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonExit
             // 
@@ -102,43 +103,44 @@
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
             // 
-            // textBoxNama
+            // textBoxDeskripsi
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(200, 205);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(245, 22);
-            this.textBoxNama.TabIndex = 107;
+            this.textBoxDeskripsi.Location = new System.Drawing.Point(200, 205);
+            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDeskripsi.Multiline = true;
+            this.textBoxDeskripsi.Name = "textBoxDeskripsi";
+            this.textBoxDeskripsi.Size = new System.Drawing.Size(245, 22);
+            this.textBoxDeskripsi.TabIndex = 107;
             // 
             // labelGenre
             // 
             this.labelGenre.AutoSize = true;
             this.labelGenre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenre.Location = new System.Drawing.Point(121, 202);
+            this.labelGenre.Location = new System.Drawing.Point(93, 201);
             this.labelGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(73, 25);
+            this.labelGenre.Size = new System.Drawing.Size(99, 25);
             this.labelGenre.TabIndex = 106;
-            this.labelGenre.Text = "Genre :";
+            this.labelGenre.Text = "Deskripsi :";
             // 
-            // textBoxId
+            // textBoxGenre
             // 
-            this.textBoxId.Location = new System.Drawing.Point(200, 163);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(103, 22);
-            this.textBoxId.TabIndex = 105;
+            this.textBoxGenre.Location = new System.Drawing.Point(200, 163);
+            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.Size = new System.Drawing.Size(103, 22);
+            this.textBoxGenre.TabIndex = 105;
             // 
             // labelId
             // 
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(153, 161);
+            this.labelId.Location = new System.Drawing.Point(119, 159);
             this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(41, 25);
+            this.labelId.Size = new System.Drawing.Size(73, 25);
             this.labelId.TabIndex = 104;
-            this.labelId.Text = "ID :";
+            this.labelId.Text = "Genre :";
             // 
             // FormTambahGenre
             // 
@@ -148,9 +150,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.textBoxNama);
+            this.Controls.Add(this.textBoxDeskripsi);
             this.Controls.Add(this.labelGenre);
-            this.Controls.Add(this.textBoxId);
+            this.Controls.Add(this.textBoxGenre);
             this.Controls.Add(this.labelId);
             this.Name = "FormTambahGenre";
             this.Text = "FormTambahGenre";
@@ -169,9 +171,9 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.TextBox textBoxNama;
+        private System.Windows.Forms.TextBox textBoxDeskripsi;
         private System.Windows.Forms.Label labelGenre;
-        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.TextBox textBoxGenre;
         private System.Windows.Forms.Label labelId;
     }
 }

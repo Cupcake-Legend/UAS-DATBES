@@ -36,8 +36,6 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.labelNama = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +86,7 @@
             this.buttonSave.TabIndex = 116;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonExit
             // 
@@ -104,7 +103,7 @@
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(205, 206);
+            this.textBoxNama.Location = new System.Drawing.Point(174, 185);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(245, 22);
@@ -114,31 +113,12 @@
             // 
             this.labelNama.AutoSize = true;
             this.labelNama.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNama.Location = new System.Drawing.Point(125, 202);
+            this.labelNama.Location = new System.Drawing.Point(94, 181);
             this.labelNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNama.Name = "labelNama";
             this.labelNama.Size = new System.Drawing.Size(72, 25);
             this.labelNama.TabIndex = 113;
             this.labelNama.Text = "Nama :";
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.Location = new System.Drawing.Point(205, 164);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(103, 22);
-            this.textBoxId.TabIndex = 112;
-            // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(156, 160);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(41, 25);
-            this.labelId.TabIndex = 111;
-            this.labelId.Text = "ID :";
             // 
             // FormTambahKelompok
             // 
@@ -150,8 +130,6 @@
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.labelNama);
-            this.Controls.Add(this.textBoxId);
-            this.Controls.Add(this.labelId);
             this.Name = "FormTambahKelompok";
             this.Text = "FormTambahKelompok";
             this.Load += new System.EventHandler(this.FormTambahKelompok_Load);
@@ -172,7 +150,5 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label labelNama;
-        private System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.Label labelId;
     }
 }

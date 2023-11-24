@@ -44,6 +44,10 @@ namespace CELIKOOR_PINKMAN
                     this.DialogResult = DialogResult.OK;
                     
                 }
+                else
+                {
+                    MessageBox.Show("Username atau password salah!", "Error");
+                }
 
 
 
@@ -52,6 +56,11 @@ namespace CELIKOOR_PINKMAN
             {
                 MessageBox.Show("Terjadi kesalahan! Pesan kesalahan: " + ex.Message, "Error");
             }
+        }
+
+        private void FormLoginPegawai_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

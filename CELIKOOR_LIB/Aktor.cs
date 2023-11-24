@@ -59,7 +59,7 @@ namespace CELIKOOR_LIB
                    (int)hasil.GetValue(0),
                    hasil.GetValue(1).ToString(),
                    DateTime.Parse(hasil.GetValue(2).ToString()),
-                   (char)hasil.GetValue(3),
+                   char.Parse(hasil.GetValue(3).ToString()),
                    hasil.GetValue(4).ToString()
                    );
 
@@ -72,7 +72,7 @@ namespace CELIKOOR_LIB
         {
             string sql;
 
-            if (kriteria.Length > 0)
+            if (kriteria == "")
             {
                 sql = "SELECT * FROM aktors";
             }
@@ -92,7 +92,7 @@ namespace CELIKOOR_LIB
                    (int)hasil.GetValue(0),
                    hasil.GetValue(1).ToString(),
                    DateTime.Parse(hasil.GetValue(2).ToString()),
-                   (char)hasil.GetValue(3),
+                   char.Parse(hasil.GetValue(3).ToString()),
                    hasil.GetValue(4).ToString()
                    );
 

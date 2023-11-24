@@ -16,5 +16,10 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+
+        private void FormDaftarJenisStudio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

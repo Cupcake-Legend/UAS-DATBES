@@ -20,5 +20,10 @@ namespace CELIKOOR_PINKMAN
         private void buttonTambah_Click(object sender, EventArgs e)
         {
         }
+
+        private void FormDaftarStudio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

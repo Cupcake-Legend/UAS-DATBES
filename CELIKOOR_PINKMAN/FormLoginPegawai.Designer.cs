@@ -207,6 +207,7 @@
             this.Name = "FormLoginPegawai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login Pegawai";
+            this.Load += new System.EventHandler(this.FormLoginPegawai_Load);
             this.panelJudul.ResumeLayout(false);
             this.panelJudul.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();

@@ -106,6 +106,7 @@
             this.Controls.Add(this.pictureBoxLogo);
             this.Name = "FormDaftarKelompok";
             this.Text = "FormDaftarKelompok";
+            this.Load += new System.EventHandler(this.FormDaftarKelompok_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);

@@ -105,6 +105,7 @@
             this.Controls.Add(this.pictureBoxLogo);
             this.Name = "FormDaftarJenisStudio";
             this.Text = "FormDaftarJenisStudio";
+            this.Load += new System.EventHandler(this.FormDaftarJenisStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);

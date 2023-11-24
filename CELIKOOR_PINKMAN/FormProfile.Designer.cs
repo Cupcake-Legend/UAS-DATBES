@@ -35,26 +35,27 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.panelGarisRegistration = new System.Windows.Forms.Panel();
             this.labelProfile = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.labelGender = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelNama = new System.Windows.Forms.Label();
-            this.labelJudul = new System.Windows.Forms.Label();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.pictureBoxHP = new System.Windows.Forms.PictureBox();
             this.pictureBoxTanggalLahir = new System.Windows.Forms.PictureBox();
             this.pictureBoxGender = new System.Windows.Forms.PictureBox();
             this.pictureBoxEmail = new System.Windows.Forms.PictureBox();
             this.pictureBoxNama = new System.Windows.Forms.PictureBox();
+            this.labelJudul = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
             this.panelJudul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHP)).BeginInit();
@@ -68,17 +69,18 @@
             // panelJudul
             // 
             this.panelJudul.BackColor = System.Drawing.Color.White;
+            this.panelJudul.Controls.Add(this.dateTimePickerBirthDate);
+            this.panelJudul.Controls.Add(this.radioButtonFemale);
+            this.panelJudul.Controls.Add(this.radioButtonMale);
             this.panelJudul.Controls.Add(this.buttonSave);
             this.panelJudul.Controls.Add(this.buttonExit);
             this.panelJudul.Controls.Add(this.buttonEdit);
             this.panelJudul.Controls.Add(this.panelGarisRegistration);
             this.panelJudul.Controls.Add(this.labelProfile);
-            this.panelJudul.Controls.Add(this.textBox6);
-            this.panelJudul.Controls.Add(this.textBox5);
-            this.panelJudul.Controls.Add(this.textBox4);
-            this.panelJudul.Controls.Add(this.textBox3);
-            this.panelJudul.Controls.Add(this.textBox2);
-            this.panelJudul.Controls.Add(this.textBox1);
+            this.panelJudul.Controls.Add(this.textBoxPhone);
+            this.panelJudul.Controls.Add(this.textBoxEmail);
+            this.panelJudul.Controls.Add(this.textBoxUsername);
+            this.panelJudul.Controls.Add(this.textBoxName);
             this.panelJudul.Controls.Add(this.labelUsername);
             this.panelJudul.Controls.Add(this.labelPhoneNumber);
             this.panelJudul.Controls.Add(this.labelBirthDate);
@@ -160,59 +162,41 @@
             this.labelProfile.TabIndex = 49;
             this.labelProfile.Text = "Profile";
             // 
-            // textBox6
+            // textBoxPhone
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(497, 287);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(231, 22);
-            this.textBox6.TabIndex = 48;
+            this.textBoxPhone.Enabled = false;
+            this.textBoxPhone.Location = new System.Drawing.Point(497, 287);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(231, 22);
+            this.textBoxPhone.TabIndex = 48;
             // 
-            // textBox5
+            // textBoxEmail
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(155, 287);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(231, 22);
-            this.textBox5.TabIndex = 47;
+            this.textBoxEmail.Enabled = false;
+            this.textBoxEmail.Location = new System.Drawing.Point(495, 201);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(231, 22);
+            this.textBoxEmail.TabIndex = 46;
             // 
-            // textBox4
+            // textBoxUsername
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(495, 201);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(231, 22);
-            this.textBox4.TabIndex = 46;
+            this.textBoxUsername.Enabled = false;
+            this.textBoxUsername.Location = new System.Drawing.Point(497, 114);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(231, 22);
+            this.textBoxUsername.TabIndex = 44;
             // 
-            // textBox3
+            // textBoxName
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(155, 201);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 22);
-            this.textBox3.TabIndex = 45;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(497, 114);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 22);
-            this.textBox2.TabIndex = 44;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(155, 114);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 22);
-            this.textBox1.TabIndex = 43;
+            this.textBoxName.Enabled = false;
+            this.textBoxName.Location = new System.Drawing.Point(155, 114);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(231, 22);
+            this.textBoxName.TabIndex = 43;
             // 
             // labelUsername
             // 
@@ -286,18 +270,6 @@
             this.labelNama.TabIndex = 28;
             this.labelNama.Text = "Name:";
             // 
-            // labelJudul
-            // 
-            this.labelJudul.AutoSize = true;
-            this.labelJudul.BackColor = System.Drawing.Color.Transparent;
-            this.labelJudul.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(332, 47);
-            this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(479, 54);
-            this.labelJudul.TabIndex = 64;
-            this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
-            // 
             // pictureBoxUsername
             // 
             this.pictureBoxUsername.Image = global::CELIKOOR_PINKMAN.Properties.Resources.id_card_no_fill;
@@ -364,6 +336,18 @@
             this.pictureBoxNama.TabIndex = 23;
             this.pictureBoxNama.TabStop = false;
             // 
+            // labelJudul
+            // 
+            this.labelJudul.AutoSize = true;
+            this.labelJudul.BackColor = System.Drawing.Color.Transparent;
+            this.labelJudul.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.labelJudul.Location = new System.Drawing.Point(332, 47);
+            this.labelJudul.Name = "labelJudul";
+            this.labelJudul.Size = new System.Drawing.Size(479, 54);
+            this.labelJudul.TabIndex = 64;
+            this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
+            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
@@ -376,6 +360,47 @@
             this.pictureBoxLogo.TabIndex = 65;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // radioButtonFemale
+            // 
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Enabled = false;
+            this.radioButtonFemale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFemale.Location = new System.Drawing.Point(244, 286);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(95, 32);
+            this.radioButtonFemale.TabIndex = 55;
+            this.radioButtonFemale.Text = "Female";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMale
+            // 
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Checked = true;
+            this.radioButtonMale.Enabled = false;
+            this.radioButtonMale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMale.Location = new System.Drawing.Point(155, 286);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(76, 32);
+            this.radioButtonMale.TabIndex = 54;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Male";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerBirthDate
+            // 
+            this.dateTimePickerBirthDate.CalendarForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarTitleBackColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.Enabled = false;
+            this.dateTimePickerBirthDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(154, 201);
+            this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
+            this.dateTimePickerBirthDate.Size = new System.Drawing.Size(177, 30);
+            this.dateTimePickerBirthDate.TabIndex = 56;
+            // 
             // FormProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -387,6 +412,7 @@
             this.Controls.Add(this.labelJudul);
             this.Name = "FormProfile";
             this.Text = "FormProfile";
+            this.Load += new System.EventHandler(this.FormProfile_Load);
             this.panelJudul.ResumeLayout(false);
             this.panelJudul.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
@@ -409,12 +435,10 @@
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Panel panelGarisRegistration;
         private System.Windows.Forms.Label labelProfile;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPhone;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.Label labelBirthDate;
@@ -429,5 +453,8 @@
         private System.Windows.Forms.PictureBox pictureBoxNama;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.RadioButton radioButtonFemale;
+        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBirthDate;
     }
 }

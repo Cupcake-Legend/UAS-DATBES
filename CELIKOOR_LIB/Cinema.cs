@@ -64,7 +64,7 @@ namespace CELIKOOR_LIB
         {
             string sql;
 
-            if (kriteria.Length > 0)
+            if (kriteria == "")
             {
                 sql = "SELECT * FROM cinemas";
             }

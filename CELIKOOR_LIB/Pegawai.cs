@@ -76,7 +76,7 @@ namespace CELIKOOR_LIB
         {
             string sql;
 
-            if (kriteria.Length > 0)
+            if (kriteria == "")
             {
                 sql = "SELECT * FROM pegawais";
             }
@@ -110,7 +110,7 @@ namespace CELIKOOR_LIB
         public static bool InsertData(Pegawai pegawai)
         {
             string sql =
-                "INSERT INTO pegawai(nama, email, username, password, roles) " +
+                "INSERT INTO pegawais(nama, email, username, password, roles) " +
                 "VALUES ('" +
                 pegawai.Nama + "', '" +
                 pegawai.Email + "', '" +

@@ -30,20 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTambahCinema));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.label = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxKota = new System.Windows.Forms.TextBox();
             this.labelKota = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.labelTglDibuka = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxAlamat = new System.Windows.Forms.TextBox();
             this.labelAlamat = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNama = new System.Windows.Forms.TextBox();
             this.labelNamaCabang = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -58,17 +56,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 137);
             this.panel1.TabIndex = 77;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(35, 12);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 50;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // label
             // 
@@ -94,6 +81,7 @@
             this.buttonSave.TabIndex = 76;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonExit
             // 
@@ -108,13 +96,13 @@
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
             // 
-            // textBox5
+            // textBoxKota
             // 
-            this.textBox5.Location = new System.Drawing.Point(204, 371);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(239, 22);
-            this.textBox5.TabIndex = 74;
+            this.textBoxKota.Location = new System.Drawing.Point(204, 371);
+            this.textBoxKota.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxKota.Name = "textBoxKota";
+            this.textBoxKota.Size = new System.Drawing.Size(239, 22);
+            this.textBoxKota.TabIndex = 74;
             // 
             // labelKota
             // 
@@ -127,14 +115,6 @@
             this.labelKota.TabIndex = 73;
             this.labelKota.Text = "Kota :";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(204, 328);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(239, 22);
-            this.textBox4.TabIndex = 72;
-            // 
             // labelTglDibuka
             // 
             this.labelTglDibuka.AutoSize = true;
@@ -146,15 +126,15 @@
             this.labelTglDibuka.TabIndex = 71;
             this.labelTglDibuka.Text = "Tgl dibuka :";
             // 
-            // textBox3
+            // textBoxAlamat
             // 
-            this.textBox3.Location = new System.Drawing.Point(204, 250);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(239, 58);
-            this.textBox3.TabIndex = 70;
+            this.textBoxAlamat.Location = new System.Drawing.Point(204, 250);
+            this.textBoxAlamat.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAlamat.Multiline = true;
+            this.textBoxAlamat.Name = "textBoxAlamat";
+            this.textBoxAlamat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxAlamat.Size = new System.Drawing.Size(239, 58);
+            this.textBoxAlamat.TabIndex = 70;
             // 
             // labelAlamat
             // 
@@ -167,13 +147,13 @@
             this.labelAlamat.TabIndex = 69;
             this.labelAlamat.Text = "Alamat :";
             // 
-            // textBox2
+            // textBoxNama
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 206);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(239, 22);
-            this.textBox2.TabIndex = 68;
+            this.textBoxNama.Location = new System.Drawing.Point(204, 206);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNama.Name = "textBoxNama";
+            this.textBoxNama.Size = new System.Drawing.Size(239, 22);
+            this.textBoxNama.TabIndex = 68;
             // 
             // labelNamaCabang
             // 
@@ -186,43 +166,40 @@
             this.labelNamaCabang.TabIndex = 67;
             this.labelNamaCabang.Text = "Nama Cabang :";
             // 
-            // textBox1
+            // dateTimePicker1
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 164);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(96, 22);
-            this.textBox1.TabIndex = 66;
+            this.dateTimePicker1.Location = new System.Drawing.Point(204, 327);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 78;
             // 
-            // labelId
+            // pictureBoxLogo
             // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(155, 161);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(41, 25);
-            this.labelId.TabIndex = 65;
-            this.labelId.Text = "ID :";
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(35, 12);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 50;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // FormTambahCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 496);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxKota);
             this.Controls.Add(this.labelKota);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.labelTglDibuka);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxAlamat);
             this.Controls.Add(this.labelAlamat);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.labelNamaCabang);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.labelId);
             this.Name = "FormTambahCinema";
             this.Text = "FormTambahCinema";
             this.panel1.ResumeLayout(false);
@@ -240,15 +217,13 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxKota;
         private System.Windows.Forms.Label labelKota;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label labelTglDibuka;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxAlamat;
         private System.Windows.Forms.Label labelAlamat;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label labelNamaCabang;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
