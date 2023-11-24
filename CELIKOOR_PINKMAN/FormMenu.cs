@@ -73,7 +73,15 @@ namespace CELIKOOR_PINKMAN
                 pegawaiLogin = null;
                 MessageBox.Show("Terjadi kesalahan!, Tolong Login ulang!", "Error");
             }
-
+            else if(konsumenLogin == null && pegawaiLogin == null) 
+            {
+                menuToolStripMenuItem.Visible = true;
+                loginToolStripMenuItem.Visible = true;
+                registerToolStripMenuItem.Visible = true;
+                operatorToolStripMenuItem.Visible = false;
+                kasirToolStripMenuItem.Visible = false;
+                masterToolStripMenuItem.Visible = false;
+            }
 
         }
 
@@ -120,9 +128,10 @@ namespace CELIKOOR_PINKMAN
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            menuToolStripMenuItem.Visible = true;
-            loginToolStripMenuItem.Visible = true;
-            registerToolStripMenuItem.Visible = true;
+            konsumenLogin = null;
+            pegawaiLogin = null;
+            AturMenu();
+           
             MessageBox.Show("Akun sukses logout!");
 
         }
