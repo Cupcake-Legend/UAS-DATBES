@@ -189,38 +189,44 @@
             // konsumenToolStripMenuItem
             // 
             this.konsumenToolStripMenuItem.Name = "konsumenToolStripMenuItem";
-            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.konsumenToolStripMenuItem.Text = "Konsumen";
+            this.konsumenToolStripMenuItem.Click += new System.EventHandler(this.konsumenToolStripMenuItem_Click);
             // 
             // cinemaToolStripMenuItem
             // 
             this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cinemaToolStripMenuItem.Text = "Cinema";
+            this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
             // 
             // pegawaiToolStripMenuItem
             // 
             this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
-            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pegawaiToolStripMenuItem.Text = "Pegawai";
+            this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
             // 
             // kelompokToolStripMenuItem
             // 
             this.kelompokToolStripMenuItem.Name = "kelompokToolStripMenuItem";
-            this.kelompokToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.kelompokToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kelompokToolStripMenuItem.Text = "Kelompok";
+            this.kelompokToolStripMenuItem.Click += new System.EventHandler(this.kelompokToolStripMenuItem_Click);
             // 
             // aktorToolStripMenuItem
             // 
             this.aktorToolStripMenuItem.Name = "aktorToolStripMenuItem";
-            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aktorToolStripMenuItem.Text = "Aktor";
+            this.aktorToolStripMenuItem.Click += new System.EventHandler(this.aktorToolStripMenuItem_Click);
             // 
             // genreToolStripMenuItem
             // 
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.genreToolStripMenuItem.Text = "Genre";
+            this.genreToolStripMenuItem.Click += new System.EventHandler(this.genreToolStripMenuItem_Click);
             // 
             // FormMenu
             // 

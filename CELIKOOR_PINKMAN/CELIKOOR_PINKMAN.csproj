@@ -55,6 +55,54 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
+    <Compile Include="FormDaftarAktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarAktor.Designer.cs">
+      <DependentUpon>FormDaftarAktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarCinema.Designer.cs">
+      <DependentUpon>FormDaftarCinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarGenre.Designer.cs">
+      <DependentUpon>FormDaftarGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarJenisStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarJenisStudio.Designer.cs">
+      <DependentUpon>FormDaftarJenisStudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarKelompok.Designer.cs">
+      <DependentUpon>FormDaftarKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarKonsumen.Designer.cs">
+      <DependentUpon>FormDaftarKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarPegawai.Designer.cs">
+      <DependentUpon>FormDaftarPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarStudio.Designer.cs">
+      <DependentUpon>FormDaftarStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLoginNormal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +121,47 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfile.Designer.cs">
+      <DependentUpon>FormProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegistrasi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegistrasi.Designer.cs">
       <DependentUpon>FormRegistrasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahAktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahAktor.Designer.cs">
+      <DependentUpon>FormTambahAktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahCinema.Designer.cs">
+      <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahGenre.Designer.cs">
+      <DependentUpon>FormTambahGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahKelompok.Designer.cs">
+      <DependentUpon>FormTambahKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahPegawai.Designer.cs">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +171,30 @@
     <Compile Include="Resources\Controls\TextBoxControl.Designer.cs">
       <DependentUpon>TextBoxControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDaftarAktor.resx">
+      <DependentUpon>FormDaftarAktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarCinema.resx">
+      <DependentUpon>FormDaftarCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarGenre.resx">
+      <DependentUpon>FormDaftarGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarJenisStudio.resx">
+      <DependentUpon>FormDaftarJenisStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarKelompok.resx">
+      <DependentUpon>FormDaftarKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarKonsumen.resx">
+      <DependentUpon>FormDaftarKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarPegawai.resx">
+      <DependentUpon>FormDaftarPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarStudio.resx">
+      <DependentUpon>FormDaftarStudio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLoginNormal.resx">
       <DependentUpon>FormLoginNormal.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,8 +204,26 @@
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProfile.resx">
+      <DependentUpon>FormProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegistrasi.resx">
       <DependentUpon>FormRegistrasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahAktor.resx">
+      <DependentUpon>FormTambahAktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahCinema.resx">
+      <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahGenre.resx">
+      <DependentUpon>FormTambahGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahKelompok.resx">
+      <DependentUpon>FormTambahKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahPegawai.resx">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

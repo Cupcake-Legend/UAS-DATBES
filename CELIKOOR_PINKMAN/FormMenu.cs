@@ -101,9 +101,6 @@ namespace CELIKOOR_PINKMAN
                     AturMenu();
 
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -157,6 +154,47 @@ namespace CELIKOOR_PINKMAN
         }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProfile frm = new FormProfile();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+
+        private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDaftarKonsumen frm = new FormDaftarKonsumen();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+
+        private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDaftarCinema frm = new FormDaftarCinema();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+
+        private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDaftarPegawai frm = new FormDaftarPegawai();
+            frm.Owner = this;
+        }
+
+        private void kelompokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDaftarKelompok frm = new FormDaftarKelompok();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+
+        private void genreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDaftarGenre frm = new FormDaftarGenre();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+
+        private void aktorToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
