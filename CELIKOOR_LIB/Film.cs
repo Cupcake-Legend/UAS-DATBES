@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,7 +60,136 @@ namespace CELIKOOR_LIB
         #endregion
 
         #region methods
+        private static Film SelectDataSingle(string filmID)
+        {
+            string sql = "SELECT * FROM films as f " +
+                "INNER JOIN kelompoks AS k ON k.id = f.kelompoks_id " +
+                "WHERE id = '" + filmID + "'";
 
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            Film film;
+
+            if (hasil.Read())
+            {
+                Kelompok kelompok = new Kelompok(
+                    (int)hasil.GetValue(10),
+                    hasil.GetValue(11).ToString()
+                    );
+
+                film = new Film(
+                    (int)hasil.GetValue(0),
+                    hasil.GetValue(1).ToString(),
+                    hasil.GetValue(2).ToString(),
+                    (int)hasil.GetValue(3),
+                    (int)hasil.GetValue(4),
+                    kelompok,
+                    hasil.GetValue(6).ToString(),
+                    (int)hasil.GetValue(7) != 0,
+                    hasil.GetValue(8).ToString(),
+                    (double)hasil.GetValue(9)
+                    );
+
+                return film;
+            }
+            else throw new Exception("Data tidak ditemukan");
+        }
+
+        public static List<Film> SelectDataList(string kriteria, string nilaiKriteria)
+        {
+            string sql;
+
+            if (kriteria == "")
+            {
+                sql = "SELECT * FROM films as f " +
+                "INNER JOIN kelompoks AS k ON k.id = f.kelompoks_id";
+            }
+            else
+            {
+                sql = "SELECT * FROM films as f " +
+                "INNER JOIN kelompoks AS k ON k.id = f.kelompoks_id " +
+                "WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%";
+            }
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            List<Film> listFilms = new List<Film>();
+
+            while (hasil.Read())
+            {
+                Kelompok kelompok = new Kelompok(
+                    (int)hasil.GetValue(10),
+                    hasil.GetValue(11).ToString()
+                    );
+
+                Film film = new Film(
+                    (int)hasil.GetValue(0),
+                    hasil.GetValue(1).ToString(),
+                    hasil.GetValue(2).ToString(),
+                    (int)hasil.GetValue(3),
+                    (int)hasil.GetValue(4),
+                    kelompok,
+                    hasil.GetValue(6).ToString(),
+                    (int)hasil.GetValue(7) != 0,
+                    hasil.GetValue(8).ToString(),
+                    (double)hasil.GetValue(9)
+                    );
+
+                listFilms.Add(film);
+            }
+
+            return listFilms;
+        }
+
+        public static bool InsertData(Film film)
+        {
+            string sql = "INSERT INTO " +
+                "films(judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, cover_image, diskon_nominal) " +
+                "VALUES ('" +
+                film.Judul + "', '" +
+                film.Sinopsis + "', '" +
+                film.tahun + "', '" +
+                film.KelompokFilm.Id + "', '" +
+                film.Bahasa + "', '" +
+                Convert.ToInt32(film.IsSubIndo) + "', '" +
+                film.CoverImage + "', '" +
+                film.DiskonNominal + "')";
+
+            int rowsEffected = Koneksi.JalankanPerintahDML(sql);
+
+            if (rowsEffected == 0) return false;
+            else return true;
+        }
+
+        public static bool UpdateData(Film film)
+        {
+            string sql = "UPDATE films SET " +
+                "judul = '" + film.Judul + "', " +
+                "sinopsis = '" + film.Sinopsis + "', " +
+                "tahun = '" + film.Tahun + "', " +
+                "durasi = '" + film.Durasi + "', " +
+                "kelompoks_id = '" + film.KelompokFilm.Id + "', " +
+                "bahasa = '" + film.Bahasa + "', " +
+                "is_sub_indo = '" + Convert.ToInt32(film.IsSubIndo) + "', " +
+                "cover_image = '" + film.CoverImage + "', " +
+                "diskon_nominal = '" + film.DiskonNominal + "' " +
+                "WHERE id = '" + film.Id + "'";
+
+            int rowsEffected = Koneksi.JalankanPerintahDML(sql);
+
+            if (rowsEffected == 0) return false;
+            else return true;
+        }
+
+        public static bool DeleteData(Film films)
+        {
+            string sql = "DELETE FROM films WHERE id = '" + films.Id + "'";
+
+            int rowsEffected = Koneksi.JalankanPerintahDML(sql);
+
+            if (rowsEffected == 0) return false;
+            else return true;
+        }
         #endregion
     }
 }
