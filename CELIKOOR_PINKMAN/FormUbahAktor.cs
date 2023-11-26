@@ -13,6 +13,7 @@ namespace CELIKOOR_PINKMAN
 {
     public partial class FormUbahAktor : Form
     {
+        public Aktor aktor;
         public FormUbahAktor()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace CELIKOOR_PINKMAN
                     gender = 'L';
                 }
 
-                Aktor a = new Aktor(0, textBoxNama.Text, dateTimePicker1.Value, gender, textBoxAsal.Text);
+                Aktor a = new Aktor(int.Parse(textBoxId.Text), textBoxNama.Text, dateTimePicker1.Value, gender, textBoxAsal.Text);
                 Boolean success = Aktor.UpdateData(a);
 
                 if (success)

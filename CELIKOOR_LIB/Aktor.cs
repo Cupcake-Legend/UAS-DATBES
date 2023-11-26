@@ -106,7 +106,7 @@ namespace CELIKOOR_LIB
         {
             string sql =
                 "INSERT INTO aktors(nama, tgl_lahir, gender, negara_asal) " +
-                "VALUES ('" +
+                "VALUES ('" + 
                 aktor.Nama + "', '" +
                 aktor.Tgl_Lahir.ToString("yyyy-MM-dd") + "', '" +
                 aktor.Gender + "', '" +

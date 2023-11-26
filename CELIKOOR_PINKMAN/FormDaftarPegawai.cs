@@ -27,32 +27,11 @@ namespace CELIKOOR_PINKMAN
                 if (listPegawai.Count > 0)
                 {
                     dataGridView1.DataSource = listPegawai;
-                    if(dataGridView1.Columns.Count < 7)
-                    {
-                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                        bcol.HeaderText = "Aksi";
-                        bcol.Text = "Ubah";
-                        bcol.Name = "btnUbahGrid";
-
-                        bcol.UseColumnTextForButtonValue = true;
-                        dataGridView1.Columns.Add(bcol);
-
-                        DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
-                        bcol1.HeaderText = "Aksi";
-                        bcol1.Text = "Delete";
-                        bcol1.Name = "btnDeleteGrid";
-                        bcol1.UseColumnTextForButtonValue = true;
-                        dataGridView1.Columns.Add(bcol1);
-
-                    }
                 }
                 else
                 {
                     dataGridView1.DataSource = null;
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -70,31 +49,64 @@ namespace CELIKOOR_PINKMAN
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns["btnDelete"].Index && e.RowIndex >= 0)
+            
+        }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                string kodeHapus = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
-                string namaHapus = dataGridView1.CurrentRow.Cells["nama"].Value.ToString();
+                string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                string namaHapus = dataGridView1.CurrentRow.Cells["Nama"].Value.ToString();
+
                 DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus?" + kodeHapus + "-" +
                     namaHapus + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (hasil == DialogResult.Yes)
                 {
-                    Pegawai f = Pegawai.SelectDataSingle(kodeHapus);
-                    Boolean hapus = Pegawai.DeleteData(f);
+                    Aktor f = Aktor.SelectDataSingle(kodeHapus);
+                    Boolean hapus = Aktor.DeleteData(f);
 
                     if (hapus)
                     {
                         MessageBox.Show("Penghapusan data berhasil");
-                        
+
                     }
                     else
                     {
                         MessageBox.Show("Penghapusan data gagal");
                     }
-
                 }
+            }
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string kriteria = "";
+            if (comboBox1.Text == "ID")
+            {
+                kriteria = "pegawais.Id";
+            }
 
+            else if (comboBox1.Text == "Nama")
+            {
+                kriteria = "pegawais.Nama";
+            }
 
+            else if (comboBox1.Text == "roles")
+            {
+                kriteria = "pegawais.Roles";
+            }
+
+            listPegawai = Pegawai.SelectDataList(kriteria, textBox1.Text);
+
+            if (listPegawai.Count > 0)
+            {
+                dataGridView1.DataSource = listPegawai;
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
             }
         }
     }

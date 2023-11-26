@@ -27,27 +27,14 @@ namespace CELIKOOR_PINKMAN
             try
             {
                 listKonsumen = Konsumen.SelectDataList("","");
-                if(listKonsumen.Count > 0 )
+                if (listKonsumen.Count > 0)
                 {
                     dataGridView1.DataSource = listKonsumen;
-                    if(dataGridView1.Columns.Count < 10)
-                    {
-                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                        bcol.HeaderText = "Aksi";
-                        bcol.Text = "Delete";
-                        bcol.Name = "btnDelete";
-
-                        bcol.UseColumnTextForButtonValue = true;
-                        dataGridView1.Columns.Add(bcol);
-                    }
                 }
                 else
                 {
                     dataGridView1.DataSource = null;
                 }
-
-
-
             }
             catch(Exception ex)
             {
@@ -86,28 +73,30 @@ namespace CELIKOOR_PINKMAN
             {
                 dataGridView1.DataSource= null;
             }
-
-
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns["btnDelete"].Index && e.RowIndex >= 0)
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                string kodeHapus = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
-                string namaHapus = dataGridView1.CurrentRow.Cells["nama"].Value.ToString();
+                string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                string namaHapus = dataGridView1.CurrentRow.Cells["Nama"].Value.ToString();
+
                 DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus?" + kodeHapus + "-" +
                     namaHapus + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (hasil == DialogResult.Yes)
                 {
-                    Konsumen f = Konsumen.SelectDataSingle(kodeHapus);
-                    Boolean hapus = Konsumen.DeleteData(f);
+                    Aktor f = Aktor.SelectDataSingle(kodeHapus);
+                    Boolean hapus = Aktor.DeleteData(f);
 
                     if (hapus)
                     {
@@ -118,11 +107,7 @@ namespace CELIKOOR_PINKMAN
                     {
                         MessageBox.Show("Penghapusan data gagal");
                     }
-
                 }
-
-
-
             }
         }
     }
