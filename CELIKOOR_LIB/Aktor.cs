@@ -125,7 +125,7 @@ namespace CELIKOOR_LIB
                 "nama = '" + aktor.Nama + "', " +
                 "tgl_lahir = '" + aktor.Tgl_Lahir.ToString("yyyy-MM=dd") + "', " +
                 "gender = '" + aktor.Gender + "', " +
-                "negara_asal = " + aktor.Negara_asal + "' " +
+                "negara_asal = '" + aktor.Negara_asal + "' " +
                 "WHERE id = '" + aktor.Id + "'";
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);
