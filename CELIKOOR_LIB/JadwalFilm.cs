@@ -109,7 +109,7 @@ namespace CELIKOOR_LIB
         {
             string sql = "UPDATE jadwal_films SET " +
                 "tanggal = '" + jadwalFilm.Tanggal.ToString("yyyy-MM-dd") + "', " +
-                "jam_pemutaran = '" + jadwalFilm.JamPemutaran + "' " +
+                "jam_pemutaran = '" + jadwalFilm.JamPemutaran + "' " +  
                 "WHERE id = '" + jadwalFilm.Id + "'";
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);

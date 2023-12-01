@@ -43,11 +43,9 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.labelGenre = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownKapasitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -197,15 +195,6 @@
             this.labelGenre.TabIndex = 130;
             this.labelGenre.Text = "Nama :";
             // 
-            // textBoxId
-            // 
-            this.textBoxId.Enabled = false;
-            this.textBoxId.Location = new System.Drawing.Point(205, 164);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(64, 22);
-            this.textBoxId.TabIndex = 129;
-            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
@@ -240,17 +229,6 @@
             this.panel1.Size = new System.Drawing.Size(504, 137);
             this.panel1.TabIndex = 134;
             // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(142, 164);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(39, 25);
-            this.labelId.TabIndex = 128;
-            this.labelId.Text = "Id :";
-            // 
             // FormTambahStudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -270,9 +248,7 @@
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.labelGenre);
-            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.labelId);
             this.Name = "FormTambahStudio";
             this.Text = "FormTambahStudio";
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownKapasitas)).EndInit();
@@ -300,10 +276,8 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label labelGenre;
-        private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelId;
     }
 }

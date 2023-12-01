@@ -44,6 +44,16 @@ namespace CELIKOOR_PINKMAN
                         bcol.Name = "btnUbahGrid";
                         bcol.UseColumnTextForButtonValue = true;
                         dataGridView1.Columns.Add(bcol);
+
+                        DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
+                        //nama header
+                        bcol1.HeaderText = "Aksi";
+                        //nama tombol
+                        bcol1.Text = "Delete";
+                        bcol1.Name = "btnDeleteGrid";
+
+                        bcol1.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(bcol1);
                     }
                 }
                 else
@@ -83,6 +93,11 @@ namespace CELIKOOR_PINKMAN
                     }
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,6 +36,32 @@ namespace CELIKOOR_PINKMAN
                 if (listCinema.Count > 0)
                 {
                     dataGridView1.DataSource = listCinema;
+
+                    if(dataGridView1.ColumnCount< 6)
+                    {
+                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+                        //nama header
+                        bcol.HeaderText = "Aksi";
+                        //nama tombol
+                        bcol.Text = "Ubah";
+                        bcol.Name = "btnUbahGrid";
+
+                        bcol.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(bcol);
+
+                        DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
+                        //nama header
+                        bcol1.HeaderText = "Aksi";
+                        //nama tombol
+                        bcol1.Text = "Ubah";
+                        bcol1.Name = "btnUbahGrid";
+
+                        bcol1.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(bcol1);
+
+                    }
+
+
                 }
                 else
                 {
@@ -52,30 +79,46 @@ namespace CELIKOOR_PINKMAN
         }
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
-                string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
-                string namaHapus = dataGridView1.CurrentRow.Cells["nama_cabang"].Value.ToString();
 
-                DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus?" + kodeHapus + "-" +
-                    namaHapus + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (hasil == DialogResult.Yes)
+            }
+
+            if (e.ColumnIndex == dataGridView1.Columns["btnDeleteGrid"].Index && e.RowIndex >= 0)
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    Aktor f = Aktor.SelectDataSingle(kodeHapus);
-                    Boolean hapus = Aktor.DeleteData(f);
+                    string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                    string namaHapus = dataGridView1.CurrentRow.Cells["nama_cabang"].Value.ToString();
 
-                    if (hapus)
-                    {
-                        MessageBox.Show("Penghapusan data berhasil");
+                    DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus?" + kodeHapus + "-" +
+                        namaHapus + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    }
-                    else
+                    if (hasil == DialogResult.Yes)
                     {
-                        MessageBox.Show("Penghapusan data gagal");
+                        Aktor f = Aktor.SelectDataSingle(kodeHapus);
+                        Boolean hapus = Aktor.DeleteData(f);
+
+                        if (hapus)
+                        {
+                            MessageBox.Show("Penghapusan data berhasil");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Penghapusan data gagal");
+                        }
                     }
                 }
+
             }
+
         }
     }
 }

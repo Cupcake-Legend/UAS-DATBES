@@ -74,5 +74,10 @@ namespace CELIKOOR_PINKMAN
                 }
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
