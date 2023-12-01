@@ -67,11 +67,29 @@
     <Compile Include="FormDaftarCinema.Designer.cs">
       <DependentUpon>FormDaftarCinema.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDaftarFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarFilm.Designer.cs">
+      <DependentUpon>FormDaftarFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDaftarGenre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDaftarGenre.Designer.cs">
       <DependentUpon>FormDaftarGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarInvoice.Designer.cs">
+      <DependentUpon>FormDaftarInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarJadwalFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarJadwalFilm.Designer.cs">
+      <DependentUpon>FormDaftarJadwalFilm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDaftarJenisStudio.cs">
       <SubType>Form</SubType>
@@ -145,11 +163,23 @@
     <Compile Include="FormTambahCinema.Designer.cs">
       <DependentUpon>FormTambahCinema.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahFilm.Designer.cs">
+      <DependentUpon>FormTambahFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahGenre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTambahGenre.Designer.cs">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahInvoice.Designer.cs">
+      <DependentUpon>FormTambahInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTambahJenisStudio.cs">
       <SubType>Form</SubType>
@@ -195,8 +225,14 @@
     <EmbeddedResource Include="FormDaftarCinema.resx">
       <DependentUpon>FormDaftarCinema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarFilm.resx">
+      <DependentUpon>FormDaftarFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarGenre.resx">
       <DependentUpon>FormDaftarGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarJadwalFilm.resx">
+      <DependentUpon>FormDaftarJadwalFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarJenisStudio.resx">
       <DependentUpon>FormDaftarJenisStudio.cs</DependentUpon>
@@ -233,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahCinema.resx">
       <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahFilm.resx">
+      <DependentUpon>FormTambahFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahGenre.resx">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>

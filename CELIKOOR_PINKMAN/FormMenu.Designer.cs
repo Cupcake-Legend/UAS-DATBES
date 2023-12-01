@@ -48,6 +48,7 @@
             this.kelompokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -180,7 +181,8 @@
             this.pegawaiToolStripMenuItem,
             this.kelompokToolStripMenuItem,
             this.aktorToolStripMenuItem,
-            this.genreToolStripMenuItem});
+            this.genreToolStripMenuItem,
+            this.filmToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.masterToolStripMenuItem.Text = "Master";
@@ -227,6 +229,13 @@
             this.genreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.genreToolStripMenuItem.Text = "Genre";
             this.genreToolStripMenuItem.Click += new System.EventHandler(this.genreToolStripMenuItem_Click);
+            // 
+            // filmToolStripMenuItem
+            // 
+            this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.filmToolStripMenuItem.Text = "Film";
+            this.filmToolStripMenuItem.Click += new System.EventHandler(this.filmToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -277,6 +286,7 @@
         private System.Windows.Forms.ToolStripMenuItem kelompokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aktorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem genreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filmToolStripMenuItem;
     }
 }
 

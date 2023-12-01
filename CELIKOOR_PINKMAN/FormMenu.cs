@@ -256,5 +256,21 @@ namespace CELIKOOR_PINKMAN
             }
 
         }
+
+        private void filmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormDaftarFilm"];
+            if (frm == null)
+            {
+                FormDaftarFilm frmDaftarFilm = new FormDaftarFilm();
+                frmDaftarFilm.MdiParent = this;
+                frmDaftarFilm.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
+        }
     }
 }
