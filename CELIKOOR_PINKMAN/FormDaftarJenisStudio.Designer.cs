@@ -48,6 +48,7 @@
             this.buttonTambah.TabIndex = 65;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // buttonDelete
             // 
@@ -59,6 +60,7 @@
             this.buttonDelete.TabIndex = 64;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // dataGridView1
             // 

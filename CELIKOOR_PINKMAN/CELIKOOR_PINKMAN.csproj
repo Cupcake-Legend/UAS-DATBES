@@ -151,6 +151,12 @@
     <Compile Include="FormTambahGenre.Designer.cs">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahJenisStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahJenisStudio.Designer.cs">
+      <DependentUpon>FormTambahJenisStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahKelompok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,12 @@
     </Compile>
     <Compile Include="FormTambahPegawai.Designer.cs">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahStudio.Designer.cs">
+      <DependentUpon>FormTambahStudio.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUbahAktor.cs">
       <SubType>Form</SubType>
@@ -225,11 +237,17 @@
     <EmbeddedResource Include="FormTambahGenre.resx">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahJenisStudio.resx">
+      <DependentUpon>FormTambahJenisStudio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTambahKelompok.resx">
       <DependentUpon>FormTambahKelompok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahPegawai.resx">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahStudio.resx">
+      <DependentUpon>FormTambahStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbahAktor.resx">
       <DependentUpon>FormUbahAktor.cs</DependentUpon>
