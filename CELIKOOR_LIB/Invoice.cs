@@ -17,6 +17,7 @@ namespace CELIKOOR_LIB
         private Konsumen konsumenInvoice;
         private Pegawai kasir;
         private string status;
+        private List<Ticket> ticketList;
         #endregion
 
         #region constructors
@@ -29,6 +30,7 @@ namespace CELIKOOR_LIB
             this.KonsumenInvoice = konsumenInvoice;
             this.Kasir = kasir;
             this.Status = status;
+            this.TicketList = new List<Ticket>();
         }
         #endregion
 
@@ -48,6 +50,7 @@ namespace CELIKOOR_LIB
                 else throw new Exception("Status hanya dapat bernilai PENDING / VALIDASI / TERBAYAR");
             }
         }
+        public List<Ticket> TicketList { get => ticketList; private set => ticketList = value; }
         #endregion
 
         #region methods
@@ -159,6 +162,13 @@ namespace CELIKOOR_LIB
             }
 
             return listInvoices;
+        }
+
+        public void InsertDataTicket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, JadwalFilm jadwalFilm, Studio studio, Film film)
+        {
+            Ticket ticket = new Ticket(nomorKursi,statusHadir, pegawaiOperator, harga, jadwalFilm, studio, film);
+
+            ticketList.Add(ticket);
         }
 
         public static bool InsertData(Invoice invoice)
