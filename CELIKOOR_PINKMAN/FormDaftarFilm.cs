@@ -22,15 +22,6 @@ namespace CELIKOOR_LIB
         {
             listFilm = Film.SelectDataList("", "");
 
-            if (listFilm.Count > 0)
-            {
-                if(dataGridView1.ColumnCount <)
-
-
-
-            }
-
-
 
         }
     }
