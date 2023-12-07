@@ -121,6 +121,12 @@
     <Compile Include="FormDaftarStudio.Designer.cs">
       <DependentUpon>FormDaftarStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLihatFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLihatFilm.Designer.cs">
+      <DependentUpon>FormLihatFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLoginNormal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,18 @@
     </Compile>
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPemesananTiket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPemesananTiket.Designer.cs">
+      <DependentUpon>FormPemesananTiket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPenjadwalanFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPenjadwalanFilm.Designer.cs">
+      <DependentUpon>FormPenjadwalanFilm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProfile.cs">
       <SubType>Form</SubType>
@@ -249,6 +267,9 @@
     <EmbeddedResource Include="FormDaftarStudio.resx">
       <DependentUpon>FormDaftarStudio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLihatFilm.resx">
+      <DependentUpon>FormLihatFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLoginNormal.resx">
       <DependentUpon>FormLoginNormal.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +278,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPemesananTiket.resx">
+      <DependentUpon>FormPemesananTiket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPenjadwalanFilm.resx">
+      <DependentUpon>FormPenjadwalanFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
