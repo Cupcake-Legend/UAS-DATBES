@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -164,7 +165,7 @@ namespace CELIKOOR_LIB
             return listInvoices;
         }
 
-        public void InsertDataTicket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, JadwalFilm jadwalFilm, Studio studio, Film film)
+        public void AddTicket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, JadwalFilm jadwalFilm, Studio studio, Film film)
         {
             Ticket ticket = new Ticket(nomorKursi,statusHadir, pegawaiOperator, harga, jadwalFilm, studio, film);
 
@@ -173,7 +174,10 @@ namespace CELIKOOR_LIB
 
         public static bool InsertData(Invoice invoice)
         {
-            string sql = "INSERT INTO " +
+            bool boolInvoice = false;
+            bool boolTicket = false;
+
+            string sqlInvoice = "INSERT INTO " +
                 "invoice(tanggal, grand_total, diskon_nominal, konsumens_id, kasir_id, status) " +
                 "VALUES ('" +
                 invoice.Tanggal.ToString("yyyy-MM-dd") + "', '" +
@@ -181,12 +185,40 @@ namespace CELIKOOR_LIB
                 invoice.DiskonNominal + "', '" +
                 invoice.KonsumenInvoice.Id + "', '" +
                 invoice.Kasir.Id + "', '" +
-                invoice.Status + "')";
+            invoice.Status + "')";
 
-            int rowsEffected = Koneksi.JalankanPerintahDML(sql);
+            int rowsEffectedInvoice = Koneksi.JalankanPerintahDML(sqlInvoice);
 
-            if (rowsEffected == 0) return false;
-            else return true;
+            if (rowsEffectedInvoice == 0) return boolInvoice;
+            else boolInvoice = true;
+
+            if (boolInvoice)
+            {
+                foreach (Ticket ticket in invoice.TicketList)
+                {
+                    string sqlTicket = "INSERT INTO tikets(invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id " +
+                        "VALUES('" +
+                        invoice.Id + "', '" +
+                        ticket.NomorKursi + "', '" +
+                        Convert.ToInt32(ticket.StatusHadir) + "', '" +
+                        ticket.PegawaiOperator.Id + "', '" +
+                        ticket.Harga + "', '" +
+                        ticket.JadwalFilm.Id + "', '" +
+                        ticket.Studio + "', '" +
+                        ticket.Film + "')";
+
+                    int rowsEffectedTicket = Koneksi.JalankanPerintahDML(sqlInvoice);
+
+                    if (rowsEffectedTicket == 0) break;
+                    else boolInvoice = true;
+                }
+                if (boolTicket)
+                {
+                    return true;
+                }
+                else return false;
+            }
+            else return false;
         }
 
         public static bool UpdateData(Invoice invoice)

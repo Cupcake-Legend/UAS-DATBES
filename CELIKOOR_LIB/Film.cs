@@ -60,7 +60,7 @@ namespace CELIKOOR_LIB
         #endregion
 
         #region methods
-        private static Film SelectDataSingle(string filmID)
+        public static Film SelectDataSingle(string filmID)
         {
             string sql = "SELECT * FROM films as f " +
                 "INNER JOIN kelompoks AS k ON k.id = f.kelompoks_id " +
