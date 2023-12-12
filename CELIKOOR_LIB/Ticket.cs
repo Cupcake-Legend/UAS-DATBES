@@ -14,21 +14,17 @@ namespace CELIKOOR_LIB
         private bool statusHadir;
         private Pegawai pegawaiOperator;
         private double harga;
-        private JadwalFilm jadwalFilm;
-        private Studio studio;
-        private Film film;
+        private SesiFilm sesiFilm;
         #endregion
 
         #region constructors
-        public Ticket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, JadwalFilm jadwalFilm, Studio studio, Film film)
+        public Ticket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, SesiFilm sesiFilm)
         {
             this.NomorKursi = nomorKursi;
             this.StatusHadir = statusHadir;
             this.PegawaiOperator = pegawaiOperator;
             this.Harga = harga;
-            this.JadwalFilm = jadwalFilm;
-            this.Studio = studio;
-            this.Film = film;
+            this.SesiFilm = sesiFilm;
         }
         #endregion
 
@@ -37,9 +33,7 @@ namespace CELIKOOR_LIB
         public bool StatusHadir { get => statusHadir; set => statusHadir = value; }
         public Pegawai PegawaiOperator { get => pegawaiOperator; set => pegawaiOperator = value; }
         public double Harga { get => harga; set => harga = value; }
-        public JadwalFilm JadwalFilm { get => jadwalFilm; set => jadwalFilm = value; }
-        public Studio Studio { get => studio; set => studio = value; }
-        public Film Film { get => film; set => film = value; }
+        public SesiFilm SesiFilm { get => sesiFilm; set => sesiFilm = value; }
         #endregion
 
         #region methods
@@ -53,20 +47,14 @@ namespace CELIKOOR_LIB
             {
                 Pegawai pegawai = Pegawai.SelectDataSingle(hasil.GetValue(3).ToString());
 
-                JadwalFilm jadwalFilm = JadwalFilm.SelectDataSingle(hasil.GetValue(5).ToString());
-
-                Studio studio = Studio.SelectDataSingle(hasil.GetValue(6).ToString());
-
-                Film film = Film.SelectDataSingle(hasil.GetValue(7).ToString());
+                SesiFilm sesiFilm = SesiFilm.SelectDataSingle(hasil.GetValue(5).ToString(), hasil.GetValue(6).ToString(), hasil.GetValue(7).ToString());
 
                 Ticket ticket = new Ticket(
                     hasil.GetValue(1).ToString(),
                     (int)hasil.GetValue(2) != 0,
                     pegawai,
                     (double)hasil.GetValue(4),
-                    jadwalFilm,
-                    studio,
-                    film
+                    sesiFilm
                     );
 
                 return ticket;
@@ -95,26 +83,39 @@ namespace CELIKOOR_LIB
             {
                 Pegawai pegawai = Pegawai.SelectDataSingle(hasil.GetValue(3).ToString());
 
-                JadwalFilm jadwalFilm = JadwalFilm.SelectDataSingle(hasil.GetValue(5).ToString());
-
-                Studio studio = Studio.SelectDataSingle(hasil.GetValue(6).ToString());
-
-                Film film = Film.SelectDataSingle(hasil.GetValue(7).ToString());
+                SesiFilm sesiFilm = SesiFilm.SelectDataSingle(hasil.GetValue(5).ToString(), hasil.GetValue(6).ToString(), hasil.GetValue(7).ToString());
 
                 Ticket ticket = new Ticket(
                     hasil.GetValue(1).ToString(),
                     (int)hasil.GetValue(2) != 0,
                     pegawai,
                     (double)hasil.GetValue(4),
-                    jadwalFilm,
-                    studio,
-                    film
+                    sesiFilm
                     );
 
                 listTIckets.Add(ticket);
             }
 
             return listTIckets;
+        }
+
+        internal static bool InsertData(string invoicesID, Ticket ticket)
+        {
+            string sql = "INSERT INTO tikets(invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id " +
+                        "VALUES('" +
+                        invoicesID + "', '" +
+                        ticket.NomorKursi + "', '" +
+                        Convert.ToInt32(ticket.StatusHadir) + "', '" +
+                        ticket.PegawaiOperator.Id + "', '" +
+                        ticket.Harga + "', '" +
+                        ticket.SesiFilm.JadwalFilm.Id + "', '" +
+                        ticket.SesiFilm.FilmStudio.Studio.Id + "', '" +
+                        ticket.SesiFilm.FilmStudio.Film.Id + "')";
+
+            int rowsEffected = Koneksi.JalankanPerintahDML(sql);
+
+            if (rowsEffected == 0) return false;
+            else return true;
         }
 
         public static bool UpdateData(string invoicesID, Ticket ticket)

@@ -165,9 +165,9 @@ namespace CELIKOOR_LIB
             return listInvoices;
         }
 
-        public void AddTicket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, JadwalFilm jadwalFilm, Studio studio, Film film)
+        public void AddTicket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, SesiFilm sesiFilm)
         {
-            Ticket ticket = new Ticket(nomorKursi,statusHadir, pegawaiOperator, harga, jadwalFilm, studio, film);
+            Ticket ticket = new Ticket(nomorKursi,statusHadir, pegawaiOperator, harga, sesiFilm);
 
             ticketList.Add(ticket);
         }
@@ -196,27 +196,20 @@ namespace CELIKOOR_LIB
             {
                 foreach (Ticket ticket in invoice.TicketList)
                 {
-                    string sqlTicket = "INSERT INTO tikets(invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id " +
-                        "VALUES('" +
-                        invoice.Id + "', '" +
-                        ticket.NomorKursi + "', '" +
-                        Convert.ToInt32(ticket.StatusHadir) + "', '" +
-                        ticket.PegawaiOperator.Id + "', '" +
-                        ticket.Harga + "', '" +
-                        ticket.JadwalFilm.Id + "', '" +
-                        ticket.Studio + "', '" +
-                        ticket.Film + "')";
+                    bool tmp = Ticket.InsertData(invoice.Id.ToString(), ticket);
 
-                    int rowsEffectedTicket = Koneksi.JalankanPerintahDML(sqlInvoice);
+                    if (!tmp)
+                    {
+                        boolTicket = false;
+                        break;
+                    }
+                    else boolTicket = true;
+                }
+            }
 
-                    if (rowsEffectedTicket == 0) break;
-                    else boolInvoice = true;
-                }
-                if (boolTicket)
-                {
-                    return true;
-                }
-                else return false;
+            if (boolInvoice && boolTicket)
+            {
+                return true;
             }
             else return false;
         }
