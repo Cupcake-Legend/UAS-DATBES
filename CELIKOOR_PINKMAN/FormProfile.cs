@@ -23,10 +23,10 @@ namespace CELIKOOR_PINKMAN
         {
             try
             {
-                buttonSave.Visible = false;
+                buttonSimpan.Visible = false;
                 char Gender;
 
-                if(radioButtonMale.Checked)
+                if(radioButtonLaki.Checked)
                 {
                     Gender = 'L';
 
@@ -51,8 +51,8 @@ namespace CELIKOOR_PINKMAN
                     textBoxEmail.Enabled = false;
                     textBoxPhone.Enabled = false;
                     dateTimePickerBirthDate.Enabled = false;
-                    radioButtonFemale.Enabled = false;
-                    radioButtonMale.Enabled = false;
+                    radioButtonPerempuan.Enabled = false;
+                    radioButtonLaki.Enabled = false;
 
                 }
                 else
@@ -62,8 +62,8 @@ namespace CELIKOOR_PINKMAN
                     textBoxEmail.Enabled = false;
                     textBoxPhone.Enabled = false;
                     dateTimePickerBirthDate.Enabled = false;
-                    radioButtonFemale.Enabled = false;
-                    radioButtonMale.Enabled = false;
+                    radioButtonPerempuan.Enabled = false;
+                    radioButtonLaki.Enabled = false;
 
                 }
 
@@ -77,14 +77,14 @@ namespace CELIKOOR_PINKMAN
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            buttonSave.Visible = true;
+            buttonSimpan.Visible = true;
             textBoxName.Enabled = true;
             textBoxEmail.Enabled = true;
             textBoxPhone.Enabled = true;
             textBoxUsername.Enabled = true;
             dateTimePickerBirthDate.Enabled = true;
-            radioButtonFemale.Enabled = true;
-            radioButtonMale.Enabled = true; 
+            radioButtonPerempuan.Enabled = true;
+            radioButtonLaki.Enabled = true; 
         }
 
         private void FormProfile_Load(object sender, EventArgs e)
@@ -103,13 +103,13 @@ namespace CELIKOOR_PINKMAN
                 dateTimePickerBirthDate.Value = frm.konsumenLogin.Tgl_Lahir;
                 if (frm.konsumenLogin.Gender == 'L')
                 {
-                    radioButtonMale.Checked = true;
-                    radioButtonFemale.Checked = false;
+                    radioButtonLaki.Checked = true;
+                    radioButtonPerempuan.Checked = false;
                 }
                 else
                 {
-                    radioButtonMale.Checked = false;
-                    radioButtonFemale.Checked = true;
+                    radioButtonLaki.Checked = false;
+                    radioButtonPerempuan.Checked = true;
                 }
 
             }

@@ -135,16 +135,16 @@ namespace CELIKOOR_PINKMAN
 
                     if(k.Gender == 'L')
                     {
-                        frm.radioButtonMale.Checked = true;
-                        frm.radioButtonFemale.Checked = false;
+                        frm.radioButtonLaki.Checked = true;
+                        frm.radioButtonPerempuan.Checked = false;
                     }
                     else
                     {
-                        frm.radioButtonFemale.Checked = true;
-                        frm.radioButtonMale.Checked = false;
+                        frm.radioButtonPerempuan.Checked = true;
+                        frm.radioButtonLaki.Checked = false;
                     }
 
-                    frm.dateTimePicker1.Value = k.Tgl_Lahir;
+                    frm.dateTimePickerTanggalLahir.Value = k.Tgl_Lahir;
                     frm.ShowDialog();
                 }
                 else
@@ -152,6 +152,16 @@ namespace CELIKOOR_PINKMAN
                     MessageBox.Show("Terjadi kesalahan");
                 }
             }
+        }
+
+        private void labelDaftarAktor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelJudul_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

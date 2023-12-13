@@ -62,10 +62,6 @@ namespace CELIKOOR_PINKMAN
                 MessageBox.Show("Terjadi kesalahan! Pesan kesalahan: " + ex.Message, "Error");
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             

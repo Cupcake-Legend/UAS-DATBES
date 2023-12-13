@@ -33,7 +33,7 @@ namespace CELIKOOR_PINKMAN
                     gender = 'P';
                 }
 
-                Aktor a = new Aktor(0, textBoxNama.Text, dateTimePicker1.Value, gender, textBoxAsal.Text);
+                Aktor a = new Aktor(0, textBoxNama.Text, dateTimePickerTanggalLahir.Value, gender, textBoxAsal.Text);
                 
 
                 Boolean success = Aktor.InsertData(a);
@@ -55,6 +55,11 @@ namespace CELIKOOR_PINKMAN
             {
                 MessageBox.Show("Terjadi kesalahan! Pesan kesalahan: " + ex.Message, "Error");
             }
+        }
+
+        private void dateTimePickerTanggalLahir_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

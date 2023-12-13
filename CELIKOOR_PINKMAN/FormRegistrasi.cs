@@ -47,7 +47,7 @@ namespace CELIKOOR_PINKMAN
                 if(textBoxPassword.Text == textBoxUlangiPassword.Text)
                 {
                     char gender;
-                    if (radioButtonMale.Checked)
+                    if (radioButtonLaki.Checked)
                     {
                         gender = 'L';
                     }

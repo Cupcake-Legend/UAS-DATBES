@@ -21,5 +21,15 @@ namespace CELIKOOR_PINKMAN
         {
 
         }
+
+        private void labelSisaKursi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

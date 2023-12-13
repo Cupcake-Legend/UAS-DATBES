@@ -249,6 +249,9 @@
     <EmbeddedResource Include="FormDaftarGenre.resx">
       <DependentUpon>FormDaftarGenre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarInvoice.resx">
+      <DependentUpon>FormDaftarInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarJadwalFilm.resx">
       <DependentUpon>FormDaftarJadwalFilm.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahGenre.resx">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahInvoice.resx">
+      <DependentUpon>FormTambahInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahJenisStudio.resx">
       <DependentUpon>FormTambahJenisStudio.cs</DependentUpon>
@@ -404,6 +410,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\welcome-back 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attack-of-the-50th-woman-iconic-sexy-film-poster--1406735273-view-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\role.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

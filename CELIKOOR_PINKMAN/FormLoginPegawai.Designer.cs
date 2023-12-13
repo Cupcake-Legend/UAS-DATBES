@@ -35,18 +35,16 @@
             this.panelJudul = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.labelJudul2 = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelWelcomeBack = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWelcome = new System.Windows.Forms.PictureBox();
             this.panelJudul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWelcome)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxPassword
@@ -113,16 +111,6 @@
             this.labelJudul2.Text = "CINEPLEX";
             this.labelJudul2.UseCompatibleTextRendering = true;
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 6);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 7;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -156,6 +144,16 @@
             this.labelWelcomeBack.Text = "Welcome Back, Staff!";
             this.labelWelcomeBack.Click += new System.EventHandler(this.labelLogin_Click);
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 6);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 7;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // pictureBoxPassword
             // 
             this.pictureBoxPassword.Image = global::CELIKOOR_PINKMAN.Properties.Resources.padlock_no_fil;
@@ -176,25 +174,13 @@
             this.pictureBoxUsername.TabIndex = 34;
             this.pictureBoxUsername.TabStop = false;
             // 
-            // pictureBoxWelcome
-            // 
-            this.pictureBoxWelcome.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBoxWelcome.Image = global::CELIKOOR_PINKMAN.Properties.Resources.matey_welcome_1;
-            this.pictureBoxWelcome.Location = new System.Drawing.Point(43, 460);
-            this.pictureBoxWelcome.Name = "pictureBoxWelcome";
-            this.pictureBoxWelcome.Size = new System.Drawing.Size(411, 303);
-            this.pictureBoxWelcome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxWelcome.TabIndex = 38;
-            this.pictureBoxWelcome.TabStop = false;
-            this.pictureBoxWelcome.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // FormLoginPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(493, 680);
+            this.ClientSize = new System.Drawing.Size(493, 450);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.panelJudul);
@@ -203,7 +189,6 @@
             this.Controls.Add(this.labelWelcomeBack);
             this.Controls.Add(this.pictureBoxPassword);
             this.Controls.Add(this.pictureBoxUsername);
-            this.Controls.Add(this.pictureBoxWelcome);
             this.Name = "FormLoginPegawai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login Pegawai";
@@ -213,7 +198,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWelcome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +217,5 @@
         private System.Windows.Forms.Label labelWelcomeBack;
         private System.Windows.Forms.PictureBox pictureBoxPassword;
         private System.Windows.Forms.PictureBox pictureBoxUsername;
-        private System.Windows.Forms.PictureBox pictureBoxWelcome;
     }
 }

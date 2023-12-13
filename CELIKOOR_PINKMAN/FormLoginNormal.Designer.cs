@@ -39,8 +39,8 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelOr = new System.Windows.Forms.Label();
             this.panelGarisOr = new System.Windows.Forms.Panel();
-            this.labelDontHaveAnAccount = new System.Windows.Forms.Label();
-            this.labelLoginToYourAccount = new System.Windows.Forms.Label();
+            this.labelTidakPunyaAkun = new System.Windows.Forms.Label();
+            this.labelLogIn = new System.Windows.Forms.Label();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -117,12 +117,12 @@
             // 
             this.linkLabelRegisterNow.AutoSize = true;
             this.linkLabelRegisterNow.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelRegisterNow.Location = new System.Drawing.Point(699, 371);
+            this.linkLabelRegisterNow.Location = new System.Drawing.Point(659, 371);
             this.linkLabelRegisterNow.Name = "linkLabelRegisterNow";
-            this.linkLabelRegisterNow.Size = new System.Drawing.Size(122, 25);
+            this.linkLabelRegisterNow.Size = new System.Drawing.Size(160, 25);
             this.linkLabelRegisterNow.TabIndex = 21;
             this.linkLabelRegisterNow.TabStop = true;
-            this.linkLabelRegisterNow.Text = "Register now";
+            this.linkLabelRegisterNow.Text = "Register sekarang";
             this.linkLabelRegisterNow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegisterNow_LinkClicked);
             // 
             // buttonLogin
@@ -157,25 +157,25 @@
             this.panelGarisOr.Size = new System.Drawing.Size(356, 2);
             this.panelGarisOr.TabIndex = 23;
             // 
-            // labelDontHaveAnAccount
+            // labelTidakPunyaAkun
             // 
-            this.labelDontHaveAnAccount.AutoSize = true;
-            this.labelDontHaveAnAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDontHaveAnAccount.Location = new System.Drawing.Point(479, 372);
-            this.labelDontHaveAnAccount.Name = "labelDontHaveAnAccount";
-            this.labelDontHaveAnAccount.Size = new System.Drawing.Size(203, 25);
-            this.labelDontHaveAnAccount.TabIndex = 26;
-            this.labelDontHaveAnAccount.Text = "Don\'t have an account?";
+            this.labelTidakPunyaAkun.AutoSize = true;
+            this.labelTidakPunyaAkun.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTidakPunyaAkun.Location = new System.Drawing.Point(497, 371);
+            this.labelTidakPunyaAkun.Name = "labelTidakPunyaAkun";
+            this.labelTidakPunyaAkun.Size = new System.Drawing.Size(165, 25);
+            this.labelTidakPunyaAkun.TabIndex = 26;
+            this.labelTidakPunyaAkun.Text = "Tidak punya akun?";
             // 
-            // labelLoginToYourAccount
+            // labelLogIn
             // 
-            this.labelLoginToYourAccount.AutoSize = true;
-            this.labelLoginToYourAccount.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoginToYourAccount.Location = new System.Drawing.Point(448, 43);
-            this.labelLoginToYourAccount.Name = "labelLoginToYourAccount";
-            this.labelLoginToYourAccount.Size = new System.Drawing.Size(414, 50);
-            this.labelLoginToYourAccount.TabIndex = 25;
-            this.labelLoginToYourAccount.Text = "Login To Your Account";
+            this.labelLogIn.AutoSize = true;
+            this.labelLogIn.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogIn.Location = new System.Drawing.Point(532, 41);
+            this.labelLogIn.Name = "labelLogIn";
+            this.labelLogIn.Size = new System.Drawing.Size(271, 50);
+            this.labelLogIn.TabIndex = 25;
+            this.labelLogIn.Text = "Login ke Akun";
             // 
             // pictureBoxPassword
             // 
@@ -223,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(925, 478);
+            this.ClientSize = new System.Drawing.Size(910, 478);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.panelJudul);
@@ -234,8 +234,8 @@
             this.Controls.Add(this.pictureBoxUsername);
             this.Controls.Add(this.labelOr);
             this.Controls.Add(this.panelGarisOr);
-            this.Controls.Add(this.labelDontHaveAnAccount);
-            this.Controls.Add(this.labelLoginToYourAccount);
+            this.Controls.Add(this.labelTidakPunyaAkun);
+            this.Controls.Add(this.labelLogIn);
             this.Name = "FormLoginNormal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
@@ -263,8 +263,8 @@
         private System.Windows.Forms.PictureBox pictureBoxUsername;
         private System.Windows.Forms.Label labelOr;
         private System.Windows.Forms.Panel panelGarisOr;
-        private System.Windows.Forms.Label labelDontHaveAnAccount;
-        private System.Windows.Forms.Label labelLoginToYourAccount;
+        private System.Windows.Forms.Label labelTidakPunyaAkun;
+        private System.Windows.Forms.Label labelLogIn;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
     }

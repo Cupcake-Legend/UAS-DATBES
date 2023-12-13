@@ -37,15 +37,15 @@
             this.panelJudul = new System.Windows.Forms.Panel();
             this.panelGarisRegistration = new System.Windows.Forms.Panel();
             this.labelRegistration = new System.Windows.Forms.Label();
-            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
-            this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.buttonCreate = new System.Windows.Forms.Button();
-            this.labelConfirmPassword = new System.Windows.Forms.Label();
+            this.radioButtonPerempuan = new System.Windows.Forms.RadioButton();
+            this.radioButtonLaki = new System.Windows.Forms.RadioButton();
+            this.buttonBuatAkun = new System.Windows.Forms.Button();
+            this.labelKonfirmasiPassword = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.labelPhoneNumber = new System.Windows.Forms.Label();
-            this.labelBirthDate = new System.Windows.Forms.Label();
-            this.labelGender = new System.Windows.Forms.Label();
+            this.labelNoHP = new System.Windows.Forms.Label();
+            this.labelTanggalLahir = new System.Windows.Forms.Label();
+            this.labelJenisKelamin = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelNama = new System.Windows.Forms.Label();
             this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
@@ -64,6 +64,7 @@
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.pictureBoxNama = new System.Windows.Forms.PictureBox();
             this.labelJudul = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWelcome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -101,9 +102,9 @@
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(456, 24);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(434, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(104, 92);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(120, 107);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 60;
             this.pictureBoxLogo.TabStop = false;
@@ -113,15 +114,15 @@
             this.panelJudul.BackColor = System.Drawing.Color.White;
             this.panelJudul.Controls.Add(this.panelGarisRegistration);
             this.panelJudul.Controls.Add(this.labelRegistration);
-            this.panelJudul.Controls.Add(this.radioButtonFemale);
-            this.panelJudul.Controls.Add(this.radioButtonMale);
-            this.panelJudul.Controls.Add(this.buttonCreate);
-            this.panelJudul.Controls.Add(this.labelConfirmPassword);
+            this.panelJudul.Controls.Add(this.radioButtonPerempuan);
+            this.panelJudul.Controls.Add(this.radioButtonLaki);
+            this.panelJudul.Controls.Add(this.buttonBuatAkun);
+            this.panelJudul.Controls.Add(this.labelKonfirmasiPassword);
             this.panelJudul.Controls.Add(this.labelPassword);
             this.panelJudul.Controls.Add(this.labelUsername);
-            this.panelJudul.Controls.Add(this.labelPhoneNumber);
-            this.panelJudul.Controls.Add(this.labelBirthDate);
-            this.panelJudul.Controls.Add(this.labelGender);
+            this.panelJudul.Controls.Add(this.labelNoHP);
+            this.panelJudul.Controls.Add(this.labelTanggalLahir);
+            this.panelJudul.Controls.Add(this.labelJenisKelamin);
             this.panelJudul.Controls.Add(this.labelEmail);
             this.panelJudul.Controls.Add(this.labelNama);
             this.panelJudul.Controls.Add(this.dateTimePickerBirthDate);
@@ -141,7 +142,7 @@
             this.panelJudul.Controls.Add(this.pictureBoxNama);
             this.panelJudul.Location = new System.Drawing.Point(275, 125);
             this.panelJudul.Name = "panelJudul";
-            this.panelJudul.Size = new System.Drawing.Size(820, 496);
+            this.panelJudul.Size = new System.Drawing.Size(894, 496);
             this.panelJudul.TabIndex = 61;
             // 
             // panelGarisRegistration
@@ -164,54 +165,54 @@
             this.labelRegistration.TabIndex = 28;
             this.labelRegistration.Text = "Registration";
             // 
-            // radioButtonFemale
+            // radioButtonPerempuan
             // 
-            this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonFemale.Location = new System.Drawing.Point(244, 235);
-            this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(95, 32);
-            this.radioButtonFemale.TabIndex = 3;
-            this.radioButtonFemale.Text = "Female";
-            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            this.radioButtonPerempuan.AutoSize = true;
+            this.radioButtonPerempuan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPerempuan.Location = new System.Drawing.Point(296, 235);
+            this.radioButtonPerempuan.Name = "radioButtonPerempuan";
+            this.radioButtonPerempuan.Size = new System.Drawing.Size(131, 32);
+            this.radioButtonPerempuan.TabIndex = 3;
+            this.radioButtonPerempuan.Text = "Perempuan";
+            this.radioButtonPerempuan.UseVisualStyleBackColor = true;
             // 
-            // radioButtonMale
+            // radioButtonLaki
             // 
-            this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Checked = true;
-            this.radioButtonMale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMale.Location = new System.Drawing.Point(155, 235);
-            this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(76, 32);
-            this.radioButtonMale.TabIndex = 2;
-            this.radioButtonMale.TabStop = true;
-            this.radioButtonMale.Text = "Male";
-            this.radioButtonMale.UseVisualStyleBackColor = true;
+            this.radioButtonLaki.AutoSize = true;
+            this.radioButtonLaki.Checked = true;
+            this.radioButtonLaki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonLaki.Location = new System.Drawing.Point(187, 235);
+            this.radioButtonLaki.Name = "radioButtonLaki";
+            this.radioButtonLaki.Size = new System.Drawing.Size(109, 32);
+            this.radioButtonLaki.TabIndex = 2;
+            this.radioButtonLaki.TabStop = true;
+            this.radioButtonLaki.Text = "Laki-Laki";
+            this.radioButtonLaki.UseVisualStyleBackColor = true;
             // 
-            // buttonCreate
+            // buttonBuatAkun
             // 
-            this.buttonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreate.ForeColor = System.Drawing.Color.White;
-            this.buttonCreate.Location = new System.Drawing.Point(581, 392);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(217, 45);
-            this.buttonCreate.TabIndex = 9;
-            this.buttonCreate.Text = "Create Account";
-            this.buttonCreate.UseVisualStyleBackColor = false;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.buttonBuatAkun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonBuatAkun.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuatAkun.ForeColor = System.Drawing.Color.White;
+            this.buttonBuatAkun.Location = new System.Drawing.Point(581, 392);
+            this.buttonBuatAkun.Name = "buttonBuatAkun";
+            this.buttonBuatAkun.Size = new System.Drawing.Size(217, 45);
+            this.buttonBuatAkun.TabIndex = 9;
+            this.buttonBuatAkun.Text = "Buat Akun";
+            this.buttonBuatAkun.UseVisualStyleBackColor = false;
+            this.buttonBuatAkun.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
-            // labelConfirmPassword
+            // labelKonfirmasiPassword
             // 
-            this.labelConfirmPassword.AutoSize = true;
-            this.labelConfirmPassword.BackColor = System.Drawing.Color.Transparent;
-            this.labelConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConfirmPassword.ForeColor = System.Drawing.Color.Black;
-            this.labelConfirmPassword.Location = new System.Drawing.Point(419, 306);
-            this.labelConfirmPassword.Name = "labelConfirmPassword";
-            this.labelConfirmPassword.Size = new System.Drawing.Size(160, 25);
-            this.labelConfirmPassword.TabIndex = 44;
-            this.labelConfirmPassword.Text = "Confirm Password:";
+            this.labelKonfirmasiPassword.AutoSize = true;
+            this.labelKonfirmasiPassword.BackColor = System.Drawing.Color.Transparent;
+            this.labelKonfirmasiPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKonfirmasiPassword.ForeColor = System.Drawing.Color.Black;
+            this.labelKonfirmasiPassword.Location = new System.Drawing.Point(476, 306);
+            this.labelKonfirmasiPassword.Name = "labelKonfirmasiPassword";
+            this.labelKonfirmasiPassword.Size = new System.Drawing.Size(180, 25);
+            this.labelKonfirmasiPassword.TabIndex = 44;
+            this.labelKonfirmasiPassword.Text = "Konfirmasi Password:";
             // 
             // labelPassword
             // 
@@ -219,7 +220,7 @@
             this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.Black;
-            this.labelPassword.Location = new System.Drawing.Point(419, 245);
+            this.labelPassword.Location = new System.Drawing.Point(476, 245);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(91, 25);
             this.labelPassword.TabIndex = 43;
@@ -231,47 +232,47 @@
             this.labelUsername.BackColor = System.Drawing.Color.Transparent;
             this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.Color.Black;
-            this.labelUsername.Location = new System.Drawing.Point(419, 180);
+            this.labelUsername.Location = new System.Drawing.Point(476, 180);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(95, 25);
             this.labelUsername.TabIndex = 42;
             this.labelUsername.Text = "Username:";
             // 
-            // labelPhoneNumber
+            // labelNoHP
             // 
-            this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.BackColor = System.Drawing.Color.Transparent;
-            this.labelPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(419, 114);
-            this.labelPhoneNumber.Name = "labelPhoneNumber";
-            this.labelPhoneNumber.Size = new System.Drawing.Size(136, 25);
-            this.labelPhoneNumber.TabIndex = 41;
-            this.labelPhoneNumber.Text = "Phone Number:";
+            this.labelNoHP.AutoSize = true;
+            this.labelNoHP.BackColor = System.Drawing.Color.Transparent;
+            this.labelNoHP.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoHP.ForeColor = System.Drawing.Color.Black;
+            this.labelNoHP.Location = new System.Drawing.Point(476, 114);
+            this.labelNoHP.Name = "labelNoHP";
+            this.labelNoHP.Size = new System.Drawing.Size(72, 25);
+            this.labelNoHP.TabIndex = 41;
+            this.labelNoHP.Text = "No. HP:";
             // 
-            // labelBirthDate
+            // labelTanggalLahir
             // 
-            this.labelBirthDate.AutoSize = true;
-            this.labelBirthDate.BackColor = System.Drawing.Color.Transparent;
-            this.labelBirthDate.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBirthDate.ForeColor = System.Drawing.Color.Black;
-            this.labelBirthDate.Location = new System.Drawing.Point(66, 302);
-            this.labelBirthDate.Name = "labelBirthDate";
-            this.labelBirthDate.Size = new System.Drawing.Size(94, 25);
-            this.labelBirthDate.TabIndex = 40;
-            this.labelBirthDate.Text = "Birth Date:";
+            this.labelTanggalLahir.AutoSize = true;
+            this.labelTanggalLahir.BackColor = System.Drawing.Color.Transparent;
+            this.labelTanggalLahir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTanggalLahir.ForeColor = System.Drawing.Color.Black;
+            this.labelTanggalLahir.Location = new System.Drawing.Point(66, 302);
+            this.labelTanggalLahir.Name = "labelTanggalLahir";
+            this.labelTanggalLahir.Size = new System.Drawing.Size(119, 25);
+            this.labelTanggalLahir.TabIndex = 40;
+            this.labelTanggalLahir.Text = "Tanggal Lahir:";
             // 
-            // labelGender
+            // labelJenisKelamin
             // 
-            this.labelGender.AutoSize = true;
-            this.labelGender.BackColor = System.Drawing.Color.Transparent;
-            this.labelGender.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGender.ForeColor = System.Drawing.Color.Black;
-            this.labelGender.Location = new System.Drawing.Point(66, 237);
-            this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(73, 25);
-            this.labelGender.TabIndex = 39;
-            this.labelGender.Text = "Gender:";
+            this.labelJenisKelamin.AutoSize = true;
+            this.labelJenisKelamin.BackColor = System.Drawing.Color.Transparent;
+            this.labelJenisKelamin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJenisKelamin.ForeColor = System.Drawing.Color.Black;
+            this.labelJenisKelamin.Location = new System.Drawing.Point(66, 237);
+            this.labelJenisKelamin.Name = "labelJenisKelamin";
+            this.labelJenisKelamin.Size = new System.Drawing.Size(120, 25);
+            this.labelJenisKelamin.TabIndex = 39;
+            this.labelJenisKelamin.Text = "Jenis Kelamin:";
             // 
             // labelEmail
             // 
@@ -295,7 +296,7 @@
             this.labelNama.Name = "labelNama";
             this.labelNama.Size = new System.Drawing.Size(63, 25);
             this.labelNama.TabIndex = 28;
-            this.labelNama.Text = "Name:";
+            this.labelNama.Text = "Nama:";
             // 
             // dateTimePickerBirthDate
             // 
@@ -306,7 +307,7 @@
             this.dateTimePickerBirthDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ScrollBar;
             this.dateTimePickerBirthDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(176, 300);
+            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(191, 301);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             this.dateTimePickerBirthDate.Size = new System.Drawing.Size(177, 30);
             this.dateTimePickerBirthDate.TabIndex = 4;
@@ -315,7 +316,7 @@
             // 
             this.textBoxUlangiPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUlangiPassword.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBoxUlangiPassword.Location = new System.Drawing.Point(581, 302);
+            this.textBoxUlangiPassword.Location = new System.Drawing.Point(658, 302);
             this.textBoxUlangiPassword.Name = "textBoxUlangiPassword";
             this.textBoxUlangiPassword.Size = new System.Drawing.Size(217, 34);
             this.textBoxUlangiPassword.TabIndex = 8;
@@ -323,7 +324,7 @@
             // pictureBoxUlangiPassword
             // 
             this.pictureBoxUlangiPassword.Image = global::CELIKOOR_PINKMAN.Properties.Resources.padlock_no_fil;
-            this.pictureBoxUlangiPassword.Location = new System.Drawing.Point(376, 304);
+            this.pictureBoxUlangiPassword.Location = new System.Drawing.Point(433, 304);
             this.pictureBoxUlangiPassword.Name = "pictureBoxUlangiPassword";
             this.pictureBoxUlangiPassword.Size = new System.Drawing.Size(37, 34);
             this.pictureBoxUlangiPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -334,7 +335,7 @@
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBoxPassword.Location = new System.Drawing.Point(585, 239);
+            this.textBoxPassword.Location = new System.Drawing.Point(662, 239);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(213, 34);
             this.textBoxPassword.TabIndex = 7;
@@ -342,7 +343,7 @@
             // pictureBoxPassword
             // 
             this.pictureBoxPassword.Image = global::CELIKOOR_PINKMAN.Properties.Resources.padlock_no_fil;
-            this.pictureBoxPassword.Location = new System.Drawing.Point(376, 241);
+            this.pictureBoxPassword.Location = new System.Drawing.Point(433, 241);
             this.pictureBoxPassword.Name = "pictureBoxPassword";
             this.pictureBoxPassword.Size = new System.Drawing.Size(37, 34);
             this.pictureBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -353,7 +354,7 @@
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBoxUsername.Location = new System.Drawing.Point(585, 174);
+            this.textBoxUsername.Location = new System.Drawing.Point(662, 174);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(213, 34);
             this.textBoxUsername.TabIndex = 6;
@@ -361,7 +362,7 @@
             // pictureBoxUsername
             // 
             this.pictureBoxUsername.Image = global::CELIKOOR_PINKMAN.Properties.Resources.id_card_no_fill;
-            this.pictureBoxUsername.Location = new System.Drawing.Point(376, 176);
+            this.pictureBoxUsername.Location = new System.Drawing.Point(433, 176);
             this.pictureBoxUsername.Name = "pictureBoxUsername";
             this.pictureBoxUsername.Size = new System.Drawing.Size(37, 34);
             this.pictureBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -372,7 +373,7 @@
             // 
             this.textBoxHP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHP.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBoxHP.Location = new System.Drawing.Point(585, 105);
+            this.textBoxHP.Location = new System.Drawing.Point(662, 105);
             this.textBoxHP.Name = "textBoxHP";
             this.textBoxHP.Size = new System.Drawing.Size(213, 34);
             this.textBoxHP.TabIndex = 5;
@@ -380,7 +381,7 @@
             // pictureBoxHP
             // 
             this.pictureBoxHP.Image = global::CELIKOOR_PINKMAN.Properties.Resources.telephone;
-            this.pictureBoxHP.Location = new System.Drawing.Point(376, 111);
+            this.pictureBoxHP.Location = new System.Drawing.Point(433, 111);
             this.pictureBoxHP.Name = "pictureBoxHP";
             this.pictureBoxHP.Size = new System.Drawing.Size(37, 34);
             this.pictureBoxHP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -413,7 +414,7 @@
             this.textBoxEmail.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxEmail.Location = new System.Drawing.Point(130, 167);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(210, 34);
+            this.textBoxEmail.Size = new System.Drawing.Size(238, 34);
             this.textBoxEmail.TabIndex = 1;
             // 
             // pictureBoxEmail
@@ -432,7 +433,7 @@
             this.textBoxNama.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxNama.Location = new System.Drawing.Point(130, 109);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(210, 34);
+            this.textBoxNama.Size = new System.Drawing.Size(238, 34);
             this.textBoxNama.TabIndex = 0;
             // 
             // pictureBoxNama
@@ -451,11 +452,23 @@
             this.labelJudul.BackColor = System.Drawing.Color.Transparent;
             this.labelJudul.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(561, 34);
+            this.labelJudul.Location = new System.Drawing.Point(582, 22);
             this.labelJudul.Name = "labelJudul";
             this.labelJudul.Size = new System.Drawing.Size(479, 54);
             this.labelJudul.TabIndex = 59;
             this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.ForeColor = System.Drawing.Color.White;
+            this.labelDescription.Location = new System.Drawing.Point(617, 76);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(425, 25);
+            this.labelDescription.TabIndex = 66;
+            this.labelDescription.Text = "\"Your Portal to a World of Cinematic Experiences\"";
+            this.labelDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormRegistrasi
             // 
@@ -463,7 +476,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1095, 645);
+            this.ClientSize = new System.Drawing.Size(1165, 645);
+            this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.panelGarisWelcome);
             this.Controls.Add(this.pictureBoxWelcome);
             this.Controls.Add(this.pictureBoxLogo);
@@ -499,15 +513,15 @@
         private System.Windows.Forms.Panel panelJudul;
         private System.Windows.Forms.Panel panelGarisRegistration;
         private System.Windows.Forms.Label labelRegistration;
-        private System.Windows.Forms.RadioButton radioButtonFemale;
-        private System.Windows.Forms.RadioButton radioButtonMale;
-        private System.Windows.Forms.Button buttonCreate;
-        private System.Windows.Forms.Label labelConfirmPassword;
+        private System.Windows.Forms.RadioButton radioButtonPerempuan;
+        private System.Windows.Forms.RadioButton radioButtonLaki;
+        private System.Windows.Forms.Button buttonBuatAkun;
+        private System.Windows.Forms.Label labelKonfirmasiPassword;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
-        private System.Windows.Forms.Label labelPhoneNumber;
-        private System.Windows.Forms.Label labelBirthDate;
-        private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.Label labelNoHP;
+        private System.Windows.Forms.Label labelTanggalLahir;
+        private System.Windows.Forms.Label labelJenisKelamin;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelNama;
         private System.Windows.Forms.DateTimePicker dateTimePickerBirthDate;
@@ -526,5 +540,6 @@
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.PictureBox pictureBoxNama;
         private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.Label labelDescription;
     }
 }

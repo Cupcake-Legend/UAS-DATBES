@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProfile));
             this.panelJudul = new System.Windows.Forms.Panel();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
+            this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.radioButtonPerempuan = new System.Windows.Forms.RadioButton();
+            this.radioButtonLaki = new System.Windows.Forms.RadioButton();
+            this.buttonSimpan = new System.Windows.Forms.Button();
+            this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.panelGarisRegistration = new System.Windows.Forms.Panel();
             this.labelProfile = new System.Windows.Forms.Label();
@@ -53,9 +56,7 @@
             this.pictureBoxNama = new System.Windows.Forms.PictureBox();
             this.labelJudul = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
-            this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.panelJudul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHP)).BeginInit();
@@ -70,10 +71,10 @@
             // 
             this.panelJudul.BackColor = System.Drawing.Color.White;
             this.panelJudul.Controls.Add(this.dateTimePickerBirthDate);
-            this.panelJudul.Controls.Add(this.radioButtonFemale);
-            this.panelJudul.Controls.Add(this.radioButtonMale);
-            this.panelJudul.Controls.Add(this.buttonSave);
-            this.panelJudul.Controls.Add(this.buttonExit);
+            this.panelJudul.Controls.Add(this.radioButtonPerempuan);
+            this.panelJudul.Controls.Add(this.radioButtonLaki);
+            this.panelJudul.Controls.Add(this.buttonSimpan);
+            this.panelJudul.Controls.Add(this.buttonKeluar);
             this.panelJudul.Controls.Add(this.buttonEdit);
             this.panelJudul.Controls.Add(this.panelGarisRegistration);
             this.panelJudul.Controls.Add(this.labelProfile);
@@ -99,33 +100,74 @@
             this.panelJudul.Size = new System.Drawing.Size(820, 399);
             this.panelJudul.TabIndex = 66;
             // 
-            // buttonSave
+            // dateTimePickerBirthDate
             // 
-            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonSave.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(356, 332);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(116, 46);
-            this.buttonSave.TabIndex = 53;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = false;
-            this.buttonSave.Visible = false;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.dateTimePickerBirthDate.CalendarForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarTitleBackColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerBirthDate.Enabled = false;
+            this.dateTimePickerBirthDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(154, 201);
+            this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
+            this.dateTimePickerBirthDate.Size = new System.Drawing.Size(177, 30);
+            this.dateTimePickerBirthDate.TabIndex = 56;
             // 
-            // buttonExit
+            // radioButtonPerempuan
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(613, 332);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(116, 46);
-            this.buttonExit.TabIndex = 52;
-            this.buttonExit.Text = "Exit";
-            this.buttonExit.UseVisualStyleBackColor = false;
+            this.radioButtonPerempuan.AutoSize = true;
+            this.radioButtonPerempuan.Enabled = false;
+            this.radioButtonPerempuan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPerempuan.Location = new System.Drawing.Point(270, 286);
+            this.radioButtonPerempuan.Name = "radioButtonPerempuan";
+            this.radioButtonPerempuan.Size = new System.Drawing.Size(131, 32);
+            this.radioButtonPerempuan.TabIndex = 55;
+            this.radioButtonPerempuan.Text = "Perempuan";
+            this.radioButtonPerempuan.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonLaki
+            // 
+            this.radioButtonLaki.AutoSize = true;
+            this.radioButtonLaki.Checked = true;
+            this.radioButtonLaki.Enabled = false;
+            this.radioButtonLaki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonLaki.Location = new System.Drawing.Point(155, 286);
+            this.radioButtonLaki.Name = "radioButtonLaki";
+            this.radioButtonLaki.Size = new System.Drawing.Size(109, 32);
+            this.radioButtonLaki.TabIndex = 54;
+            this.radioButtonLaki.TabStop = true;
+            this.radioButtonLaki.Text = "Laki-Laki";
+            this.radioButtonLaki.UseVisualStyleBackColor = true;
+            // 
+            // buttonSimpan
+            // 
+            this.buttonSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSimpan.ForeColor = System.Drawing.Color.White;
+            this.buttonSimpan.Location = new System.Drawing.Point(356, 332);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSimpan.Name = "buttonSimpan";
+            this.buttonSimpan.Size = new System.Drawing.Size(116, 46);
+            this.buttonSimpan.TabIndex = 53;
+            this.buttonSimpan.Text = "Simpan";
+            this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Visible = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonKeluar
+            // 
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKeluar.ForeColor = System.Drawing.Color.White;
+            this.buttonKeluar.Location = new System.Drawing.Point(613, 332);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKeluar.Name = "buttonKeluar";
+            this.buttonKeluar.Size = new System.Drawing.Size(116, 46);
+            this.buttonKeluar.TabIndex = 52;
+            this.buttonKeluar.Text = "Keluar";
+            this.buttonKeluar.UseVisualStyleBackColor = false;
             // 
             // buttonEdit
             // 
@@ -218,9 +260,9 @@
             this.labelPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.labelPhoneNumber.Location = new System.Drawing.Point(489, 258);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
-            this.labelPhoneNumber.Size = new System.Drawing.Size(136, 25);
+            this.labelPhoneNumber.Size = new System.Drawing.Size(72, 25);
             this.labelPhoneNumber.TabIndex = 41;
-            this.labelPhoneNumber.Text = "Phone Number:";
+            this.labelPhoneNumber.Text = "No. HP:";
             // 
             // labelBirthDate
             // 
@@ -230,9 +272,9 @@
             this.labelBirthDate.ForeColor = System.Drawing.Color.Black;
             this.labelBirthDate.Location = new System.Drawing.Point(149, 172);
             this.labelBirthDate.Name = "labelBirthDate";
-            this.labelBirthDate.Size = new System.Drawing.Size(94, 25);
+            this.labelBirthDate.Size = new System.Drawing.Size(119, 25);
             this.labelBirthDate.TabIndex = 40;
-            this.labelBirthDate.Text = "Birth Date:";
+            this.labelBirthDate.Text = "Tanggal Lahir:";
             // 
             // labelGender
             // 
@@ -242,9 +284,9 @@
             this.labelGender.ForeColor = System.Drawing.Color.Black;
             this.labelGender.Location = new System.Drawing.Point(149, 258);
             this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(73, 25);
+            this.labelGender.Size = new System.Drawing.Size(120, 25);
             this.labelGender.TabIndex = 39;
-            this.labelGender.Text = "Gender:";
+            this.labelGender.Text = "Jenis Kelamin:";
             // 
             // labelEmail
             // 
@@ -268,7 +310,7 @@
             this.labelNama.Name = "labelNama";
             this.labelNama.Size = new System.Drawing.Size(63, 25);
             this.labelNama.TabIndex = 28;
-            this.labelNama.Text = "Name:";
+            this.labelNama.Text = "Nama:";
             // 
             // pictureBoxUsername
             // 
@@ -342,11 +384,12 @@
             this.labelJudul.BackColor = System.Drawing.Color.Transparent;
             this.labelJudul.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(332, 47);
+            this.labelJudul.Location = new System.Drawing.Point(244, 18);
             this.labelJudul.Name = "labelJudul";
             this.labelJudul.Size = new System.Drawing.Size(479, 54);
             this.labelJudul.TabIndex = 64;
             this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
+            this.labelJudul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxLogo
             // 
@@ -360,46 +403,13 @@
             this.pictureBoxLogo.TabIndex = 65;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // radioButtonFemale
+            // panelGarisJudul
             // 
-            this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Enabled = false;
-            this.radioButtonFemale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonFemale.Location = new System.Drawing.Point(244, 286);
-            this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(95, 32);
-            this.radioButtonFemale.TabIndex = 55;
-            this.radioButtonFemale.Text = "Female";
-            this.radioButtonFemale.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonMale
-            // 
-            this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Checked = true;
-            this.radioButtonMale.Enabled = false;
-            this.radioButtonMale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMale.Location = new System.Drawing.Point(155, 286);
-            this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(76, 32);
-            this.radioButtonMale.TabIndex = 54;
-            this.radioButtonMale.TabStop = true;
-            this.radioButtonMale.Text = "Male";
-            this.radioButtonMale.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePickerBirthDate
-            // 
-            this.dateTimePickerBirthDate.CalendarForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.dateTimePickerBirthDate.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
-            this.dateTimePickerBirthDate.CalendarTitleBackColor = System.Drawing.SystemColors.ScrollBar;
-            this.dateTimePickerBirthDate.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.dateTimePickerBirthDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.dateTimePickerBirthDate.Enabled = false;
-            this.dateTimePickerBirthDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(154, 201);
-            this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
-            this.dateTimePickerBirthDate.Size = new System.Drawing.Size(177, 30);
-            this.dateTimePickerBirthDate.TabIndex = 56;
+            this.panelGarisJudul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panelGarisJudul.Location = new System.Drawing.Point(254, 75);
+            this.panelGarisJudul.Name = "panelGarisJudul";
+            this.panelGarisJudul.Size = new System.Drawing.Size(463, 10);
+            this.panelGarisJudul.TabIndex = 67;
             // 
             // FormProfile
             // 
@@ -407,11 +417,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(865, 553);
+            this.Controls.Add(this.panelGarisJudul);
             this.Controls.Add(this.panelJudul);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.labelJudul);
             this.Name = "FormProfile";
-            this.Text = "FormProfile";
+            this.Text = "Profile";
             this.Load += new System.EventHandler(this.FormProfile_Load);
             this.panelJudul.ResumeLayout(false);
             this.panelJudul.PerformLayout();
@@ -430,8 +441,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panelJudul;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonSimpan;
+        private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Panel panelGarisRegistration;
         private System.Windows.Forms.Label labelProfile;
@@ -453,8 +464,9 @@
         private System.Windows.Forms.PictureBox pictureBoxNama;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelJudul;
-        private System.Windows.Forms.RadioButton radioButtonFemale;
-        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.RadioButton radioButtonPerempuan;
+        private System.Windows.Forms.RadioButton radioButtonLaki;
         private System.Windows.Forms.DateTimePicker dateTimePickerBirthDate;
+        private System.Windows.Forms.Panel panelGarisJudul;
     }
 }

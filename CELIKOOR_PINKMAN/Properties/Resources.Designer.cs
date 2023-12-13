@@ -63,6 +63,16 @@ namespace CELIKOOR_PINKMAN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap attack_of_the_50th_woman_iconic_sexy_film_poster__1406735273_view_1 {
+            get {
+                object obj = ResourceManager.GetObject("attack_of_the_50th_woman_iconic_sexy_film_poster__1406735273_view_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
@@ -176,6 +186,16 @@ namespace CELIKOOR_PINKMAN.Properties {
         internal static System.Drawing.Bitmap phone_call {
             get {
                 object obj = ResourceManager.GetObject("phone_call", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap role {
+            get {
+                object obj = ResourceManager.GetObject("role", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
