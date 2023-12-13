@@ -49,6 +49,10 @@
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jadwalFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,32 +124,33 @@
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // registerToolStripMenuItem
             // 
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            this.registerToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.registerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.registerToolStripMenuItem.Text = "Register";
             this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.profileToolStripMenuItem.Text = "Profile";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -172,7 +177,10 @@
             this.kelompokToolStripMenuItem,
             this.aktorToolStripMenuItem,
             this.genreToolStripMenuItem,
-            this.filmToolStripMenuItem});
+            this.filmToolStripMenuItem,
+            this.studioToolStripMenuItem,
+            this.invoiceToolStripMenuItem,
+            this.laporanToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.masterToolStripMenuItem.Text = "Master";
@@ -222,8 +230,10 @@
             // 
             // filmToolStripMenuItem
             // 
+            this.filmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jadwalFilmToolStripMenuItem});
             this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.filmToolStripMenuItem.Text = "Film";
             this.filmToolStripMenuItem.Click += new System.EventHandler(this.filmToolStripMenuItem_Click);
             // 
@@ -236,6 +246,30 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // laporanToolStripMenuItem
+            // 
+            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
+            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.laporanToolStripMenuItem.Text = "Laporan";
+            // 
+            // jadwalFilmToolStripMenuItem
+            // 
+            this.jadwalFilmToolStripMenuItem.Name = "jadwalFilmToolStripMenuItem";
+            this.jadwalFilmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.jadwalFilmToolStripMenuItem.Text = "Jadwal Film";
+            // 
+            // studioToolStripMenuItem
+            // 
+            this.studioToolStripMenuItem.Name = "studioToolStripMenuItem";
+            this.studioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studioToolStripMenuItem.Text = "Studio";
+            // 
+            // invoiceToolStripMenuItem
+            // 
+            this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
+            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.invoiceToolStripMenuItem.Text = "Invoice";
             // 
             // FormMenu
             // 
@@ -287,6 +321,10 @@
         private System.Windows.Forms.ToolStripMenuItem aktorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem genreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jadwalFilmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem laporanToolStripMenuItem;
     }
 }
 

@@ -40,16 +40,16 @@
             this.labelJudul = new System.Windows.Forms.Label();
             this.textBoxDurasi = new System.Windows.Forms.TextBox();
             this.labelDurasi = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonSUBINDO = new System.Windows.Forms.RadioButton();
+            this.radioButtonLAiN = new System.Windows.Forms.RadioButton();
             this.labelSubs = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDiskon = new System.Windows.Forms.TextBox();
             this.labelDiskon = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelKelompok = new System.Windows.Forms.Label();
             this.comboBoxKelompok = new System.Windows.Forms.ComboBox();
             this.labelCover = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCover = new System.Windows.Forms.TextBox();
             this.buttonOpen = new System.Windows.Forms.Button();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             this.buttonSimpan.TabIndex = 87;
             this.buttonSimpan.Text = "Simpan";
             this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonKeluar
             // 
@@ -176,27 +177,27 @@
             this.labelDurasi.TabIndex = 91;
             this.labelDurasi.Text = "Durasi :";
             // 
-            // radioButton1
+            // radioButtonSUBINDO
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(167, 475);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(137, 20);
-            this.radioButton1.TabIndex = 93;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Bahasa Indonesia";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonSUBINDO.AutoSize = true;
+            this.radioButtonSUBINDO.Location = new System.Drawing.Point(167, 475);
+            this.radioButtonSUBINDO.Name = "radioButtonSUBINDO";
+            this.radioButtonSUBINDO.Size = new System.Drawing.Size(137, 20);
+            this.radioButtonSUBINDO.TabIndex = 93;
+            this.radioButtonSUBINDO.TabStop = true;
+            this.radioButtonSUBINDO.Text = "Bahasa Indonesia";
+            this.radioButtonSUBINDO.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonLAiN
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(329, 475);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 20);
-            this.radioButton2.TabIndex = 94;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Lainnya";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonLAiN.AutoSize = true;
+            this.radioButtonLAiN.Location = new System.Drawing.Point(329, 475);
+            this.radioButtonLAiN.Name = "radioButtonLAiN";
+            this.radioButtonLAiN.Size = new System.Drawing.Size(75, 20);
+            this.radioButtonLAiN.TabIndex = 94;
+            this.radioButtonLAiN.TabStop = true;
+            this.radioButtonLAiN.Text = "Lainnya";
+            this.radioButtonLAiN.UseVisualStyleBackColor = true;
             // 
             // labelSubs
             // 
@@ -209,13 +210,13 @@
             this.labelSubs.TabIndex = 95;
             this.labelSubs.Text = "Subtitle :";
             // 
-            // textBox2
+            // textBoxDiskon
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 568);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 22);
-            this.textBox2.TabIndex = 97;
+            this.textBoxDiskon.Location = new System.Drawing.Point(167, 568);
+            this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDiskon.Name = "textBoxDiskon";
+            this.textBoxDiskon.Size = new System.Drawing.Size(118, 22);
+            this.textBoxDiskon.TabIndex = 97;
             // 
             // labelDiskon
             // 
@@ -280,13 +281,13 @@
             this.labelCover.TabIndex = 101;
             this.labelCover.Text = "Cover :";
             // 
-            // textBox1
+            // textBoxCover
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 524);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 22);
-            this.textBox1.TabIndex = 102;
+            this.textBoxCover.Location = new System.Drawing.Point(167, 524);
+            this.textBoxCover.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCover.Name = "textBoxCover";
+            this.textBoxCover.Size = new System.Drawing.Size(210, 22);
+            this.textBoxCover.TabIndex = 102;
             // 
             // buttonOpen
             // 
@@ -362,16 +363,16 @@
             this.ClientSize = new System.Drawing.Size(497, 686);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonOpen);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxCover);
             this.Controls.Add(this.labelCover);
             this.Controls.Add(this.comboBoxKelompok);
             this.Controls.Add(this.labelKelompok);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxDiskon);
             this.Controls.Add(this.labelDiskon);
             this.Controls.Add(this.labelSubs);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonLAiN);
+            this.Controls.Add(this.radioButtonSUBINDO);
             this.Controls.Add(this.textBoxDurasi);
             this.Controls.Add(this.labelDurasi);
             this.Controls.Add(this.buttonSimpan);
@@ -385,6 +386,7 @@
             this.Controls.Add(this.labelJudul);
             this.Name = "FormTambahFilm";
             this.Text = "Tambah Film";
+            this.Load += new System.EventHandler(this.FormTambahFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -406,16 +408,16 @@
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.TextBox textBoxDurasi;
         private System.Windows.Forms.Label labelDurasi;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonSUBINDO;
+        private System.Windows.Forms.RadioButton radioButtonLAiN;
         private System.Windows.Forms.Label labelSubs;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDiskon;
         private System.Windows.Forms.Label labelDiskon;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label labelKelompok;
         private System.Windows.Forms.ComboBox comboBoxKelompok;
         private System.Windows.Forms.Label labelCover;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxCover;
         private System.Windows.Forms.Button buttonOpen;
         private System.Windows.Forms.Panel panelGarisJudul;
         private System.Windows.Forms.Label label1;

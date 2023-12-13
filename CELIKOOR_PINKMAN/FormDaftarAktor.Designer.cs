@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDaftarAktor));
             this.buttonTambah = new System.Windows.Forms.Button();
-            this.buttonHapus = new System.Windows.Forms.Button();
+            this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelDaftarAktor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,19 +61,19 @@
             this.buttonTambah.UseVisualStyleBackColor = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
-            // buttonHapus
+            // buttonKeluar
             // 
-            this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonHapus.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHapus.ForeColor = System.Drawing.Color.White;
-            this.buttonHapus.Location = new System.Drawing.Point(399, 528);
-            this.buttonHapus.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonHapus.Name = "buttonHapus";
-            this.buttonHapus.Size = new System.Drawing.Size(111, 37);
-            this.buttonHapus.TabIndex = 74;
-            this.buttonHapus.Text = "Hapus";
-            this.buttonHapus.UseVisualStyleBackColor = false;
-            this.buttonHapus.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKeluar.ForeColor = System.Drawing.Color.White;
+            this.buttonKeluar.Location = new System.Drawing.Point(399, 528);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonKeluar.Name = "buttonKeluar";
+            this.buttonKeluar.Size = new System.Drawing.Size(111, 37);
+            this.buttonKeluar.TabIndex = 74;
+            this.buttonKeluar.Text = "Keluar";
+            this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // dataGridView1
             // 
@@ -196,7 +196,7 @@
             this.ClientSize = new System.Drawing.Size(540, 578);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonTambah);
-            this.Controls.Add(this.buttonHapus);
+            this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -216,7 +216,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonTambah;
-        private System.Windows.Forms.Button buttonHapus;
+        private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelDaftarAktor;
         private System.Windows.Forms.PictureBox pictureBoxLogo;

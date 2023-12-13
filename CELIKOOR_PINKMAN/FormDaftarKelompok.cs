@@ -49,7 +49,21 @@ namespace CELIKOOR_PINKMAN
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
+            {
+
+            }
+            if (e.ColumnIndex == dataGridView1.Columns["btnDeleteGrid"].Index && e.RowIndex >= 0)
             {
                 string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 string namaHapus = dataGridView1.CurrentRow.Cells["Nama"].Value.ToString();
@@ -72,12 +86,9 @@ namespace CELIKOOR_PINKMAN
                         MessageBox.Show("Penghapusan data gagal");
                     }
                 }
+            
+
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

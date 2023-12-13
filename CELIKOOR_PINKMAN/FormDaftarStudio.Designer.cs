@@ -32,39 +32,47 @@
             this.buttonTambah = new System.Windows.Forms.Button();
             this.buttonHapus = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelGarisJudul = new System.Windows.Forms.Panel();
+            this.labelJudul = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelDaftarJadwalFilm = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonTambah
             // 
+            this.buttonTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTambah.ForeColor = System.Drawing.Color.White;
             this.buttonTambah.Location = new System.Drawing.Point(31, 534);
             this.buttonTambah.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(111, 37);
             this.buttonTambah.TabIndex = 69;
             this.buttonTambah.Text = "Tambah";
-            this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambah.UseVisualStyleBackColor = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // buttonHapus
             // 
+            this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHapus.ForeColor = System.Drawing.Color.White;
             this.buttonHapus.Location = new System.Drawing.Point(399, 534);
             this.buttonHapus.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
             this.buttonHapus.TabIndex = 67;
-            this.buttonHapus.Text = "Hapus";
-            this.buttonHapus.UseVisualStyleBackColor = true;
+            this.buttonHapus.Text = "Keluar";
+            this.buttonHapus.UseVisualStyleBackColor = false;
             this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // dataGridView1
@@ -77,29 +85,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(479, 194);
             this.dataGridView1.TabIndex = 66;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label.Location = new System.Drawing.Point(376, 41);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(120, 90);
-            this.label.TabIndex = 65;
-            this.label.Text = "Daftar\r\nStudio";
-            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(31, 28);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 64;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // panel1
             // 
@@ -147,27 +132,82 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.panelGarisJudul);
+            this.panel2.Controls.Add(this.labelJudul);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.labelDaftarJadwalFilm);
+            this.panel2.Location = new System.Drawing.Point(-2, 7);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(540, 140);
+            this.panel2.TabIndex = 83;
+            // 
+            // panelGarisJudul
+            // 
+            this.panelGarisJudul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panelGarisJudul.Location = new System.Drawing.Point(194, 49);
+            this.panelGarisJudul.Name = "panelGarisJudul";
+            this.panelGarisJudul.Size = new System.Drawing.Size(275, 10);
+            this.panelGarisJudul.TabIndex = 74;
+            // 
+            // labelJudul
+            // 
+            this.labelJudul.AutoSize = true;
+            this.labelJudul.BackColor = System.Drawing.Color.Transparent;
+            this.labelJudul.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.labelJudul.Location = new System.Drawing.Point(169, 8);
+            this.labelJudul.Name = "labelJudul";
+            this.labelJudul.Size = new System.Drawing.Size(325, 38);
+            this.labelJudul.TabIndex = 73;
+            this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelDaftarJadwalFilm
+            // 
+            this.labelDaftarJadwalFilm.AutoSize = true;
+            this.labelDaftarJadwalFilm.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDaftarJadwalFilm.ForeColor = System.Drawing.Color.White;
+            this.labelDaftarJadwalFilm.Location = new System.Drawing.Point(201, 72);
+            this.labelDaftarJadwalFilm.Name = "labelDaftarJadwalFilm";
+            this.labelDaftarJadwalFilm.Size = new System.Drawing.Size(276, 45);
+            this.labelDaftarJadwalFilm.TabIndex = 72;
+            this.labelDaftarJadwalFilm.Text = "DAFTAR STUDIO";
+            this.labelDaftarJadwalFilm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // FormDaftarStudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 598);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label);
-            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormDaftarStudio";
             this.Text = "FormDaftarStudio";
             this.Load += new System.EventHandler(this.FormDaftarStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -176,11 +216,14 @@
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.Button buttonHapus;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelGarisJudul;
+        private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelDaftarJadwalFilm;
     }
 }

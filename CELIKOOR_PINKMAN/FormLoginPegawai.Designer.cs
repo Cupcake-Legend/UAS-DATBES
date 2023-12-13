@@ -35,10 +35,10 @@
             this.panelJudul = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.labelJudul2 = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelWelcomeBack = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.panelJudul.SuspendLayout();
@@ -53,6 +53,7 @@
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxPassword.Location = new System.Drawing.Point(124, 305);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(284, 34);
             this.textBoxPassword.TabIndex = 30;
             this.textBoxPassword.Text = "Password";
@@ -111,6 +112,16 @@
             this.labelJudul2.Text = "CINEPLEX";
             this.labelJudul2.UseCompatibleTextRendering = true;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 6);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 7;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -143,16 +154,6 @@
             this.labelWelcomeBack.TabIndex = 37;
             this.labelWelcomeBack.Text = "Welcome Back, Staff!";
             this.labelWelcomeBack.Click += new System.EventHandler(this.labelLogin_Click);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(24, 6);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 7;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // pictureBoxPassword
             // 

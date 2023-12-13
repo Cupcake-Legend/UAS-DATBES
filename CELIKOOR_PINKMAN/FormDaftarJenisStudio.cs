@@ -25,10 +25,33 @@ namespace CELIKOOR_PINKMAN
             try
             {
                 listJenisStudio = JenisStudio.SelectDataList("", "");
-                if (listJenisStudio.Count > 0)
+                FormatDataGrid();
+                TampilDataGrid();
+               
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan! Pesan kesalahan: " + ex.Message, "Error");
+            }
+        }
+
+        private void FormatDataGrid()
+        {
+            dataGridView1.Columns.Add("colID", "ID");
+            dataGridView1.Columns.Add("colNama", "Nama");
+            dataGridView1.Columns.Add("colDeskripsi", "Deskripsi");
+        }
+        private void TampilDataGrid()
+        {
+            if(listJenisStudio.Count > 0)
+            {
+                foreach(JenisStudio j in listJenisStudio)
                 {
-                    dataGridView1.DataSource = listJenisStudio;
-                    if (dataGridView1.ColumnCount < 4)
+                    dataGridView1.Rows.Add(j.Id, j.Nama, j.Deskripsi);
+
+                    if (!dataGridView1.Columns.Contains("btnUbahGrid"))
                     {
                         DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
                         //nama header
@@ -41,6 +64,9 @@ namespace CELIKOOR_PINKMAN
                         dataGridView1.Columns.Add(bcol);
 
 
+                    }
+                    if (!dataGridView1.Columns.Contains("btnDeleteGrid"))
+                    {
                         DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
                         //nama header
                         bcol1.HeaderText = "Aksi";
@@ -52,17 +78,10 @@ namespace CELIKOOR_PINKMAN
                         dataGridView1.Columns.Add(bcol1);
 
                     }
-                   
-                }
-                else
-                {
-                    dataGridView1.DataSource = null;
+
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Terjadi kesalahan! Pesan kesalahan: " + ex.Message, "Error");
-            }
+
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -74,10 +93,15 @@ namespace CELIKOOR_PINKMAN
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
@@ -87,8 +111,8 @@ namespace CELIKOOR_PINKMAN
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
-                    string namaHapus = dataGridView1.CurrentRow.Cells["Nama"].Value.ToString();
+                    string kodeHapus = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
+                    string namaHapus = dataGridView1.CurrentRow.Cells["colNama"].Value.ToString();
 
                     DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus?" + kodeHapus + "-" +
                         namaHapus + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -111,6 +135,7 @@ namespace CELIKOOR_PINKMAN
                 }
 
             }
+
         }
     }
 }

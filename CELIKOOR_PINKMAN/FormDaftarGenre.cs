@@ -49,6 +49,16 @@ namespace CELIKOOR_PINKMAN
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
 
@@ -80,11 +90,6 @@ namespace CELIKOOR_PINKMAN
                     }
                 }
             }
-        }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

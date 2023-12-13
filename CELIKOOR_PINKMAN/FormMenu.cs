@@ -272,5 +272,10 @@ namespace CELIKOOR_PINKMAN
                 frm.BringToFront();
             }
         }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

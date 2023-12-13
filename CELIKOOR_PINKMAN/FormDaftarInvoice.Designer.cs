@@ -70,8 +70,9 @@
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
             this.buttonHapus.TabIndex = 85;
-            this.buttonHapus.Text = "Hapus";
+            this.buttonHapus.Text = "Keluar";
             this.buttonHapus.UseVisualStyleBackColor = false;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // dataGridView1
             // 
@@ -83,6 +84,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(479, 194);
             this.dataGridView1.TabIndex = 84;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
@@ -195,6 +197,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormDaftarInvoice";
             this.Text = "Daftar Invoice";
+            this.Load += new System.EventHandler(this.FormDaftarInvoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

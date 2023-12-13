@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLihatFilm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxStudio = new System.Windows.Forms.ComboBox();
+            this.labelStudio = new System.Windows.Forms.Label();
+            this.comboBoxJam = new System.Windows.Forms.ComboBox();
+            this.labelJam = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labelTanggal = new System.Windows.Forms.Label();
+            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
+            this.labelGenre = new System.Windows.Forms.Label();
+            this.labelAktor = new System.Windows.Forms.Label();
+            this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             this.buttonHapus = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.labelJudul = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelLihatFilm = new System.Windows.Forms.Label();
-            this.labelGenre = new System.Windows.Forms.Label();
-            this.labelAktor = new System.Windows.Forms.Label();
-            this.comboBoxAktor = new System.Windows.Forms.ComboBox();
-            this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             this.buttonCari = new System.Windows.Forms.Button();
-            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
-            this.labelTanggal = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.labelJam = new System.Windows.Forms.Label();
-            this.comboBoxJam = new System.Windows.Forms.ComboBox();
-            this.labelStudio = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,7 +68,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.comboBoxStudio);
             this.panel1.Controls.Add(this.labelStudio);
             this.panel1.Controls.Add(this.comboBoxJam);
             this.panel1.Controls.Add(this.labelJam);
@@ -77,13 +78,122 @@
             this.panel1.Controls.Add(this.comboBoxGenre);
             this.panel1.Controls.Add(this.labelGenre);
             this.panel1.Controls.Add(this.labelAktor);
-            this.panel1.Controls.Add(this.comboBoxAktor);
             this.panel1.Controls.Add(this.labelCariBerdasarkan);
             this.panel1.Location = new System.Drawing.Point(4, 145);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(479, 242);
             this.panel1.TabIndex = 70;
+            // 
+            // comboBoxStudio
+            // 
+            this.comboBoxStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStudio.FormattingEnabled = true;
+            this.comboBoxStudio.Items.AddRange(new object[] {
+            "ID",
+            "Nama",
+            "Negara Asal"});
+            this.comboBoxStudio.Location = new System.Drawing.Point(125, 209);
+            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxStudio.Name = "comboBoxStudio";
+            this.comboBoxStudio.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxStudio.TabIndex = 20;
+            // 
+            // labelStudio
+            // 
+            this.labelStudio.AutoSize = true;
+            this.labelStudio.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStudio.Location = new System.Drawing.Point(20, 205);
+            this.labelStudio.Name = "labelStudio";
+            this.labelStudio.Size = new System.Drawing.Size(77, 25);
+            this.labelStudio.TabIndex = 19;
+            this.labelStudio.Text = "Studio :";
+            // 
+            // comboBoxJam
+            // 
+            this.comboBoxJam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJam.FormattingEnabled = true;
+            this.comboBoxJam.Items.AddRange(new object[] {
+            "ID",
+            "Nama",
+            "Negara Asal"});
+            this.comboBoxJam.Location = new System.Drawing.Point(125, 171);
+            this.comboBoxJam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxJam.Name = "comboBoxJam";
+            this.comboBoxJam.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxJam.TabIndex = 18;
+            // 
+            // labelJam
+            // 
+            this.labelJam.AutoSize = true;
+            this.labelJam.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJam.Location = new System.Drawing.Point(20, 167);
+            this.labelJam.Name = "labelJam";
+            this.labelJam.Size = new System.Drawing.Size(56, 25);
+            this.labelJam.TabIndex = 17;
+            this.labelJam.Text = "Jam :";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(125, 130);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(227, 22);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
+            // labelTanggal
+            // 
+            this.labelTanggal.AutoSize = true;
+            this.labelTanggal.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTanggal.Location = new System.Drawing.Point(20, 128);
+            this.labelTanggal.Name = "labelTanggal";
+            this.labelTanggal.Size = new System.Drawing.Size(89, 25);
+            this.labelTanggal.TabIndex = 14;
+            this.labelTanggal.Text = "Tanggal :";
+            // 
+            // comboBoxGenre
+            // 
+            this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGenre.FormattingEnabled = true;
+            this.comboBoxGenre.Items.AddRange(new object[] {
+            "ID",
+            "Nama",
+            "Negara Asal"});
+            this.comboBoxGenre.Location = new System.Drawing.Point(125, 89);
+            this.comboBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxGenre.Name = "comboBoxGenre";
+            this.comboBoxGenre.Size = new System.Drawing.Size(227, 24);
+            this.comboBoxGenre.TabIndex = 13;
+            // 
+            // labelGenre
+            // 
+            this.labelGenre.AutoSize = true;
+            this.labelGenre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGenre.Location = new System.Drawing.Point(20, 88);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(73, 25);
+            this.labelGenre.TabIndex = 12;
+            this.labelGenre.Text = "Genre :";
+            // 
+            // labelAktor
+            // 
+            this.labelAktor.AutoSize = true;
+            this.labelAktor.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAktor.Location = new System.Drawing.Point(20, 51);
+            this.labelAktor.Name = "labelAktor";
+            this.labelAktor.Size = new System.Drawing.Size(70, 25);
+            this.labelAktor.TabIndex = 11;
+            this.labelAktor.Text = "Aktor :";
+            // 
+            // labelCariBerdasarkan
+            // 
+            this.labelCariBerdasarkan.AutoSize = true;
+            this.labelCariBerdasarkan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCariBerdasarkan.Location = new System.Drawing.Point(20, 16);
+            this.labelCariBerdasarkan.Name = "labelCariBerdasarkan";
+            this.labelCariBerdasarkan.Size = new System.Drawing.Size(171, 25);
+            this.labelCariBerdasarkan.TabIndex = 8;
+            this.labelCariBerdasarkan.Text = "Cari Berdasarkan : ";
             // 
             // buttonHapus
             // 
@@ -95,8 +205,9 @@
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
             this.buttonHapus.TabIndex = 87;
-            this.buttonHapus.Text = "Hapus";
+            this.buttonHapus.Text = "Keluar";
             this.buttonHapus.UseVisualStyleBackColor = false;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // panel2
             // 
@@ -153,50 +264,6 @@
             this.labelLihatFilm.Text = "LIHAT FILM";
             this.labelLihatFilm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // labelGenre
-            // 
-            this.labelGenre.AutoSize = true;
-            this.labelGenre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenre.Location = new System.Drawing.Point(20, 88);
-            this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(73, 25);
-            this.labelGenre.TabIndex = 12;
-            this.labelGenre.Text = "Genre :";
-            // 
-            // labelAktor
-            // 
-            this.labelAktor.AutoSize = true;
-            this.labelAktor.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAktor.Location = new System.Drawing.Point(20, 51);
-            this.labelAktor.Name = "labelAktor";
-            this.labelAktor.Size = new System.Drawing.Size(70, 25);
-            this.labelAktor.TabIndex = 11;
-            this.labelAktor.Text = "Aktor :";
-            // 
-            // comboBoxAktor
-            // 
-            this.comboBoxAktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAktor.FormattingEnabled = true;
-            this.comboBoxAktor.Items.AddRange(new object[] {
-            "ID",
-            "Nama",
-            "Negara Asal"});
-            this.comboBoxAktor.Location = new System.Drawing.Point(125, 52);
-            this.comboBoxAktor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxAktor.Name = "comboBoxAktor";
-            this.comboBoxAktor.Size = new System.Drawing.Size(227, 24);
-            this.comboBoxAktor.TabIndex = 9;
-            // 
-            // labelCariBerdasarkan
-            // 
-            this.labelCariBerdasarkan.AutoSize = true;
-            this.labelCariBerdasarkan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCariBerdasarkan.Location = new System.Drawing.Point(20, 16);
-            this.labelCariBerdasarkan.Name = "labelCariBerdasarkan";
-            this.labelCariBerdasarkan.Size = new System.Drawing.Size(171, 25);
-            this.labelCariBerdasarkan.TabIndex = 8;
-            this.labelCariBerdasarkan.Text = "Cari Berdasarkan : ";
-            // 
             // buttonCari
             // 
             this.buttonCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -209,85 +276,15 @@
             this.buttonCari.TabIndex = 89;
             this.buttonCari.Text = "Cari";
             this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
-            // comboBoxGenre
+            // textBox1
             // 
-            this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Items.AddRange(new object[] {
-            "ID",
-            "Nama",
-            "Negara Asal"});
-            this.comboBoxGenre.Location = new System.Drawing.Point(125, 89);
-            this.comboBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxGenre.Name = "comboBoxGenre";
-            this.comboBoxGenre.Size = new System.Drawing.Size(227, 24);
-            this.comboBoxGenre.TabIndex = 13;
-            // 
-            // labelTanggal
-            // 
-            this.labelTanggal.AutoSize = true;
-            this.labelTanggal.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTanggal.Location = new System.Drawing.Point(20, 128);
-            this.labelTanggal.Name = "labelTanggal";
-            this.labelTanggal.Size = new System.Drawing.Size(89, 25);
-            this.labelTanggal.TabIndex = 14;
-            this.labelTanggal.Text = "Tanggal :";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 130);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(227, 22);
-            this.dateTimePicker1.TabIndex = 15;
-            // 
-            // labelJam
-            // 
-            this.labelJam.AutoSize = true;
-            this.labelJam.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJam.Location = new System.Drawing.Point(20, 167);
-            this.labelJam.Name = "labelJam";
-            this.labelJam.Size = new System.Drawing.Size(56, 25);
-            this.labelJam.TabIndex = 17;
-            this.labelJam.Text = "Jam :";
-            // 
-            // comboBoxJam
-            // 
-            this.comboBoxJam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxJam.FormattingEnabled = true;
-            this.comboBoxJam.Items.AddRange(new object[] {
-            "ID",
-            "Nama",
-            "Negara Asal"});
-            this.comboBoxJam.Location = new System.Drawing.Point(125, 171);
-            this.comboBoxJam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxJam.Name = "comboBoxJam";
-            this.comboBoxJam.Size = new System.Drawing.Size(160, 24);
-            this.comboBoxJam.TabIndex = 18;
-            // 
-            // labelStudio
-            // 
-            this.labelStudio.AutoSize = true;
-            this.labelStudio.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStudio.Location = new System.Drawing.Point(20, 205);
-            this.labelStudio.Name = "labelStudio";
-            this.labelStudio.Size = new System.Drawing.Size(77, 25);
-            this.labelStudio.TabIndex = 19;
-            this.labelStudio.Text = "Studio :";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "ID",
-            "Nama",
-            "Negara Asal"});
-            this.comboBox2.Location = new System.Drawing.Point(125, 209);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 24);
-            this.comboBox2.TabIndex = 20;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(125, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 25);
+            this.textBox1.TabIndex = 21;
             // 
             // FormLihatFilm
             // 
@@ -301,6 +298,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormLihatFilm";
             this.Text = "Lihat Film";
+            this.Load += new System.EventHandler(this.FormLihatFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -322,7 +320,6 @@
         private System.Windows.Forms.Label labelLihatFilm;
         private System.Windows.Forms.Label labelGenre;
         private System.Windows.Forms.Label labelAktor;
-        private System.Windows.Forms.ComboBox comboBoxAktor;
         private System.Windows.Forms.Label labelCariBerdasarkan;
         private System.Windows.Forms.ComboBox comboBoxGenre;
         private System.Windows.Forms.Button buttonCari;
@@ -331,6 +328,7 @@
         private System.Windows.Forms.Label labelJam;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelTanggal;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxStudio;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

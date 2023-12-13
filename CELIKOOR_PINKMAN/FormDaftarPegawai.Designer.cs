@@ -36,11 +36,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.labelJudul = new System.Windows.Forms.Label();
-            this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -83,6 +83,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(479, 194);
             this.dataGridView1.TabIndex = 84;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // labelDaftarPegawai
             // 
@@ -130,6 +131,16 @@
             this.comboBox1.Size = new System.Drawing.Size(424, 24);
             this.comboBox1.TabIndex = 1;
             // 
+            // labelCariBerdasarkan
+            // 
+            this.labelCariBerdasarkan.AutoSize = true;
+            this.labelCariBerdasarkan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCariBerdasarkan.Location = new System.Drawing.Point(12, 4);
+            this.labelCariBerdasarkan.Name = "labelCariBerdasarkan";
+            this.labelCariBerdasarkan.Size = new System.Drawing.Size(171, 25);
+            this.labelCariBerdasarkan.TabIndex = 0;
+            this.labelCariBerdasarkan.Text = "Cari Berdasarkan : ";
+            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
@@ -172,16 +183,6 @@
             this.labelJudul.Size = new System.Drawing.Size(325, 38);
             this.labelJudul.TabIndex = 73;
             this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
-            // 
-            // labelCariBerdasarkan
-            // 
-            this.labelCariBerdasarkan.AutoSize = true;
-            this.labelCariBerdasarkan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCariBerdasarkan.Location = new System.Drawing.Point(12, 4);
-            this.labelCariBerdasarkan.Name = "labelCariBerdasarkan";
-            this.labelCariBerdasarkan.Size = new System.Drawing.Size(171, 25);
-            this.labelCariBerdasarkan.TabIndex = 0;
-            this.labelCariBerdasarkan.Text = "Cari Berdasarkan : ";
             // 
             // FormDaftarPegawai
             // 
