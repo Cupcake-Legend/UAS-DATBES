@@ -18,7 +18,7 @@ namespace CELIKOOR_LIB
         }
         List<Film> listFilm = new List<Film>();
 
-        private void FormDaftarFilm_Load(object sender, EventArgs e)
+        public void FormDaftarFilm_Load(object sender, EventArgs e)
         {
             listFilm = Film.SelectDataList("", "");
 

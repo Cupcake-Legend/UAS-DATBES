@@ -20,7 +20,7 @@ namespace CELIKOOR_PINKMAN
 
         public List<JenisStudio> listJenisStudio = new List<JenisStudio>();
 
-        private void FormDaftarJenisStudio_Load(object sender, EventArgs e)
+        public void FormDaftarJenisStudio_Load(object sender, EventArgs e)
         {
             try
             {

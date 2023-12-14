@@ -28,7 +28,7 @@ namespace CELIKOOR_PINKMAN
         }
 
 
-        private void FormDaftarCinema_Load(object sender, EventArgs e)
+        public void FormDaftarCinema_Load(object sender, EventArgs e)
         {
             try
             {

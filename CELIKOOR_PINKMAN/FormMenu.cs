@@ -31,8 +31,6 @@ namespace CELIKOOR_PINKMAN
                 operatorToolStripMenuItem.Visible=false;
                 kasirToolStripMenuItem.Visible=false;
                 masterToolStripMenuItem.Visible=false;
-
-
             }
             else if (konsumenLogin == null && pegawaiLogin != null)
             {

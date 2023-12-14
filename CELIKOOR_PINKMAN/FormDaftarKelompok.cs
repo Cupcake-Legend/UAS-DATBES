@@ -26,7 +26,7 @@ namespace CELIKOOR_PINKMAN
         }
         List<Kelompok> listKelompok = new List<Kelompok>();
 
-        private void FormDaftarKelompok_Load(object sender, EventArgs e)
+        public void FormDaftarKelompok_Load(object sender, EventArgs e)
         {
             try
             {

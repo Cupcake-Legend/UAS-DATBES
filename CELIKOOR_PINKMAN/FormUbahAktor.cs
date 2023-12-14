@@ -55,5 +55,12 @@ namespace CELIKOOR_PINKMAN
 
             }
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            FormDaftarAktor frm = (FormDaftarAktor)this.Owner;
+            frm.FormDaftarAktor_Load(buttonKeluar, e);
+            this.Close();
+        }
     }
 }

@@ -52,7 +52,7 @@
             this.buttonTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(31, 534);
+            this.buttonTambah.Location = new System.Drawing.Point(31, 528);
             this.buttonTambah.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(111, 37);
@@ -66,7 +66,7 @@
             this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapus.ForeColor = System.Drawing.Color.White;
-            this.buttonHapus.Location = new System.Drawing.Point(399, 534);
+            this.buttonHapus.Location = new System.Drawing.Point(399, 528);
             this.buttonHapus.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
@@ -78,7 +78,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 316);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 310);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -92,7 +92,7 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(31, 160);
+            this.panel1.Location = new System.Drawing.Point(31, 154);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(479, 139);
@@ -100,7 +100,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 91);
+            this.textBox1.Location = new System.Drawing.Point(27, 85);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(424, 22);
@@ -116,7 +116,7 @@
             "Alamat ",
             "Tgl Dibuka",
             "Kota"});
-            this.comboBox1.Location = new System.Drawing.Point(27, 49);
+            this.comboBox1.Location = new System.Drawing.Point(27, 43);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(424, 24);
@@ -126,7 +126,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 18);
+            this.label2.Location = new System.Drawing.Point(12, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 16);
             this.label2.TabIndex = 0;
@@ -139,7 +139,7 @@
             this.panel2.Controls.Add(this.labelJudul);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.labelDaftarJadwalFilm);
-            this.panel2.Location = new System.Drawing.Point(-2, 7);
+            this.panel2.Location = new System.Drawing.Point(-2, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(540, 140);
             this.panel2.TabIndex = 83;
@@ -147,7 +147,7 @@
             // panelGarisJudul
             // 
             this.panelGarisJudul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panelGarisJudul.Location = new System.Drawing.Point(194, 49);
+            this.panelGarisJudul.Location = new System.Drawing.Point(194, 43);
             this.panelGarisJudul.Name = "panelGarisJudul";
             this.panelGarisJudul.Size = new System.Drawing.Size(275, 10);
             this.panelGarisJudul.TabIndex = 74;
@@ -158,7 +158,7 @@
             this.labelJudul.BackColor = System.Drawing.Color.Transparent;
             this.labelJudul.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(169, 8);
+            this.labelJudul.Location = new System.Drawing.Point(169, 2);
             this.labelJudul.Name = "labelJudul";
             this.labelJudul.Size = new System.Drawing.Size(325, 38);
             this.labelJudul.TabIndex = 73;
@@ -167,7 +167,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 114);
@@ -180,7 +180,7 @@
             this.labelDaftarJadwalFilm.AutoSize = true;
             this.labelDaftarJadwalFilm.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDaftarJadwalFilm.ForeColor = System.Drawing.Color.White;
-            this.labelDaftarJadwalFilm.Location = new System.Drawing.Point(201, 72);
+            this.labelDaftarJadwalFilm.Location = new System.Drawing.Point(201, 66);
             this.labelDaftarJadwalFilm.Name = "labelDaftarJadwalFilm";
             this.labelDaftarJadwalFilm.Size = new System.Drawing.Size(276, 45);
             this.labelDaftarJadwalFilm.TabIndex = 72;

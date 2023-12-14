@@ -19,7 +19,7 @@ namespace CELIKOOR_PINKMAN
         }
         List<JadwalFilm> listJadwalFilm = new List<JadwalFilm>();
 
-        private void FormDaftarJadwalFilm_Load(object sender, EventArgs e)
+        public void FormDaftarJadwalFilm_Load(object sender, EventArgs e)
         {
             try
             {

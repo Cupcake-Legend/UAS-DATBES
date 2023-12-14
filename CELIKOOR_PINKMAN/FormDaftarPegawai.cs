@@ -19,7 +19,7 @@ namespace CELIKOOR_PINKMAN
         }
         List<Pegawai> listPegawai = new List<Pegawai>();
 
-        private void FormDaftarPegawai_Load(object sender, EventArgs e)
+        public void FormDaftarPegawai_Load(object sender, EventArgs e)
         {
             try
             {

@@ -40,20 +40,20 @@
             this.labelTanggalLahir = new System.Windows.Forms.Label();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.labelNama = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelUbahAktor = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.labelId = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxAsal
             // 
-            this.textBoxAsal.Location = new System.Drawing.Point(193, 336);
+            this.textBoxAsal.Location = new System.Drawing.Point(199, 314);
             this.textBoxAsal.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAsal.Name = "textBoxAsal";
             this.textBoxAsal.Size = new System.Drawing.Size(245, 22);
@@ -63,7 +63,7 @@
             // 
             this.radioButtonPerempuan.AutoSize = true;
             this.radioButtonPerempuan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonPerempuan.Location = new System.Drawing.Point(308, 287);
+            this.radioButtonPerempuan.Location = new System.Drawing.Point(314, 265);
             this.radioButtonPerempuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonPerempuan.Name = "radioButtonPerempuan";
             this.radioButtonPerempuan.Size = new System.Drawing.Size(131, 32);
@@ -76,7 +76,7 @@
             this.radioButtonLaki.AutoSize = true;
             this.radioButtonLaki.Checked = true;
             this.radioButtonLaki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonLaki.Location = new System.Drawing.Point(193, 287);
+            this.radioButtonLaki.Location = new System.Drawing.Point(199, 265);
             this.radioButtonLaki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonLaki.Name = "radioButtonLaki";
             this.radioButtonLaki.Size = new System.Drawing.Size(109, 32);
@@ -91,7 +91,7 @@
             this.labelGender.BackColor = System.Drawing.Color.Transparent;
             this.labelGender.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.Color.Black;
-            this.labelGender.Location = new System.Drawing.Point(47, 292);
+            this.labelGender.Location = new System.Drawing.Point(53, 270);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(80, 25);
             this.labelGender.TabIndex = 116;
@@ -99,7 +99,7 @@
             // 
             // dateTimePickerTanggalLahir
             // 
-            this.dateTimePickerTanggalLahir.Location = new System.Drawing.Point(193, 254);
+            this.dateTimePickerTanggalLahir.Location = new System.Drawing.Point(199, 232);
             this.dateTimePickerTanggalLahir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerTanggalLahir.Name = "dateTimePickerTanggalLahir";
             this.dateTimePickerTanggalLahir.Size = new System.Drawing.Size(247, 22);
@@ -109,7 +109,7 @@
             // 
             this.labelAsal.AutoSize = true;
             this.labelAsal.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAsal.Location = new System.Drawing.Point(47, 331);
+            this.labelAsal.Location = new System.Drawing.Point(53, 309);
             this.labelAsal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAsal.Name = "labelAsal";
             this.labelAsal.Size = new System.Drawing.Size(125, 25);
@@ -121,7 +121,7 @@
             this.buttonSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(77, 403);
+            this.buttonSimpan.Location = new System.Drawing.Point(83, 381);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(123, 46);
@@ -135,19 +135,20 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(315, 403);
+            this.buttonKeluar.Location = new System.Drawing.Point(321, 381);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(123, 46);
             this.buttonKeluar.TabIndex = 109;
             this.buttonKeluar.Text = "Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // labelTanggalLahir
             // 
             this.labelTanggalLahir.AutoSize = true;
             this.labelTanggalLahir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTanggalLahir.Location = new System.Drawing.Point(48, 252);
+            this.labelTanggalLahir.Location = new System.Drawing.Point(54, 230);
             this.labelTanggalLahir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTanggalLahir.Name = "labelTanggalLahir";
             this.labelTanggalLahir.Size = new System.Drawing.Size(136, 25);
@@ -156,7 +157,7 @@
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(190, 210);
+            this.textBoxNama.Location = new System.Drawing.Point(196, 188);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(245, 22);
@@ -166,32 +167,12 @@
             // 
             this.labelNama.AutoSize = true;
             this.labelNama.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNama.Location = new System.Drawing.Point(48, 210);
+            this.labelNama.Location = new System.Drawing.Point(54, 188);
             this.labelNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNama.Name = "labelNama";
             this.labelNama.Size = new System.Drawing.Size(72, 25);
             this.labelNama.TabIndex = 106;
             this.labelNama.Text = "Nama :";
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.Location = new System.Drawing.Point(190, 168);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.ReadOnly = true;
-            this.textBoxId.Size = new System.Drawing.Size(87, 22);
-            this.textBoxId.TabIndex = 119;
-            // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(48, 169);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(39, 25);
-            this.labelId.TabIndex = 118;
-            this.labelId.Text = "Id :";
             // 
             // panel2
             // 
@@ -225,17 +206,6 @@
             this.label1.TabIndex = 73;
             this.label1.Text = "CELIKOOR 21 CINEPLEX";
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 11);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 71;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // labelUbahAktor
             // 
             this.labelUbahAktor.AutoSize = true;
@@ -248,14 +218,44 @@
             this.labelUbahAktor.Text = "UBAH AKTOR";
             this.labelUbahAktor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 11);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 71;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Location = new System.Drawing.Point(196, 152);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(245, 22);
+            this.textBoxId.TabIndex = 122;
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.Location = new System.Drawing.Point(54, 149);
+            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(39, 25);
+            this.labelId.TabIndex = 121;
+            this.labelId.Text = "Id :";
+            // 
             // FormUbahAktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 453);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(533, 438);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.labelId);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxAsal);
             this.Controls.Add(this.radioButtonPerempuan);
             this.Controls.Add(this.radioButtonLaki);
@@ -290,12 +290,12 @@
         public System.Windows.Forms.DateTimePicker dateTimePickerTanggalLahir;
         public System.Windows.Forms.TextBox textBoxNama;
         public System.Windows.Forms.TextBox textBoxAsal;
-        public System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelGarisJudul;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelUbahAktor;
+        public System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.Label labelId;
     }
 }

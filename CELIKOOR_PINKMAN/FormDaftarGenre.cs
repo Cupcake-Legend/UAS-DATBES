@@ -26,7 +26,7 @@ namespace CELIKOOR_PINKMAN
             frm.ShowDialog();
         }
 
-        private void FormDaftarGenre_Load(object sender, EventArgs e)
+        public void FormDaftarGenre_Load(object sender, EventArgs e)
         {
             try
             {
