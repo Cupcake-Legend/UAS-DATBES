@@ -37,9 +37,9 @@ namespace CELIKOOR_LIB
         #endregion
 
         #region methods
-        public static Ticket SelectDataSingle(string ticketID)
+        public static Ticket SelectDataSingle(string invoiceID, string nomorKursi)
         {
-            string sql = "SELECT * FROM tikets WHERE id = '" + ticketID + "'";
+            string sql = "SELECT * FROM tikets WHERE invoices_id = '" + invoiceID + "' AND nomor_kursi = '" + nomorKursi + "'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
