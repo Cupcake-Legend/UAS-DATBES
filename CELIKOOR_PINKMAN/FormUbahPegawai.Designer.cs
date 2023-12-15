@@ -44,27 +44,27 @@
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.panelJudul = new System.Windows.Forms.Panel();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.labelJudul = new System.Windows.Forms.Label();
-            this.buttonKeluar = new System.Windows.Forms.Button();
             this.labelId = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.buttonKeluar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.pictureBoxEmail = new System.Windows.Forms.PictureBox();
             this.pictureBoxNama = new System.Windows.Forms.PictureBox();
+            this.labelJudul = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelJudul.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNama)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,40 +239,6 @@
             this.panelJudul.Size = new System.Drawing.Size(811, 338);
             this.panelJudul.TabIndex = 78;
             // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBoxEmail.Location = new System.Drawing.Point(130, 209);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(210, 34);
-            this.textBoxEmail.TabIndex = 1;
-            // 
-            // labelJudul
-            // 
-            this.labelJudul.AutoSize = true;
-            this.labelJudul.BackColor = System.Drawing.Color.Transparent;
-            this.labelJudul.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(209, 19);
-            this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(479, 54);
-            this.labelJudul.TabIndex = 76;
-            this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
-            // 
-            // buttonKeluar
-            // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(640, 271);
-            this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(155, 45);
-            this.buttonKeluar.TabIndex = 50;
-            this.buttonKeluar.Text = "Keluar";
-            this.buttonKeluar.UseVisualStyleBackColor = false;
-            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
-            // 
             // labelId
             // 
             this.labelId.AutoSize = true;
@@ -287,23 +253,13 @@
             // 
             // textBoxId
             // 
+            this.textBoxId.Enabled = false;
             this.textBoxId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxId.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxId.Location = new System.Drawing.Point(128, 94);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(210, 34);
             this.textBoxId.TabIndex = 51;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(55, 19);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(92, 81);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 77;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -314,6 +270,19 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
+            // 
+            // buttonKeluar
+            // 
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKeluar.ForeColor = System.Drawing.Color.White;
+            this.buttonKeluar.Location = new System.Drawing.Point(640, 271);
+            this.buttonKeluar.Name = "buttonKeluar";
+            this.buttonKeluar.Size = new System.Drawing.Size(155, 45);
+            this.buttonKeluar.TabIndex = 50;
+            this.buttonKeluar.Text = "Keluar";
+            this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // pictureBox1
             // 
@@ -345,6 +314,15 @@
             this.pictureBoxUsername.TabIndex = 35;
             this.pictureBoxUsername.TabStop = false;
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBoxEmail.Location = new System.Drawing.Point(130, 209);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(210, 34);
+            this.textBoxEmail.TabIndex = 1;
+            // 
             // pictureBoxEmail
             // 
             this.pictureBoxEmail.Image = global::CELIKOOR_PINKMAN.Properties.Resources.mail;
@@ -365,6 +343,29 @@
             this.pictureBoxNama.TabIndex = 23;
             this.pictureBoxNama.TabStop = false;
             // 
+            // labelJudul
+            // 
+            this.labelJudul.AutoSize = true;
+            this.labelJudul.BackColor = System.Drawing.Color.Transparent;
+            this.labelJudul.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.labelJudul.Location = new System.Drawing.Point(209, 19);
+            this.labelJudul.Name = "labelJudul";
+            this.labelJudul.Size = new System.Drawing.Size(479, 54);
+            this.labelJudul.TabIndex = 76;
+            this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(55, 19);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(92, 81);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 77;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // FormUbahPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,15 +378,16 @@
             this.Controls.Add(this.labelJudul);
             this.Name = "FormUbahPegawai";
             this.Text = "Ubah Pegawai";
+            this.Load += new System.EventHandler(this.FormUbahPegawai_Load);
             this.panelJudul.ResumeLayout(false);
             this.panelJudul.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNama)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

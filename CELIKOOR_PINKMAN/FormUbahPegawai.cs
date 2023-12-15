@@ -18,6 +18,8 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+        public Pegawai pegawai;
+        
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
@@ -41,6 +43,16 @@ namespace CELIKOOR_PINKMAN
                 MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Kesalahan");
             }
         }
+
+        private void FormUbahPegawai_Load(object sender, EventArgs e)
+        {
+            textBoxId.Text = pegawai.Id.ToString();
+            textBoxNama.Text = pegawai.Nama;
+            textBoxEmail.Text = pegawai.Email;
+            textBoxUsername.Text = pegawai.Username;
+            textBoxPassword.Text = pegawai.Password;
+            
+        }
     }
     }
-}
+

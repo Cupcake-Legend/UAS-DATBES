@@ -24,19 +24,59 @@ namespace CELIKOOR_PINKMAN
             try
             {
                 listPegawai = Pegawai.SelectDataList("", "");
-                if (listPegawai.Count > 0)
-                {
-                    dataGridView1.DataSource = listPegawai;
-                }
-                else
-                {
-                    dataGridView1.DataSource = null;
-                }
+                FormatDataGrid();
+                TampilDataGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Terjadi kesalahan! Pesan kesalahan: " + ex.Message, "Error");
 
+            }
+        }
+        private void FormatDataGrid()
+        {
+            dataGridView1.Columns.Add("colID", "ID");
+            dataGridView1.Columns.Add("colNama", "Nama");
+            dataGridView1.Columns.Add("colEmail", "Email");
+            dataGridView1.Columns.Add("colUsername", "Username");
+            dataGridView1.Columns.Add("colPassword", "Password");
+            dataGridView1.Columns.Add("colRoles", "Roles");
+
+        }
+        private void TampilDataGrid()
+        {
+            if(listPegawai.Count > 0)
+            {
+                foreach(Pegawai p in listPegawai)
+                {
+                    dataGridView1.Rows.Add(p.Id, p.Nama, p.Email, p.Username, p.Password, p.Roles);
+
+                    if (!dataGridView1.Columns.Contains("btnUbahGrid"))
+                    {
+                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+                        //nama header
+                        bcol.HeaderText = "Aksi";
+                        //nama tombol
+                        bcol.Text = "Ubah";
+                        bcol.Name = "btnUbahGrid";
+
+                        bcol.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(bcol);
+
+                    }
+                    if (!dataGridView1.Columns.Contains("btnDeleteGrid"))
+                    {
+                        DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
+                        //nama header
+                        bcol1.HeaderText = "Aksi";
+                        //nama tombol
+                        bcol1.Text = "Delete";
+                        bcol1.Name = "btnDelete";
+
+                        bcol1.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(bcol1);
+                    }
+                }
             }
         }
 
@@ -54,30 +94,7 @@ namespace CELIKOOR_PINKMAN
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
-                string namaHapus = dataGridView1.CurrentRow.Cells["Nama"].Value.ToString();
-
-                DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus?" + kodeHapus + "-" +
-                    namaHapus + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (hasil == DialogResult.Yes)
-                {
-                    Aktor f = Aktor.SelectDataSingle(kodeHapus);
-                    Boolean hapus = Aktor.DeleteData(f);
-
-                    if (hapus)
-                    {
-                        MessageBox.Show("Penghapusan data berhasil");
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Penghapusan data gagal");
-                    }
-                }
-            }
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -112,7 +129,53 @@ namespace CELIKOOR_PINKMAN
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
+            {
+                string kodeHapus = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
+                Pegawai p = Pegawai.SelectDataSingle(kodeHapus);
+                FormUbahPegawai frm = new FormUbahPegawai();
+                frm.Owner = this;
+                
+                frm.ShowDialog();
 
+
+            }
+            if (e.ColumnIndex == dataGridView1.Columns["btnDeleteGrid"].Index && e.RowIndex >= 0)
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    string kodeHapus = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
+                    string namaHapus = dataGridView1.CurrentRow.Cells["colNama"].Value.ToString();
+
+                    DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus?" + kodeHapus + "-" +
+                        namaHapus + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (hasil == DialogResult.Yes)
+                    {
+                        Aktor f = Aktor.SelectDataSingle(kodeHapus);
+                        Boolean hapus = Aktor.DeleteData(f);
+
+                        if (hapus)
+                        {
+                            MessageBox.Show("Penghapusan data berhasil");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Penghapusan data gagal");
+                        }
+                    }
+                }
+
+            }
+
+
+
+        }
+
+        private void buttonHapus_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

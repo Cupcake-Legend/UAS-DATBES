@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelUbahJadwalFilm = new System.Windows.Forms.Label();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
@@ -41,10 +42,9 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelTanggal = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,17 @@
             this.label1.TabIndex = 73;
             this.label1.Text = "CELIKOOR 21 CINEPLEX";
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 11);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 71;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // labelUbahJadwalFilm
             // 
             this.labelUbahJadwalFilm.AutoSize = true;
@@ -98,7 +109,7 @@
             this.buttonSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(48, 315);
+            this.buttonSimpan.Location = new System.Drawing.Point(48, 312);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(123, 46);
@@ -112,7 +123,7 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(300, 315);
+            this.buttonKeluar.Location = new System.Drawing.Point(300, 312);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(123, 46);
@@ -125,7 +136,7 @@
             // 
             this.labelJam.AutoSize = true;
             this.labelJam.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJam.Location = new System.Drawing.Point(62, 260);
+            this.labelJam.Location = new System.Drawing.Point(62, 257);
             this.labelJam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelJam.Name = "labelJam";
             this.labelJam.Size = new System.Drawing.Size(56, 25);
@@ -135,7 +146,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(335, 265);
+            this.radioButton4.Location = new System.Drawing.Point(335, 262);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(40, 20);
             this.radioButton4.TabIndex = 126;
@@ -146,7 +157,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(279, 265);
+            this.radioButton3.Location = new System.Drawing.Point(279, 262);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(37, 20);
             this.radioButton3.TabIndex = 127;
@@ -157,7 +168,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(224, 265);
+            this.radioButton2.Location = new System.Drawing.Point(224, 262);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(34, 20);
             this.radioButton2.TabIndex = 128;
@@ -168,7 +179,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(169, 265);
+            this.radioButton1.Location = new System.Drawing.Point(169, 262);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(31, 20);
             this.radioButton1.TabIndex = 129;
@@ -178,60 +189,50 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 212);
+            this.dateTimePicker1.Location = new System.Drawing.Point(169, 209);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(235, 22);
             this.dateTimePicker1.TabIndex = 125;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 11);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 71;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // labelTanggal
             // 
             this.labelTanggal.AutoSize = true;
             this.labelTanggal.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTanggal.Location = new System.Drawing.Point(62, 210);
+            this.labelTanggal.Location = new System.Drawing.Point(62, 207);
             this.labelTanggal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTanggal.Name = "labelTanggal";
             this.labelTanggal.Size = new System.Drawing.Size(89, 25);
             this.labelTanggal.TabIndex = 120;
             this.labelTanggal.Text = "Tanggal :";
             // 
-            // textBoxId
+            // textBoxID
             // 
-            this.textBoxId.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxId.Location = new System.Drawing.Point(174, 162);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(153, 30);
-            this.textBoxId.TabIndex = 131;
+            this.textBoxID.Enabled = false;
+            this.textBoxID.Location = new System.Drawing.Point(165, 170);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(88, 22);
+            this.textBoxID.TabIndex = 142;
             // 
-            // labelId
+            // label3
             // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(67, 163);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(39, 25);
-            this.labelId.TabIndex = 130;
-            this.labelId.Text = "Id :";
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(62, 167);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 25);
+            this.label3.TabIndex = 141;
+            this.label3.Text = "ID:";
             // 
             // FormUbahJadwalFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 381);
-            this.Controls.Add(this.textBoxId);
-            this.Controls.Add(this.labelId);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonKeluar);
@@ -244,6 +245,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "FormUbahJadwalFilm";
             this.Text = "Ubah Jadwal Film";
+            this.Load += new System.EventHandler(this.FormUbahJadwalFilm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -268,7 +270,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelTanggal;
-        private System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label3;
     }
 }

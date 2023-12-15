@@ -61,6 +61,14 @@ namespace CELIKOOR_PINKMAN
         {
             if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
+                string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                Genre g = Genre.SelectDataSingle(kodeHapus);
+                FormUbahGenre frm = new FormUbahGenre();
+                frm.Owner = this;
+                frm.genre = g;
+                frm.ShowDialog(); 
+               
+
 
             }
             if (e.ColumnIndex == dataGridView1.Columns["btnDeleteGrid"].Index && e.RowIndex >= 0)
@@ -90,6 +98,11 @@ namespace CELIKOOR_PINKMAN
                     }
                 }
             }
+        }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

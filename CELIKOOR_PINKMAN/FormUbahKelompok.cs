@@ -18,6 +18,7 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+        public Kelompok kelompok;
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -28,14 +29,14 @@ namespace CELIKOOR_PINKMAN
         {
             try
             {
-                Kelompok k = new Kelompok(int.Parse(textBoxId.Text), textBoxNama.Text);
+                Kelompok k = new Kelompok(kelompok.Id, textBoxNama.Text);
                 Kelompok.UpdateData(k);
                 MessageBox.Show("Data kelompok telah diubah.", "Info");
                 buttonKeluar_Click(sender, e);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Kesalahan");
+                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Error");
             }
         }
 
@@ -53,6 +54,13 @@ namespace CELIKOOR_PINKMAN
 
         private void labelNama_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void FormUbahKelompok_Load(object sender, EventArgs e)
+        {
+            textBoxID.Text = kelompok.Id.ToString();
+            textBoxNama.Text = kelompok.Nama;
 
         }
     }

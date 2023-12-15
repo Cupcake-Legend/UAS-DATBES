@@ -70,8 +70,9 @@
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
             this.buttonHapus.TabIndex = 80;
-            this.buttonHapus.Text = "Hapus";
+            this.buttonHapus.Text = "Keluar";
             this.buttonHapus.UseVisualStyleBackColor = false;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // dataGridView1
             // 

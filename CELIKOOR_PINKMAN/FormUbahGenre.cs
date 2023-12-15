@@ -18,7 +18,7 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
-
+        public Genre genre;
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             FormDaftarGenre frm = (FormDaftarGenre)this.Owner;
@@ -30,15 +30,22 @@ namespace CELIKOOR_PINKMAN
         {
             try
             { 
-                Genre g = new Genre(int.Parse(textBoxId.Text), textBoxGenre.Text, textBoxDeskripsi.Text);
+                Genre g = new Genre(genre.Id, textBoxGenre.Text, textBoxDeskripsi.Text);
                 Genre.EditData(g);
                 MessageBox.Show("Data genre telah diubah.", "Info");
                 buttonKeluar_Click(sender, e);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Kesalahan");
+                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Error");
             }
+        }
+
+        private void FormUbahGenre_Load(object sender, EventArgs e)
+        {
+            textBoxID.Text = genre.Id.ToString();
+            textBoxGenre.Text = genre.Nama;
+            textBoxDeskripsi.Text = genre.Deskripsi;
         }
     }
 }

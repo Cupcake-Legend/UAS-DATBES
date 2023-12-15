@@ -48,11 +48,11 @@
             this.aktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jadwalFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -189,42 +189,42 @@
             // konsumenToolStripMenuItem
             // 
             this.konsumenToolStripMenuItem.Name = "konsumenToolStripMenuItem";
-            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.konsumenToolStripMenuItem.Text = "Konsumen";
             this.konsumenToolStripMenuItem.Click += new System.EventHandler(this.konsumenToolStripMenuItem_Click);
             // 
             // cinemaToolStripMenuItem
             // 
             this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cinemaToolStripMenuItem.Text = "Cinema";
             this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
             // 
             // pegawaiToolStripMenuItem
             // 
             this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
-            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pegawaiToolStripMenuItem.Text = "Pegawai";
             this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
             // 
             // kelompokToolStripMenuItem
             // 
             this.kelompokToolStripMenuItem.Name = "kelompokToolStripMenuItem";
-            this.kelompokToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.kelompokToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kelompokToolStripMenuItem.Text = "Kelompok";
             this.kelompokToolStripMenuItem.Click += new System.EventHandler(this.kelompokToolStripMenuItem_Click);
             // 
             // aktorToolStripMenuItem
             // 
             this.aktorToolStripMenuItem.Name = "aktorToolStripMenuItem";
-            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aktorToolStripMenuItem.Text = "Aktor";
             this.aktorToolStripMenuItem.Click += new System.EventHandler(this.aktorToolStripMenuItem_Click);
             // 
             // genreToolStripMenuItem
             // 
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.genreToolStripMenuItem.Text = "Genre";
             this.genreToolStripMenuItem.Click += new System.EventHandler(this.genreToolStripMenuItem_Click);
             // 
@@ -237,27 +237,12 @@
             this.filmToolStripMenuItem.Text = "Film";
             this.filmToolStripMenuItem.Click += new System.EventHandler(this.filmToolStripMenuItem_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CELIKOOR_PINKMAN.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // laporanToolStripMenuItem
-            // 
-            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
-            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.laporanToolStripMenuItem.Text = "Laporan";
-            // 
             // jadwalFilmToolStripMenuItem
             // 
             this.jadwalFilmToolStripMenuItem.Name = "jadwalFilmToolStripMenuItem";
             this.jadwalFilmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.jadwalFilmToolStripMenuItem.Text = "Jadwal Film";
+            this.jadwalFilmToolStripMenuItem.Click += new System.EventHandler(this.jadwalFilmToolStripMenuItem_Click);
             // 
             // studioToolStripMenuItem
             // 
@@ -270,6 +255,23 @@
             this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
             this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.invoiceToolStripMenuItem.Text = "Invoice";
+            // 
+            // laporanToolStripMenuItem
+            // 
+            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
+            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.laporanToolStripMenuItem.Text = "Laporan";
+            this.laporanToolStripMenuItem.Click += new System.EventHandler(this.laporanToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CELIKOOR_PINKMAN.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(87, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormMenu
             // 

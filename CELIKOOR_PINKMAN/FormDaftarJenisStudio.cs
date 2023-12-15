@@ -105,6 +105,14 @@ namespace CELIKOOR_PINKMAN
         {
             if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
+                string kodeHapus = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
+                JenisStudio j = JenisStudio.SelectDataSingle(kodeHapus);
+                FormUbahJenisStudio frm = new FormUbahJenisStudio();
+                frm.Owner = this;
+                frm.jenisStudio = j;
+                frm.ShowDialog();
+                
+
 
             }
             if (e.ColumnIndex == dataGridView1.Columns["btnDeleteGrid"].Index && e.RowIndex >= 0)
@@ -136,6 +144,11 @@ namespace CELIKOOR_PINKMAN
 
             }
 
+        }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

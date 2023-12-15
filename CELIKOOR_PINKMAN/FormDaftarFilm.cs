@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CELIKOOR_PINKMAN;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -91,6 +92,12 @@ namespace CELIKOOR_LIB
         {
             if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
+                string kodeHapus = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
+                Film f = Film.SelectDataSingle(kodeHapus);
+                FormUbahFilm frm = new FormUbahFilm();
+                frm.Owner = this;
+                frm.film = f;
+                frm.ShowDialog();
 
             }
             if (e.ColumnIndex == dataGridView1.Columns["btnDelete"].Index && e.RowIndex >= 0)
@@ -123,6 +130,11 @@ namespace CELIKOOR_LIB
 
             }
 
+        }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

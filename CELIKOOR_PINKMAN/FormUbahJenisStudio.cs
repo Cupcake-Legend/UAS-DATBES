@@ -17,6 +17,7 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+        public JenisStudio jenisStudio;
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
@@ -29,15 +30,23 @@ namespace CELIKOOR_PINKMAN
         {
             try
             {
-                JenisStudio j = new JenisStudio(int.Parse(textBoxId.Text), textBoxNama.Text, textBoxDeskripsi.Text);
+                JenisStudio j = new JenisStudio(jenisStudio.Id, textBoxNama.Text, textBoxDeskripsi.Text);
                 JenisStudio.EditData(j);
                 MessageBox.Show("Data jenis studio telah diubah.", "Info");
                 buttonKeluar_Click(sender, e);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Kesalahan");
+                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Error");
             }
+        }
+
+        private void FormUbahJenisStudio_Load(object sender, EventArgs e)
+        {
+            textBoxID.Text = jenisStudio.Id.ToString();
+            textBoxNama.Text = jenisStudio.Nama;
+            textBoxDeskripsi.Text = jenisStudio.Deskripsi;
+
         }
     }
 }

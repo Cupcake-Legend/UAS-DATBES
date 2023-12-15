@@ -133,9 +133,9 @@
             this.labelGenre.ForeColor = System.Drawing.Color.Black;
             this.labelGenre.Location = new System.Drawing.Point(143, 365);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(48, 25);
+            this.labelGenre.Size = new System.Drawing.Size(63, 25);
             this.labelGenre.TabIndex = 87;
-            this.labelGenre.Text = "Porn";
+            this.labelGenre.Text = "Action";
             // 
             // labelKeteranganAktor
             // 
@@ -181,9 +181,9 @@
             this.labelKelompok.ForeColor = System.Drawing.Color.Black;
             this.labelKelompok.Location = new System.Drawing.Point(143, 402);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(56, 25);
+            this.labelKelompok.Size = new System.Drawing.Size(34, 25);
             this.labelKelompok.TabIndex = 85;
-            this.labelKelompok.Text = "18++";
+            this.labelKelompok.Text = "PG";
             // 
             // labelKeteranganDurasi
             // 

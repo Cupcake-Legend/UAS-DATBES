@@ -104,6 +104,13 @@ namespace CELIKOOR_PINKMAN
         {
             if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
+                string kodeHapus = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                Studio s = Studio.SelectDataSingle(kodeHapus);
+                FormUbahStudio frm = new FormUbahStudio();
+                frm.Owner = this;
+                frm.studio = s;
+                frm.ShowDialog();
+
 
             }
             if (e.ColumnIndex == dataGridView1.Columns["btnDeleteGrid"].Index && e.RowIndex >= 0)

@@ -19,6 +19,7 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+        public JadwalFilm jadwalFilm;
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
@@ -47,7 +48,7 @@ namespace CELIKOOR_PINKMAN
                 {
                     jam = "IV";
                 }
-                JadwalFilm j = new JadwalFilm(int.Parse(textBoxId.Text), dateTimePicker1.Value, jam);
+                JadwalFilm j = new JadwalFilm(jadwalFilm.Id, dateTimePicker1.Value, jam);
                 JadwalFilm.UpdateData(j);
                 MessageBox.Show("Data jadwal film telah diubah.", "Info");
                 buttonKeluar_Click(sender, e);
@@ -56,6 +57,29 @@ namespace CELIKOOR_PINKMAN
             {
                 MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Kesalahan");
             }
+        }
+
+        private void FormUbahJadwalFilm_Load(object sender, EventArgs e)
+        {
+            textBoxID.Text = jadwalFilm.Id.ToString();
+            if (jadwalFilm.JamPemutaran == "I")
+            {
+                radioButton1.Checked = true;
+            }
+            else if (jadwalFilm.JamPemutaran == "II")
+            {
+                radioButton2.Checked = true;
+            }
+            else if (jadwalFilm.JamPemutaran == "III")
+            {
+                radioButton3.Checked = true;
+            }
+            else if (jadwalFilm.JamPemutaran == "IV")
+            {
+                radioButton4.Checked = true;
+            }
+            dateTimePicker1.Value = jadwalFilm.Tanggal;
+
         }
     }
 }

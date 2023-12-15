@@ -275,5 +275,39 @@ namespace CELIKOOR_PINKMAN
         {
 
         }
+
+        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormLaporan"];
+            if (frm == null)
+            {
+                FormLaporan frmDaftarFilm = new FormLaporan();
+                frmDaftarFilm.MdiParent = this;
+                frmDaftarFilm.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
+
+        }
+
+        private void jadwalFilmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormDaftarJadwalFilm"];
+            if (frm == null)
+            {
+                FormDaftarJadwalFilm frmDaftarFilm = new FormDaftarJadwalFilm();
+                frmDaftarFilm.MdiParent = this;
+                frmDaftarFilm.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
+
+        }
     }
 }

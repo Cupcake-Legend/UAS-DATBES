@@ -18,6 +18,7 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+        public Studio studio;
 
         private void LabelRp1_Click(object sender, EventArgs e)
         {
@@ -90,7 +91,7 @@ namespace CELIKOOR_PINKMAN
             {
                 JenisStudio j = (JenisStudio)comboBoxJenisStudio.SelectedItem;
                 Cinema c = (Cinema)comboBoxCinema.SelectedItem;
-                Studio s = new Studio(int.Parse(textBoxId.Text), textBoxNama.Text, (int)numUpDownKapasitas.Value, 
+                Studio s = new Studio(studio.Id, textBoxNama.Text, (int)numUpDownKapasitas.Value, 
                     j, c, int.Parse(textBoxHargaWeekday.Text), int.Parse(textBoxHargaWeekend.Text));
                 Studio.UpdateData(s);
                 MessageBox.Show("Data studio telah diubah.", "Info");
@@ -107,6 +108,24 @@ namespace CELIKOOR_PINKMAN
             FormDaftarStudio frm = (FormDaftarStudio)this.Owner;
             frm.FormDaftarStudio_Load(buttonKeluar, e);
             this.Close();
+        }
+
+        private void FormUbahStudio_Load(object sender, EventArgs e)
+        {
+            List<Cinema> listCinema = new List<Cinema>();
+            List<JenisStudio> listJenisStudio = new List<JenisStudio>();
+            listCinema = Cinema.SelectDataList("", "");
+            listJenisStudio = JenisStudio.SelectDataList("", "");
+
+            comboBoxCinema.DataSource = listCinema;
+            comboBoxJenisStudio.DataSource = listJenisStudio;
+            comboBoxCinema.DataSource = "nama_cabang";
+            comboBoxJenisStudio.DataSource = "nama";
+
+            textBoxNama.Text = studio.Nama;
+            textBoxHargaWeekday.Text = studio.HargaWeekday.ToString();
+            textBoxHargaWeekend.Text = studio.HargaWeekend.ToString();
+            numUpDownKapasitas.Value = studio.Kapasitas;
         }
     }
 }

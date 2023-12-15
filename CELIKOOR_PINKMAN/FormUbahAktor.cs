@@ -34,7 +34,7 @@ namespace CELIKOOR_PINKMAN
                     gender = 'L';
                 }
 
-                Aktor a = new Aktor(int.Parse(textBoxId.Text), textBoxNama.Text, dateTimePickerTanggalLahir.Value, gender, textBoxAsal.Text);
+                Aktor a = new Aktor(aktor.Id, textBoxNama.Text, dateTimePickerTanggalLahir.Value, gender, textBoxAsal.Text);
                 Boolean success = Aktor.UpdateData(a);
 
                 if (success)
@@ -61,6 +61,23 @@ namespace CELIKOOR_PINKMAN
             FormDaftarAktor frm = (FormDaftarAktor)this.Owner;
             frm.FormDaftarAktor_Load(buttonKeluar, e);
             this.Close();
+        }
+
+        private void FormUbahAktor_Load(object sender, EventArgs e)
+        {
+            textBoxID.Text = aktor.Id.ToString();
+            textBoxNama.Text = aktor.Nama;
+            textBoxAsal.Text = aktor.Negara_asal;
+            if(aktor.Gender == 'L')
+            {
+                radioButtonLaki.Checked = true;
+            }
+            else
+            {
+                radioButtonPerempuan.Checked = true;
+            }
+            dateTimePickerTanggalLahir.Value = aktor.Tgl_Lahir;
+            
         }
     }
 }

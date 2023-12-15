@@ -43,10 +43,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGarisJudul = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelUbahAktor = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
+            this.labelUbahAktor = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -206,6 +206,17 @@
             this.label1.TabIndex = 73;
             this.label1.Text = "CELIKOOR 21 CINEPLEX";
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 11);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 71;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // labelUbahAktor
             // 
             this.labelUbahAktor.AutoSize = true;
@@ -218,43 +229,34 @@
             this.labelUbahAktor.Text = "UBAH AKTOR";
             this.labelUbahAktor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBoxLogo
+            // textBoxID
             // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(13, 11);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 71;
-            this.pictureBoxLogo.TabStop = false;
+            this.textBoxID.Enabled = false;
+            this.textBoxID.Location = new System.Drawing.Point(193, 154);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(88, 22);
+            this.textBoxID.TabIndex = 144;
             // 
-            // textBoxId
+            // label3
             // 
-            this.textBoxId.Location = new System.Drawing.Point(196, 152);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(245, 22);
-            this.textBoxId.TabIndex = 122;
-            // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(54, 149);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(39, 25);
-            this.labelId.TabIndex = 121;
-            this.labelId.Text = "Id :";
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(53, 151);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 25);
+            this.label3.TabIndex = 143;
+            this.label3.Text = "ID:";
             // 
             // FormUbahAktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 438);
-            this.Controls.Add(this.textBoxId);
-            this.Controls.Add(this.labelId);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxAsal);
             this.Controls.Add(this.radioButtonPerempuan);
@@ -270,6 +272,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormUbahAktor";
             this.Text = "Ubah Aktor";
+            this.Load += new System.EventHandler(this.FormUbahAktor_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -295,7 +298,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelUbahAktor;
-        public System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label3;
     }
 }

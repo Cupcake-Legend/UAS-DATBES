@@ -18,6 +18,8 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+        public Film film;
+        List<Kelompok>listKelompok = new List<Kelompok>();
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
@@ -32,7 +34,7 @@ namespace CELIKOOR_PINKMAN
                     subs = false;
                 }
                 Kelompok k = (Kelompok)comboBoxKelompok.SelectedItem;
-                Film f = new Film(int.Parse(textBoxId.Text), textBoxJudul.Text, textBoxSinopsis.Text,
+                Film f = new Film(film.Id, textBoxJudul.Text, textBoxSinopsis.Text,
                     (int)numericUpDown1.Value, int.Parse(textBoxDurasi.Text), k, textBoxBahasa.Text, subs,
                     textBoxCover.Text, double.Parse(textBoxDiskon.Text));
                 Film.UpdateData(f);
@@ -41,7 +43,7 @@ namespace CELIKOOR_PINKMAN
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Kesalahan");
+                MessageBox.Show("Gagal mengubah data. Pesan kesalahan: " + ex.Message, "Error");
             }
         }
 
@@ -50,6 +52,35 @@ namespace CELIKOOR_PINKMAN
             FormDaftarJadwalFilm frm = (FormDaftarJadwalFilm)this.Owner;
             frm.FormDaftarJadwalFilm_Load(buttonKeluar, e);
             this.Close();
+        }
+
+        private void FormUbahFilm_Load(object sender, EventArgs e)
+        {
+           listKelompok = Kelompok.SelectDataKelompok("", "");
+            comboBoxKelompok.DataSource = listKelompok;
+            comboBoxKelompok.DisplayMember = "nama";
+
+            textBoxID.Text = film.Id.ToString();
+            textBoxJudul.Text = film.Judul;
+            textBoxCover.Text = film.CoverImage;
+            textBoxBahasa.Text = film.Bahasa;
+            textBoxDiskon.Text = film.DiskonNominal.ToString();
+            textBoxDurasi.Text = film.Durasi.ToString();
+            textBoxSinopsis.Text = film.Sinopsis.ToString();
+            numericUpDown1.Value = film.Tahun;
+
+            if(film.IsSubIndo == true)
+            {
+                radioButtonSUBINDO.Checked = true;
+                radioButtonLAiN.Checked = false;
+            }
+            else
+            {
+                radioButtonSUBINDO.Checked = false;
+                radioButtonLAiN.Checked = true;
+            }
+
+
         }
     }
 }

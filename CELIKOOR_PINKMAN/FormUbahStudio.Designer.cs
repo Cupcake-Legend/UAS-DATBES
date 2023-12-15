@@ -50,8 +50,6 @@
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.labelGenre = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownKapasitas)).BeginInit();
@@ -63,7 +61,7 @@
             this.LabelRp1.BackColor = System.Drawing.Color.Transparent;
             this.LabelRp1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelRp1.ForeColor = System.Drawing.Color.Black;
-            this.LabelRp1.Location = new System.Drawing.Point(198, 375);
+            this.LabelRp1.Location = new System.Drawing.Point(198, 319);
             this.LabelRp1.Name = "LabelRp1";
             this.LabelRp1.Size = new System.Drawing.Size(34, 25);
             this.LabelRp1.TabIndex = 163;
@@ -108,7 +106,7 @@
             this.labelRp2.BackColor = System.Drawing.Color.Transparent;
             this.labelRp2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRp2.ForeColor = System.Drawing.Color.Black;
-            this.labelRp2.Location = new System.Drawing.Point(199, 420);
+            this.labelRp2.Location = new System.Drawing.Point(199, 364);
             this.labelRp2.Name = "labelRp2";
             this.labelRp2.Size = new System.Drawing.Size(34, 25);
             this.labelRp2.TabIndex = 164;
@@ -141,7 +139,7 @@
             // 
             // textBoxHargaWeekend
             // 
-            this.textBoxHargaWeekend.Location = new System.Drawing.Point(231, 422);
+            this.textBoxHargaWeekend.Location = new System.Drawing.Point(231, 366);
             this.textBoxHargaWeekend.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHargaWeekend.Multiline = true;
             this.textBoxHargaWeekend.Name = "textBoxHargaWeekend";
@@ -153,7 +151,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 422);
+            this.label5.Location = new System.Drawing.Point(42, 366);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 25);
@@ -163,7 +161,7 @@
             // 
             // textBoxHargaWeekday
             // 
-            this.textBoxHargaWeekday.Location = new System.Drawing.Point(231, 378);
+            this.textBoxHargaWeekday.Location = new System.Drawing.Point(231, 322);
             this.textBoxHargaWeekday.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHargaWeekday.Multiline = true;
             this.textBoxHargaWeekday.Name = "textBoxHargaWeekday";
@@ -175,7 +173,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 375);
+            this.label4.Location = new System.Drawing.Point(42, 319);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 25);
@@ -186,7 +184,7 @@
             // comboBoxCinema
             // 
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(204, 338);
+            this.comboBoxCinema.Location = new System.Drawing.Point(204, 282);
             this.comboBoxCinema.Name = "comboBoxCinema";
             this.comboBoxCinema.Size = new System.Drawing.Size(184, 24);
             this.comboBoxCinema.TabIndex = 157;
@@ -196,7 +194,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 334);
+            this.label3.Location = new System.Drawing.Point(42, 278);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 25);
@@ -207,7 +205,7 @@
             // comboBoxJenisStudio
             // 
             this.comboBoxJenisStudio.FormattingEnabled = true;
-            this.comboBoxJenisStudio.Location = new System.Drawing.Point(203, 299);
+            this.comboBoxJenisStudio.Location = new System.Drawing.Point(203, 243);
             this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
             this.comboBoxJenisStudio.Size = new System.Drawing.Size(185, 24);
             this.comboBoxJenisStudio.TabIndex = 155;
@@ -217,7 +215,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 298);
+            this.label2.Location = new System.Drawing.Point(42, 242);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 25);
@@ -227,7 +225,7 @@
             // 
             // numUpDownKapasitas
             // 
-            this.numUpDownKapasitas.Location = new System.Drawing.Point(204, 261);
+            this.numUpDownKapasitas.Location = new System.Drawing.Point(204, 205);
             this.numUpDownKapasitas.Name = "numUpDownKapasitas";
             this.numUpDownKapasitas.Size = new System.Drawing.Size(120, 22);
             this.numUpDownKapasitas.TabIndex = 153;
@@ -237,7 +235,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 256);
+            this.label1.Location = new System.Drawing.Point(42, 200);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 25);
@@ -250,7 +248,7 @@
             this.buttonSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(58, 480);
+            this.buttonSimpan.Location = new System.Drawing.Point(58, 424);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(123, 46);
@@ -264,7 +262,7 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(316, 480);
+            this.buttonKeluar.Location = new System.Drawing.Point(316, 424);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(123, 46);
@@ -275,7 +273,7 @@
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(204, 224);
+            this.textBoxNama.Location = new System.Drawing.Point(204, 168);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Multiline = true;
             this.textBoxNama.Name = "textBoxNama";
@@ -286,39 +284,18 @@
             // 
             this.labelGenre.AutoSize = true;
             this.labelGenre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenre.Location = new System.Drawing.Point(42, 220);
+            this.labelGenre.Location = new System.Drawing.Point(42, 164);
             this.labelGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGenre.Name = "labelGenre";
             this.labelGenre.Size = new System.Drawing.Size(72, 25);
             this.labelGenre.TabIndex = 148;
             this.labelGenre.Text = "Nama :";
             // 
-            // textBoxId
-            // 
-            this.textBoxId.Location = new System.Drawing.Point(204, 180);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(245, 22);
-            this.textBoxId.TabIndex = 166;
-            // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(42, 180);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(39, 25);
-            this.labelId.TabIndex = 165;
-            this.labelId.Text = "Id :";
-            // 
             // FormUbahStudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 537);
-            this.Controls.Add(this.textBoxId);
-            this.Controls.Add(this.labelId);
             this.Controls.Add(this.LabelRp1);
             this.Controls.Add(this.labelRp2);
             this.Controls.Add(this.panel2);
@@ -338,6 +315,7 @@
             this.Controls.Add(this.labelGenre);
             this.Name = "FormUbahStudio";
             this.Text = "Ubah Studio";
+            this.Load += new System.EventHandler(this.FormUbahStudio_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -370,7 +348,5 @@
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label labelGenre;
-        private System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.Label labelId;
     }
 }

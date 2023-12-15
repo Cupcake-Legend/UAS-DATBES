@@ -16,5 +16,10 @@ namespace CELIKOOR_PINKMAN
         {
             InitializeComponent();
         }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

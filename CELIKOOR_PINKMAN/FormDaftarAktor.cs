@@ -144,7 +144,7 @@ namespace CELIKOOR_PINKMAN
                 {
                     FormUbahAktor frm = new FormUbahAktor();
                     frm.Owner = this;
-                    frm.textBoxId.Text = k.Id.ToString();
+                    frm.aktor = k;
                     frm.textBoxNama.Text = k.Nama;
                     frm.textBoxAsal.Text = k.Negara_asal;
 
