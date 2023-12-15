@@ -75,6 +75,7 @@
             this.buttonKeluar.TabIndex = 92;
             this.buttonKeluar.Text = "Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // textBoxNama
             // 

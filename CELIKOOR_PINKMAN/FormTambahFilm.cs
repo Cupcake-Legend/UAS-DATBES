@@ -66,10 +66,7 @@ namespace CELIKOOR_PINKMAN
         {
             listKelompok = Kelompok.SelectDataKelompok("", "");
             comboBoxKelompok.DataSource = listKelompok;
-            comboBoxKelompok.DisplayMember = "nama";
-
-            
-            
+            comboBoxKelompok.DisplayMember = "nama"; 
         }
     }
 }

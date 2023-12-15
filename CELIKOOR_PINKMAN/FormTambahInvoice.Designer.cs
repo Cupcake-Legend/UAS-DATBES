@@ -36,7 +36,7 @@
             this.labelTambahInvoice = new System.Windows.Forms.Label();
             this.comboBoxKonsumen = new System.Windows.Forms.ComboBox();
             this.labelKonsumen = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDiskon = new System.Windows.Forms.TextBox();
             this.labelDiskon = new System.Windows.Forms.Label();
             this.textBoxGrandTotal = new System.Windows.Forms.TextBox();
             this.labelGrandTotal = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.dateTimePickerTanggal = new System.Windows.Forms.DateTimePicker();
             this.comboBoxKasir = new System.Windows.Forms.ComboBox();
             this.labelKasir = new System.Windows.Forms.Label();
-            this.comboBox1Status = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.labelStatus = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -126,13 +126,13 @@
             this.labelKonsumen.TabIndex = 122;
             this.labelKonsumen.Text = "Konsumen :";
             // 
-            // textBox2
+            // textBoxDiskon
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 273);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 22);
-            this.textBox2.TabIndex = 120;
+            this.textBoxDiskon.Location = new System.Drawing.Point(172, 273);
+            this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDiskon.Name = "textBoxDiskon";
+            this.textBoxDiskon.Size = new System.Drawing.Size(118, 22);
+            this.textBoxDiskon.TabIndex = 120;
             // 
             // labelDiskon
             // 
@@ -176,6 +176,7 @@
             this.buttonSimpan.TabIndex = 113;
             this.buttonSimpan.Text = "Simpan";
             this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonKeluar
             // 
@@ -189,6 +190,7 @@
             this.buttonKeluar.TabIndex = 112;
             this.buttonKeluar.Text = "Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // labelTanggal
             // 
@@ -227,17 +229,17 @@
             this.labelKasir.TabIndex = 129;
             this.labelKasir.Text = "Kasir :";
             // 
-            // comboBox1Status
+            // comboBoxStatus
             // 
-            this.comboBox1Status.FormattingEnabled = true;
-            this.comboBox1Status.Items.AddRange(new object[] {
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Items.AddRange(new object[] {
             "PENDING",
             "VALIDASI",
             "TERBAYAR"});
-            this.comboBox1Status.Location = new System.Drawing.Point(172, 411);
-            this.comboBox1Status.Name = "comboBox1Status";
-            this.comboBox1Status.Size = new System.Drawing.Size(118, 24);
-            this.comboBox1Status.TabIndex = 132;
+            this.comboBoxStatus.Location = new System.Drawing.Point(172, 411);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(118, 24);
+            this.comboBoxStatus.TabIndex = 132;
             // 
             // labelStatus
             // 
@@ -255,7 +257,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 530);
-            this.Controls.Add(this.comboBox1Status);
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.comboBoxKasir);
             this.Controls.Add(this.labelKasir);
@@ -263,7 +265,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.comboBoxKonsumen);
             this.Controls.Add(this.labelKonsumen);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxDiskon);
             this.Controls.Add(this.labelDiskon);
             this.Controls.Add(this.textBoxGrandTotal);
             this.Controls.Add(this.labelGrandTotal);
@@ -290,7 +292,7 @@
         private System.Windows.Forms.Label labelTambahInvoice;
         private System.Windows.Forms.ComboBox comboBoxKonsumen;
         private System.Windows.Forms.Label labelKonsumen;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDiskon;
         private System.Windows.Forms.Label labelDiskon;
         private System.Windows.Forms.TextBox textBoxGrandTotal;
         private System.Windows.Forms.Label labelGrandTotal;
@@ -300,7 +302,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerTanggal;
         private System.Windows.Forms.ComboBox comboBoxKasir;
         private System.Windows.Forms.Label labelKasir;
-        private System.Windows.Forms.ComboBox comboBox1Status;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label labelStatus;
     }
 }

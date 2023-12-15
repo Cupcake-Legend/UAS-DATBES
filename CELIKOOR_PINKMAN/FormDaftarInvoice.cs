@@ -19,7 +19,7 @@ namespace CELIKOOR_PINKMAN
         }
         List<Invoice> listInvoice = new List<Invoice>();
 
-        private void FormDaftarInvoice_Load(object sender, EventArgs e)
+        public void FormDaftarInvoice_Load(object sender, EventArgs e)
         {
             listInvoice = Invoice.SelectDataList("", "");
 
