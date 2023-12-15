@@ -309,5 +309,22 @@ namespace CELIKOOR_PINKMAN
             }
 
         }
+
+        private void invoiceToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormDaftarInvoice"];
+            if (frm == null)
+            {
+                FormDaftarInvoice frmDaftarFilm = new FormDaftarInvoice();
+                frmDaftarFilm.MdiParent = this;
+                frmDaftarFilm.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
+
+        }
     }
 }
