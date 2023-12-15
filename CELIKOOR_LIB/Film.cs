@@ -20,6 +20,8 @@ namespace CELIKOOR_LIB
         private bool isSubIndo;
         private string coverImage;
         private double diskonNominal;
+        private List<GenreFilm> genreFilmList;
+        private List<AktorFilm> aktorFilmList;
         #endregion
 
         #region constructors
@@ -35,6 +37,8 @@ namespace CELIKOOR_LIB
             this.IsSubIndo = isSubIndo;
             this.CoverImage = coverImage;
             this.DiskonNominal = diskonNominal;
+            this.GenreFilmList = new List<GenreFilm>();
+            this.AktorFilmList = new List<AktorFilm>();
         }
         #endregion
 
@@ -88,6 +92,9 @@ namespace CELIKOOR_LIB
         
         
         }
+
+        public List<GenreFilm> GenreFilmList { get => genreFilmList; set => genreFilmList = value; }
+        public List<AktorFilm> AktorFilmList { get => aktorFilmList; set => aktorFilmList = value; }
         #endregion
 
         #region methods
@@ -149,9 +156,6 @@ namespace CELIKOOR_LIB
                 
                 Kelompok kelompok = Kelompok.SelectDataSingle(hasil.GetValue(5).ToString());
 
-                
-
-                
                 Film film = new Film(
                     int.Parse(hasil.GetValue(0).ToString()),
                     hasil.GetValue(1).ToString(),
@@ -170,8 +174,26 @@ namespace CELIKOOR_LIB
             return listFilms;
         }
 
+        public void AddGenreFilm(Genre genre)
+        {
+            GenreFilm genreFilm = new GenreFilm(genre);
+
+            this.GenreFilmList.Add(genreFilm);
+        }
+
+        public void AddAktorFilm(Aktor aktor, string peran)
+        {
+            AktorFilm aktorFilm = new AktorFilm(aktor, peran);
+
+            this.AktorFilmList.Add(aktorFilm);
+        }
+
         public static bool InsertData(Film film)
         {
+            bool boolFilm = false;
+            bool boolGenreFilm = false;
+            bool boolAktorFilm = false;
+
             string sql = "INSERT INTO " +
                 "films(judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, cover_image, diskon_nominal) " +
                 "VALUES ('" +
@@ -186,8 +208,44 @@ namespace CELIKOOR_LIB
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);
 
-            if (rowsEffected == 0) return false;
-            else return true;
+            if (rowsEffected == 0) boolFilm = false;
+            else boolFilm = true;
+
+            if (boolFilm)
+            {
+                foreach (var genrefilm in film.GenreFilmList)
+                {
+                    bool tmp = GenreFilm.InsertData(film.Id.ToString(), genrefilm);
+
+                    if (!tmp)
+                    {
+                        boolGenreFilm = false;
+                        break;
+                    }
+                    else boolGenreFilm = true;
+                }
+            }
+
+            if (boolFilm)
+            {
+                foreach (var aktorFilm in film.AktorFilmList)
+                {
+                    bool tmp = AktorFilm.InsertData(film.Id.ToString(), aktorFilm);
+
+                    if (!tmp)
+                    {
+                        boolAktorFilm = false;
+                        break;
+                    }
+                    else boolAktorFilm = true;
+                }
+            }
+
+            if (boolFilm && boolGenreFilm && boolAktorFilm)
+            {
+                return true;
+            }
+            else return false;
         }
 
         public static bool UpdateData(Film film)

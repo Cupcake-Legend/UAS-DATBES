@@ -189,7 +189,7 @@ namespace CELIKOOR_LIB
 
             int rowsEffectedInvoice = Koneksi.JalankanPerintahDML(sqlInvoice);
 
-            if (rowsEffectedInvoice == 0) return boolInvoice;
+            if (rowsEffectedInvoice == 0) boolInvoice = false;
             else boolInvoice = true;
 
             if (boolInvoice)
