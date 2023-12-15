@@ -59,6 +59,7 @@
             this.buttonTambah.TabIndex = 87;
             this.buttonTambah.Text = "Search";
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // buttonHapus
             // 
@@ -109,11 +110,11 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "ID",
-            "Nama Cabang",
-            "Alamat ",
-            "Tgl Dibuka",
-            "Kota"});
+            "Film terlaris",
+            "Pemasukan terbanyak dari cabang",
+            "Film paling banyak jumlah ketidakhadiran",
+            "Studio dengan tingkat utilitas terendah",
+            "Konsumen paling sering nonton comedy"});
             this.comboBox1.Location = new System.Drawing.Point(27, 43);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
@@ -197,6 +198,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "FormLaporan";
             this.Text = "Laporan";
+            this.Load += new System.EventHandler(this.FormLaporan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
