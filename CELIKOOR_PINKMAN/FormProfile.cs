@@ -53,6 +53,7 @@ namespace CELIKOOR_PINKMAN
                     dateTimePickerBirthDate.Enabled = false;
                     radioButtonPerempuan.Enabled = false;
                     radioButtonLaki.Enabled = false;
+                    textBoxUsername.Enabled = false;
 
                 }
                 else
@@ -64,6 +65,8 @@ namespace CELIKOOR_PINKMAN
                     dateTimePickerBirthDate.Enabled = false;
                     radioButtonPerempuan.Enabled = false;
                     radioButtonLaki.Enabled = false;
+                    textBoxUsername.Enabled = false;
+
 
                 }
 

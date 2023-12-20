@@ -31,6 +31,7 @@ namespace CELIKOOR_PINKMAN
                 operatorToolStripMenuItem.Visible=false;
                 kasirToolStripMenuItem.Visible=false;
                 masterToolStripMenuItem.Visible=false;
+                filmToolStripMenuItem1.Visible = true;
             }
             else if (konsumenLogin == null && pegawaiLogin != null)
             {
@@ -42,6 +43,8 @@ namespace CELIKOOR_PINKMAN
                     operatorToolStripMenuItem.Visible = true;
                     kasirToolStripMenuItem.Visible = false;
                     masterToolStripMenuItem.Visible = false;
+                    filmToolStripMenuItem1.Visible = false;
+
 
                 }
                 else if (pegawaiLogin.Roles == "KASIR")
@@ -52,6 +55,8 @@ namespace CELIKOOR_PINKMAN
                     operatorToolStripMenuItem.Visible = false;
                     kasirToolStripMenuItem.Visible = true;
                     masterToolStripMenuItem.Visible = false;
+                    filmToolStripMenuItem1.Visible = false;
+
 
                 }
                 else if (pegawaiLogin.Roles == "ADMIN")
@@ -62,6 +67,8 @@ namespace CELIKOOR_PINKMAN
                     operatorToolStripMenuItem.Visible = false;
                     kasirToolStripMenuItem.Visible = false;
                     masterToolStripMenuItem.Visible = true;
+                    filmToolStripMenuItem1.Visible = false;
+
                 }
             }
 
@@ -79,6 +86,8 @@ namespace CELIKOOR_PINKMAN
                 operatorToolStripMenuItem.Visible = false;
                 kasirToolStripMenuItem.Visible = false;
                 masterToolStripMenuItem.Visible = false;
+                filmToolStripMenuItem1.Visible = false;
+
             }
 
         }
@@ -316,6 +325,23 @@ namespace CELIKOOR_PINKMAN
             if (frm == null)
             {
                 FormDaftarInvoice frmDaftarFilm = new FormDaftarInvoice();
+                frmDaftarFilm.MdiParent = this;
+                frmDaftarFilm.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
+
+        }
+
+        private void filmToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormLihatFilm"];
+            if (frm == null)
+            {
+                FormLihatFilm frmDaftarFilm = new FormLihatFilm();
                 frmDaftarFilm.MdiParent = this;
                 frmDaftarFilm.Show();
             }

@@ -46,7 +46,7 @@ namespace CELIKOOR_LIB
         #region methods
         public static Studio SelectDataSingle(string studioID)
         {
-            string sql = "SELECT s.*, js.*, c.* FROM studios AS s" +
+            string sql = "SELECT s.*, js.*, c.* FROM studios AS s " +
                 "INNER JOIN jenis_studios AS js ON js.id = s.jenis_studios_id " +
                 "INNER JOIN cinemas AS c ON c.id = s.cinemas_id " +
                 "WHERE id = '" + studioID + "'";
@@ -91,13 +91,13 @@ namespace CELIKOOR_LIB
             string sql;
             if (kriteria == "")
             {
-                sql = "SELECT s.*, js.*, c.* FROM studios AS s" +
+                sql = "SELECT s.*, js.*, c.* FROM studios AS s " +
                 "INNER JOIN jenis_studios AS js ON js.id = s.jenis_studios_id " +
                 "INNER JOIN cinemas AS c ON c.id = s.cinemas_id";
             }
             else
             {
-                sql = "SELECT s.*, js.*, c.* FROM studios AS s" +
+                sql = "SELECT s.*, js.*, c.* FROM studios AS s " +
                 "INNER JOIN jenis_studios AS js ON js.id = s.jenis_studios_id " +
                 "INNER JOIN cinemas AS c ON c.id = s.cinemas_id " +
                 "WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";

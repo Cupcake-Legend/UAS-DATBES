@@ -35,7 +35,7 @@ namespace CELIKOOR_PINKMAN
             comboBoxGenre.DisplayMember = "nama";
             
             comboBoxJam.DataSource = listJadwalFilm;
-            comboBoxGenre.DisplayMember = "jamPemutaran";
+            comboBoxJam.DisplayMember = "jamPemutaran";
 
             comboBoxStudio.DataSource = listStudio;
             comboBoxStudio.DisplayMember = "nama";
@@ -47,7 +47,11 @@ namespace CELIKOOR_PINKMAN
 
         private void FormatDataGrid()
         {
-            dataGridView1.Columns.Add("colID", "ID");
+            DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
+            imageCol.Name = "colCover";
+            imageCol.HeaderText = "Cover Image";
+            imageCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            dataGridView1.Columns.Add(imageCol);
             dataGridView1.Columns.Add("colJudul", "Judul");
             dataGridView1.Columns.Add("colSinopsis", "Sinopsis");
             dataGridView1.Columns.Add("colTahun", "Tahun    ");
@@ -55,16 +59,18 @@ namespace CELIKOOR_PINKMAN
             dataGridView1.Columns.Add("colKelompok", "Kelompok");
             dataGridView1.Columns.Add("colBahasa", "Bahasa");
             dataGridView1.Columns.Add("colSub", "Sub-Indo");
-            dataGridView1.Columns.Add("colCover", "Cover Image  ");
-            dataGridView1.Columns.Add("colDiskon", "Diskon");
         }
         private void TampilDataGrid()
         {
             if(listFilm.Count > 0)
             {
+                dataGridView1.RowTemplate.Height = 150;
+
                 foreach(Film f in listFilm)
                 {
-                    dataGridView1.Rows.Add(f.Id, f.Judul, f.Sinopsis, f.Tahun, f.Durasi, f.KelompokFilm, f.Bahasa, f.IsSubIndo, f.CoverImage, f.DiskonNominal);
+                    string imagePath = f.CoverImage;
+                    Bitmap image = new Bitmap(imagePath);
+                    dataGridView1.Rows.Add(image, f.Judul, f.Sinopsis, f.Tahun, f.Durasi, f.KelompokFilm, f.Bahasa, f.IsSubIndo);
 
                 }
             }

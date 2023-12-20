@@ -27,6 +27,7 @@ namespace CELIKOOR_PINKMAN
         {
             FormRegistrasi frm = new FormRegistrasi();
             frm.Owner = this;
+            this.Visible = false;
             frm.ShowDialog();
             
         }
@@ -42,6 +43,7 @@ namespace CELIKOOR_PINKMAN
                     {
                         FormLoginPegawai formPegawai = new FormLoginPegawai();
                         formPegawai.Owner = this;
+                        this.Visible = false;
 
                         if(formPegawai.ShowDialog() == DialogResult.OK)
                         {

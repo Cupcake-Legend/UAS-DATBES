@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLihatFilm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             this.labelStudio = new System.Windows.Forms.Label();
             this.comboBoxJam = new System.Windows.Forms.ComboBox();
@@ -42,27 +43,26 @@
             this.labelAktor = new System.Windows.Forms.Label();
             this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             this.buttonHapus = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelGarisJudul = new System.Windows.Forms.Panel();
-            this.labelJudul = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelLihatFilm = new System.Windows.Forms.Label();
             this.buttonCari = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelDaftarFilm = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 393);
+            this.dataGridView1.Location = new System.Drawing.Point(490, 8);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(468, 194);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 387);
             this.dataGridView1.TabIndex = 73;
             // 
             // panel1
@@ -79,11 +79,19 @@
             this.panel1.Controls.Add(this.labelGenre);
             this.panel1.Controls.Add(this.labelAktor);
             this.panel1.Controls.Add(this.labelCariBerdasarkan);
-            this.panel1.Location = new System.Drawing.Point(4, 145);
+            this.panel1.Location = new System.Drawing.Point(4, 153);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(479, 242);
             this.panel1.TabIndex = 70;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(125, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 25);
+            this.textBox1.TabIndex = 21;
             // 
             // comboBoxStudio
             // 
@@ -200,7 +208,7 @@
             this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonHapus.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapus.ForeColor = System.Drawing.Color.White;
-            this.buttonHapus.Location = new System.Drawing.Point(374, 605);
+            this.buttonHapus.Location = new System.Drawing.Point(1025, 401);
             this.buttonHapus.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
@@ -209,67 +217,12 @@
             this.buttonHapus.UseVisualStyleBackColor = false;
             this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.panelGarisJudul);
-            this.panel2.Controls.Add(this.labelJudul);
-            this.panel2.Controls.Add(this.pictureBoxLogo);
-            this.panel2.Controls.Add(this.labelLihatFilm);
-            this.panel2.Location = new System.Drawing.Point(-23, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 140);
-            this.panel2.TabIndex = 88;
-            // 
-            // panelGarisJudul
-            // 
-            this.panelGarisJudul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panelGarisJudul.Location = new System.Drawing.Point(208, 49);
-            this.panelGarisJudul.Name = "panelGarisJudul";
-            this.panelGarisJudul.Size = new System.Drawing.Size(275, 10);
-            this.panelGarisJudul.TabIndex = 74;
-            // 
-            // labelJudul
-            // 
-            this.labelJudul.AutoSize = true;
-            this.labelJudul.BackColor = System.Drawing.Color.Transparent;
-            this.labelJudul.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(183, 8);
-            this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(325, 38);
-            this.labelJudul.TabIndex = 73;
-            this.labelJudul.Text = "CELIKOOR 21 CINEPLEX";
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(29, 14);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(127, 114);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 71;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // labelLihatFilm
-            // 
-            this.labelLihatFilm.AutoSize = true;
-            this.labelLihatFilm.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLihatFilm.ForeColor = System.Drawing.Color.White;
-            this.labelLihatFilm.Location = new System.Drawing.Point(245, 73);
-            this.labelLihatFilm.Name = "labelLihatFilm";
-            this.labelLihatFilm.Size = new System.Drawing.Size(197, 45);
-            this.labelLihatFilm.TabIndex = 72;
-            this.labelLihatFilm.Text = "LIHAT FILM";
-            this.labelLihatFilm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // buttonCari
             // 
             this.buttonCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonCari.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCari.ForeColor = System.Drawing.Color.White;
-            this.buttonCari.Location = new System.Drawing.Point(13, 605);
+            this.buttonCari.Location = new System.Drawing.Point(4, 401);
             this.buttonCari.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCari.Name = "buttonCari";
             this.buttonCari.Size = new System.Drawing.Size(111, 37);
@@ -278,21 +231,68 @@
             this.buttonCari.UseVisualStyleBackColor = false;
             this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
-            // textBox1
+            // panel3
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(125, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 25);
-            this.textBox1.TabIndex = 21;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.labelDaftarFilm);
+            this.panel3.Location = new System.Drawing.Point(4, 8);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(479, 140);
+            this.panel3.TabIndex = 90;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel4.Location = new System.Drawing.Point(179, 41);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(275, 10);
+            this.panel4.TabIndex = 74;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.label1.Location = new System.Drawing.Point(154, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(325, 38);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "CELIKOOR 21 CINEPLEX";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelDaftarFilm
+            // 
+            this.labelDaftarFilm.AutoSize = true;
+            this.labelDaftarFilm.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDaftarFilm.ForeColor = System.Drawing.Color.White;
+            this.labelDaftarFilm.Location = new System.Drawing.Point(203, 64);
+            this.labelDaftarFilm.Name = "labelDaftarFilm";
+            this.labelDaftarFilm.Size = new System.Drawing.Size(231, 45);
+            this.labelDaftarFilm.TabIndex = 72;
+            this.labelDaftarFilm.Text = "DAFTAR FILM";
+            this.labelDaftarFilm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormLihatFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 647);
+            this.ClientSize = new System.Drawing.Size(1145, 456);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.buttonCari);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -302,9 +302,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,11 +313,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonHapus;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelGarisJudul;
-        private System.Windows.Forms.Label labelJudul;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelLihatFilm;
         private System.Windows.Forms.Label labelGenre;
         private System.Windows.Forms.Label labelAktor;
         private System.Windows.Forms.Label labelCariBerdasarkan;
@@ -330,5 +325,10 @@
         private System.Windows.Forms.Label labelTanggal;
         private System.Windows.Forms.ComboBox comboBoxStudio;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelDaftarFilm;
     }
 }
