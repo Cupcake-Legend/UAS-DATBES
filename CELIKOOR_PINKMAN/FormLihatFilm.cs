@@ -137,6 +137,9 @@ namespace CELIKOOR_PINKMAN
             {
                 FormPemesananTiket frm = new FormPemesananTiket();
                 frm.MdiParent = this.Owner;
+
+                frm.film = f;
+
                 Bitmap image = new Bitmap(f.CoverImage);
                 frm.pictureBox1.Image = image;
                 frm.labelKelompok.Text = f.KelompokFilm.ToString();
@@ -157,11 +160,34 @@ namespace CELIKOOR_PINKMAN
 
                 List<FilmStudio> listFilmStudio = new List<FilmStudio>();
                 listFilmStudio = FilmStudio.SelectDataList("films_id", f.Id.ToString());
+
+                frm.comboBoxStudio.SelectedIndex = -1;
+
+
                 frm.comboBoxFilm.DataSource = listFilmStudio;
                 frm.comboBoxFilm.DisplayMember = "Film";
 
-                frm.comboBoxStudio.DataSource = listFilmStudio;
-                frm.comboBoxStudio.DisplayMember = "Studio";
+               
+
+                List<FilmStudio> listFS = new List<FilmStudio>();
+
+
+                listFS = FilmStudio.SelectDataList("films_id", f.Id.ToString());
+
+
+                List<Studio> listStudio = new List<Studio>();
+
+
+                foreach (FilmStudio filmStudio in listFS)
+                {
+                    listStudio.Add(filmStudio.Studio);
+                }
+
+
+
+                frm.comboBoxCinema.DataSource = listStudio;
+                frm.comboBoxCinema.DisplayMember = "cinemaStudio";
+
 
 
 

@@ -252,6 +252,7 @@
             this.comboBoxCinema.Name = "comboBoxCinema";
             this.comboBoxCinema.Size = new System.Drawing.Size(230, 31);
             this.comboBoxCinema.TabIndex = 72;
+            this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
