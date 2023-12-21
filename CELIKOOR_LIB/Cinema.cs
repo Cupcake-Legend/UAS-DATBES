@@ -134,6 +134,12 @@ namespace CELIKOOR_LIB
             if (rowsEffected == 0) return false;
             else return true;
         }
+
+        public override string ToString()
+        {
+            return this.Nama_cabang;
+        }
+
         #endregion
     }
 }

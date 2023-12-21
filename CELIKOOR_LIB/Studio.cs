@@ -49,7 +49,7 @@ namespace CELIKOOR_LIB
             string sql = "SELECT s.*, js.*, c.* FROM studios AS s " +
                 "INNER JOIN jenis_studios AS js ON js.id = s.jenis_studios_id " +
                 "INNER JOIN cinemas AS c ON c.id = s.cinemas_id " +
-                "WHERE id = '" + studioID + "'";
+                "WHERE s.id = '" + studioID + "'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
@@ -183,6 +183,12 @@ namespace CELIKOOR_LIB
             if (rowsEffected == 0) return false;
             else return true;
         }
+
+        public override string ToString()
+        {
+            return this.Nama;
+        }
+
         #endregion
     }
 }

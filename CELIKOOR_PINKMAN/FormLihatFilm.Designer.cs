@@ -58,12 +58,13 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(490, 8);
+            this.dataGridView1.Location = new System.Drawing.Point(486, 153);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(646, 387);
             this.dataGridView1.TabIndex = 73;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 
@@ -82,7 +83,7 @@
             this.panel1.Location = new System.Drawing.Point(4, 153);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 242);
+            this.panel1.Size = new System.Drawing.Size(479, 387);
             this.panel1.TabIndex = 70;
             // 
             // textBox1
@@ -208,7 +209,7 @@
             this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonHapus.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapus.ForeColor = System.Drawing.Color.White;
-            this.buttonHapus.Location = new System.Drawing.Point(1025, 401);
+            this.buttonHapus.Location = new System.Drawing.Point(1025, 551);
             this.buttonHapus.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
@@ -222,7 +223,7 @@
             this.buttonCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonCari.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCari.ForeColor = System.Drawing.Color.White;
-            this.buttonCari.Location = new System.Drawing.Point(4, 401);
+            this.buttonCari.Location = new System.Drawing.Point(4, 551);
             this.buttonCari.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCari.Name = "buttonCari";
             this.buttonCari.Size = new System.Drawing.Size(111, 37);
@@ -240,13 +241,13 @@
             this.panel3.Controls.Add(this.labelDaftarFilm);
             this.panel3.Location = new System.Drawing.Point(4, 8);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(479, 140);
+            this.panel3.Size = new System.Drawing.Size(1128, 140);
             this.panel3.TabIndex = 90;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel4.Location = new System.Drawing.Point(179, 41);
+            this.panel4.Location = new System.Drawing.Point(439, 48);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(275, 10);
             this.panel4.TabIndex = 74;
@@ -257,7 +258,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label1.Location = new System.Drawing.Point(154, 0);
+            this.label1.Location = new System.Drawing.Point(414, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(325, 38);
             this.label1.TabIndex = 73;
@@ -279,18 +280,18 @@
             this.labelDaftarFilm.AutoSize = true;
             this.labelDaftarFilm.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDaftarFilm.ForeColor = System.Drawing.Color.White;
-            this.labelDaftarFilm.Location = new System.Drawing.Point(203, 64);
+            this.labelDaftarFilm.Location = new System.Drawing.Point(489, 61);
             this.labelDaftarFilm.Name = "labelDaftarFilm";
-            this.labelDaftarFilm.Size = new System.Drawing.Size(231, 45);
+            this.labelDaftarFilm.Size = new System.Drawing.Size(181, 45);
             this.labelDaftarFilm.TabIndex = 72;
-            this.labelDaftarFilm.Text = "DAFTAR FILM";
+            this.labelDaftarFilm.Text = "CARI FILM";
             this.labelDaftarFilm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormLihatFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 456);
+            this.ClientSize = new System.Drawing.Size(1145, 606);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.buttonCari);
             this.Controls.Add(this.buttonHapus);

@@ -47,18 +47,28 @@ namespace CELIKOOR_PINKMAN
 
         private void FormatDataGrid()
         {
+            dataGridView1.Columns.Add("colID", "ID");
+            dataGridView1.Columns["colID"].Visible = false;
             DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
             imageCol.Name = "colCover";
             imageCol.HeaderText = "Cover Image";
             imageCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridView1.Columns.Add(imageCol);
-            dataGridView1.Columns.Add("colJudul", "Judul");
-            dataGridView1.Columns.Add("colSinopsis", "Sinopsis");
-            dataGridView1.Columns.Add("colTahun", "Tahun    ");
-            dataGridView1.Columns.Add("colDurasi", "Durasi");
-            dataGridView1.Columns.Add("colKelompok", "Kelompok");
-            dataGridView1.Columns.Add("colBahasa", "Bahasa");
-            dataGridView1.Columns.Add("colSub", "Sub-Indo");
+
+            DataGridViewTextBoxColumn judul = new DataGridViewTextBoxColumn();
+            judul.Name = "colJudul";
+            judul.HeaderText = "Judul";
+            judul.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.Columns.Add(judul);
+
+
+
+            DataGridViewTextBoxColumn sinopsis = new DataGridViewTextBoxColumn();
+            sinopsis.Name = "colSinopsis";
+            sinopsis.HeaderText = "Sinopsis";
+            sinopsis.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.Columns.Add(sinopsis);
+
         }
         private void TampilDataGrid()
         {
@@ -70,7 +80,35 @@ namespace CELIKOOR_PINKMAN
                 {
                     string imagePath = f.CoverImage;
                     Bitmap image = new Bitmap(imagePath);
-                    dataGridView1.Rows.Add(image, f.Judul, f.Sinopsis, f.Tahun, f.Durasi, f.KelompokFilm, f.Bahasa, f.IsSubIndo);
+                    dataGridView1.Rows.Add(f.Id, image, f.Judul, f.Sinopsis);
+                    
+
+                    if (!dataGridView1.Columns.Contains("btnDetails"))
+                    {
+                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+                        //nama header
+                        bcol.HeaderText = "Aksi";
+                        //nama tombol
+                        bcol.Text = "Lihat Detail";
+                        bcol.Name = "btnDetails";
+
+                        bcol.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(bcol);
+
+                    }
+                    if (!dataGridView1.Columns.Contains("btnBeli"))
+                    {
+                        DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
+                        //nama header
+                        bcol1.HeaderText = "Aksi";
+                        //nama tombol
+                        bcol1.Text = "Beli Tiket";
+                        bcol1.Name = "btnBeli";
+
+                        bcol1.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(bcol1);
+
+                    }
 
                 }
             }
@@ -83,6 +121,53 @@ namespace CELIKOOR_PINKMAN
 
         private void buttonCari_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string pKodeKategori = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
+            Film f = Film.SelectDataSingle(pKodeKategori);
+
+            if (e.ColumnIndex == dataGridView1.Columns["btnDetails"].Index && e.RowIndex >= 0)
+            {
+
+            }
+            if (e.ColumnIndex == dataGridView1.Columns["btnBeli"].Index && e.RowIndex >= 0)
+            {
+                FormPemesananTiket frm = new FormPemesananTiket();
+                frm.MdiParent = this.Owner;
+                Bitmap image = new Bitmap(f.CoverImage);
+                frm.pictureBox1.Image = image;
+                frm.labelKelompok.Text = f.KelompokFilm.ToString();
+                
+                frm.labelDurasi.Text = f.Durasi.ToString() + "  jam";
+                frm.labelSipnosis.Text = f.Sinopsis.ToString();
+
+                string genre = "";
+                
+                foreach(GenreFilm g in f.GenreFilmList)
+                {
+                    genre += g + " ";
+                    
+
+                }
+                frm.labelGenre.Text = genre;
+                frm.comboBoxFilm.Text = f.Judul;
+
+                List<FilmStudio> listFilmStudio = new List<FilmStudio>();
+                listFilmStudio = FilmStudio.SelectDataList("films_id", f.Id.ToString());
+                frm.comboBoxFilm.DataSource = listFilmStudio;
+                frm.comboBoxFilm.DisplayMember = "Film";
+
+                frm.comboBoxStudio.DataSource = listFilmStudio;
+                frm.comboBoxStudio.DisplayMember = "Studio";
+
+
+
+                frm.ShowDialog();
+
+            }
 
         }
     }

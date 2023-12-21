@@ -33,9 +33,28 @@ namespace CELIKOOR_LIB
 
         private void FormatDataGrid()
         {
+            DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
+            imageCol.Name = "colCover";
+            imageCol.HeaderText = "Cover Image";
+            imageCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            dataGridView1.Columns.Add(imageCol);
+
             dataGridView1.Columns.Add("colID", "ID");
-            dataGridView1.Columns.Add("colJudul", "Judul");
-            dataGridView1.Columns.Add("colSinopsis", "Sinopsis");
+
+            DataGridViewTextBoxColumn judul = new DataGridViewTextBoxColumn();
+            judul.Name = "colJudul";
+            judul.HeaderText = "Judul";
+            judul.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.Columns.Add(judul);
+
+
+
+            DataGridViewTextBoxColumn sinopsis = new DataGridViewTextBoxColumn();
+            sinopsis.Name = "colSinopsis";
+            sinopsis.HeaderText = "Sinopsis";
+            sinopsis.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.Columns.Add(sinopsis);
+
             dataGridView1.Columns.Add("colTahun", "Tahun    ");
             dataGridView1.Columns.Add("colDurasi", "Durasi");
             dataGridView1.Columns.Add("colKelompok", "Kelompok");
@@ -43,11 +62,7 @@ namespace CELIKOOR_LIB
             dataGridView1.Columns.Add("colSub", "Sub-Indo");
 
 
-            DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
-            imageCol.Name = "colCover";
-            imageCol.HeaderText = "Cover Image";
-            imageCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            dataGridView1.Columns.Add(imageCol);
+        
             dataGridView1.Columns.Add("colDiskon", "Diskon");
         }
         
@@ -60,7 +75,7 @@ namespace CELIKOOR_LIB
                 {
                     string imagePath = f.CoverImage;
                     Bitmap image = new Bitmap(imagePath);
-                    dataGridView1.Rows.Add(f.Id, f.Judul, f.Sinopsis, f.Tahun, f.Durasi, f.KelompokFilm, f.Bahasa, f.IsSubIndo, image, f.DiskonNominal);
+                    dataGridView1.Rows.Add(image, f.Id, f.Judul, f.Sinopsis, f.Tahun, f.Durasi, f.KelompokFilm, f.Bahasa, f.IsSubIndo,f.DiskonNominal);
 
                     if (!dataGridView1.Columns.Contains("btnUbahGrid"))
                     {

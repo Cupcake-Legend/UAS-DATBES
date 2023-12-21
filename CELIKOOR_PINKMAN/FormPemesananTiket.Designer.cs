@@ -223,24 +223,29 @@
             // 
             // comboBoxFilm
             // 
+            this.comboBoxFilm.Enabled = false;
             this.comboBoxFilm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFilm.FormattingEnabled = true;
             this.comboBoxFilm.Location = new System.Drawing.Point(116, 11);
             this.comboBoxFilm.Name = "comboBoxFilm";
             this.comboBoxFilm.Size = new System.Drawing.Size(317, 31);
             this.comboBoxFilm.TabIndex = 70;
+            this.comboBoxFilm.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilm_SelectedIndexChanged);
             // 
             // comboBoxStudio
             // 
+            this.comboBoxStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStudio.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStudio.FormattingEnabled = true;
             this.comboBoxStudio.Location = new System.Drawing.Point(114, 175);
             this.comboBoxStudio.Name = "comboBoxStudio";
             this.comboBoxStudio.Size = new System.Drawing.Size(121, 31);
             this.comboBoxStudio.TabIndex = 71;
+            this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
             // 
             // comboBoxCinema
             // 
+            this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinema.FormattingEnabled = true;
             this.comboBoxCinema.Location = new System.Drawing.Point(114, 119);
@@ -1664,7 +1669,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CELIKOOR_PINKMAN.Properties.Resources.attack_of_the_50th_woman_iconic_sexy_film_poster__1406735273_view_1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(446, 695);
@@ -1715,9 +1719,6 @@
         private System.Windows.Forms.Label labelKeteranganTanggal;
         private System.Windows.Forms.Label labelKeteranganCinema;
         private System.Windows.Forms.Label labelKeteranganStudio;
-        private System.Windows.Forms.ComboBox comboBoxFilm;
-        private System.Windows.Forms.ComboBox comboBoxStudio;
-        private System.Windows.Forms.ComboBox comboBoxCinema;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelStudio;
         private System.Windows.Forms.Label labelSisaKursi;
@@ -1725,15 +1726,10 @@
         private System.Windows.Forms.Button buttonBayar;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Label labelKeteranganSinopsis;
-        private System.Windows.Forms.Label labelAktor;
         private System.Windows.Forms.Label labelKeteranganAktor;
-        private System.Windows.Forms.Label labelDurasi;
         private System.Windows.Forms.Label labelKeteranganDurasi;
-        private System.Windows.Forms.Label labelSipnosis;
         private System.Windows.Forms.Label labelKeteranganKelompok;
-        private System.Windows.Forms.Label labelKelompok;
         private System.Windows.Forms.Label labelKeteranganGenre;
-        private System.Windows.Forms.Label labelGenre;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelKeteranganDiskon;
@@ -1843,6 +1839,14 @@
         private System.Windows.Forms.Label labelSaldo;
         private System.Windows.Forms.Label labelKeteranganSaldo;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label labelAktor;
+        public System.Windows.Forms.Label labelDurasi;
+        public System.Windows.Forms.Label labelSipnosis;
+        public System.Windows.Forms.Label labelKelompok;
+        public System.Windows.Forms.Label labelGenre;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ComboBox comboBoxFilm;
+        public System.Windows.Forms.ComboBox comboBoxStudio;
+        public System.Windows.Forms.ComboBox comboBoxCinema;
     }
 }

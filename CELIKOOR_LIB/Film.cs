@@ -102,7 +102,7 @@ namespace CELIKOOR_LIB
         {
             string sql = "SELECT * FROM films as f " +
                 "INNER JOIN kelompoks AS k ON k.id = f.kelompoks_id " +
-                "WHERE id = '" + filmID + "'";
+                "WHERE f.id = '" + filmID + "'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
@@ -110,23 +110,20 @@ namespace CELIKOOR_LIB
 
             if (hasil.Read())
             {
-                Kelompok kelompok = new Kelompok(
-                    (int)hasil.GetValue(10),
-                    hasil.GetValue(11).ToString()
-                    );
+                Kelompok kelompok = Kelompok.SelectDataSingle(hasil.GetValue(5).ToString());
+
 
                 film = new Film(
-                    (int)hasil.GetValue(0),
+                    int.Parse(hasil.GetValue(0).ToString()),
                     hasil.GetValue(1).ToString(),
                     hasil.GetValue(2).ToString(),
-                    (int)hasil.GetValue(3),
-                    (int)hasil.GetValue(4),
+                    int.Parse(hasil.GetValue(3).ToString()),
+                    int.Parse(hasil.GetValue(4).ToString()),
                     kelompok,
                     hasil.GetValue(6).ToString(),
-                    (int)hasil.GetValue(7) != 0,
+                    int.Parse(hasil.GetValue(7).ToString()) != 0,
                     hasil.GetValue(8).ToString(),
-                    (double)hasil.GetValue(9)
-                    );
+                    double.Parse((hasil.GetValue(9).ToString())));
 
                 return film;
             }
@@ -277,6 +274,12 @@ namespace CELIKOOR_LIB
             if (rowsEffected == 0) return false;
             else return true;
         }
+
+        public override string ToString()
+        {
+            return this.Judul;
+        }
+
         #endregion
     }
 }

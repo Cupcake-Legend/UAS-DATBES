@@ -52,7 +52,7 @@
             this.buttonTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(23, 453);
+            this.buttonTambah.Location = new System.Drawing.Point(13, 556);
             this.buttonTambah.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(111, 37);
@@ -65,7 +65,7 @@
             this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonHapus.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapus.ForeColor = System.Drawing.Color.White;
-            this.buttonHapus.Location = new System.Drawing.Point(941, 453);
+            this.buttonHapus.Location = new System.Drawing.Point(1021, 556);
             this.buttonHapus.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(111, 37);
@@ -78,11 +78,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(509, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(509, 158);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(623, 390);
             this.dataGridView1.TabIndex = 79;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -91,7 +91,7 @@
             this.labelDaftarFilm.AutoSize = true;
             this.labelDaftarFilm.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDaftarFilm.ForeColor = System.Drawing.Color.White;
-            this.labelDaftarFilm.Location = new System.Drawing.Point(203, 64);
+            this.labelDaftarFilm.Location = new System.Drawing.Point(449, 74);
             this.labelDaftarFilm.Name = "labelDaftarFilm";
             this.labelDaftarFilm.Size = new System.Drawing.Size(231, 45);
             this.labelDaftarFilm.TabIndex = 72;
@@ -107,7 +107,7 @@
             this.panel1.Location = new System.Drawing.Point(23, 160);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 287);
+            this.panel1.Size = new System.Drawing.Size(479, 388);
             this.panel1.TabIndex = 78;
             // 
             // textBox1
@@ -151,13 +151,13 @@
             this.panel2.Controls.Add(this.labelDaftarFilm);
             this.panel2.Location = new System.Drawing.Point(23, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(479, 140);
+            this.panel2.Size = new System.Drawing.Size(1109, 140);
             this.panel2.TabIndex = 82;
             // 
             // panelGarisJudul
             // 
             this.panelGarisJudul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panelGarisJudul.Location = new System.Drawing.Point(179, 41);
+            this.panelGarisJudul.Location = new System.Drawing.Point(425, 51);
             this.panelGarisJudul.Name = "panelGarisJudul";
             this.panelGarisJudul.Size = new System.Drawing.Size(275, 10);
             this.panelGarisJudul.TabIndex = 74;
@@ -168,7 +168,7 @@
             this.labelJudul.BackColor = System.Drawing.Color.Transparent;
             this.labelJudul.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.labelJudul.Location = new System.Drawing.Point(154, 0);
+            this.labelJudul.Location = new System.Drawing.Point(400, 10);
             this.labelJudul.Name = "labelJudul";
             this.labelJudul.Size = new System.Drawing.Size(325, 38);
             this.labelJudul.TabIndex = 73;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 496);
+            this.ClientSize = new System.Drawing.Size(1145, 606);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.dataGridView1);
