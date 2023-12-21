@@ -1,4 +1,5 @@
 ﻿using CELIKOOR_LIB;
+using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace CELIKOOR_PINKMAN
         
         private void FormPemesananTiket_Load(object sender, EventArgs e)
         {
-           
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void labelSisaKursi_Click(object sender, EventArgs e)
@@ -42,6 +43,10 @@ namespace CELIKOOR_PINKMAN
 
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            panelA.Controls.Clear();
+            panelB.Controls.Clear();
+            panelC.Controls.Clear();
+
             Studio s = (Studio)comboBoxStudio.SelectedItem;
 
             labelKetKursi.Text = s.Kapasitas.ToString();
@@ -59,9 +64,36 @@ namespace CELIKOOR_PINKMAN
             {
                 labelHarga.Text = s.HargaWeekend.ToString();
             }
+
+            GenerateCheckBoxes("A", panelA);
+            GenerateCheckBoxes("B", panelB);
+            GenerateCheckBoxes("C", panelC);
             
 
 
+        }
+
+        private void GenerateCheckBoxes(string columnName, Panel panel)
+        {
+            Studio s = (Studio)comboBoxStudio.SelectedItem;
+            int kapastitas = s.Kapasitas;
+            int rows = (int)Math.Ceiling((decimal)kapastitas / 12);
+            int limit = 4;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < limit; j++)
+                {
+                    int seatNumber = i * limit + j + 1;
+                    CheckBox cb = new CheckBox();
+                    cb.Text = seatNumber.ToString();
+                    cb.AutoSize = true;
+                    cb.Location = new System.Drawing.Point(10 + j * 45, 30 + i * 30);
+                    cb.Name = columnName + seatNumber.ToString();
+                    panel.Controls.Add(cb);
+
+
+                }
+            }
         }
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)

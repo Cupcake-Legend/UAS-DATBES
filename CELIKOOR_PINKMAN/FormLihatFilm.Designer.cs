@@ -58,11 +58,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(486, 153);
+            this.dataGridView1.Location = new System.Drawing.Point(376, 153);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(646, 387);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 387);
             this.dataGridView1.TabIndex = 73;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -83,7 +83,7 @@
             this.panel1.Location = new System.Drawing.Point(4, 153);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 387);
+            this.panel1.Size = new System.Drawing.Size(370, 387);
             this.panel1.TabIndex = 70;
             // 
             // textBox1
