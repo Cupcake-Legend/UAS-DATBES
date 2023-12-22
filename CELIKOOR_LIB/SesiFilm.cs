@@ -51,6 +51,10 @@ namespace CELIKOOR_LIB
             else return null;
         }
 
+        
+
+
+
         public static List<SesiFilm> SelectDataList(string kriteria, string nilaiKriteria)
         {
             string sql = "SELECT * FROM sesi_film WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";

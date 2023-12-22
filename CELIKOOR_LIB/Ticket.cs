@@ -139,6 +139,34 @@ namespace CELIKOOR_LIB
             if (rowsEffected == 0) return false;
             else return true;
         }
+
+        public static List<string> GetNomorKursi(Studio studios, Film films)
+        {
+            string sql = "SELECT tikets.nomor_kursi , studios.id, films.judul " +
+                "FROM tikets " +
+                "INNER JOIN sesi_films on sesi_films.films_id = tikets.films_id and sesi_films.jadwal_film_id = tikets.jadwal_film_id and sesi_films.studios_id = tikets.studios_id " +
+                "INNER JOIN film_studio on film_studio.films_id = sesi_films.films_id and film_studio.studios_id = sesi_films.studios_id " +
+                "INNER JOIN films on films.id = film_studio.films_id " +
+                "INNER JOIN studios on film_studio.studios_id = studios.id " +
+                "WHERE films.id = '" + films.Id.ToString() + "' and studios.id = '" + studios.Id.ToString() + "'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            List<string>listKursi =  new List<string>();
+
+            while (hasil.Read())
+            {
+                listKursi.Add(hasil.GetValue(0).ToString());
+            }
+            return listKursi;
+
+
+
+
+
+        }
+
+
         #endregion
     }
 }

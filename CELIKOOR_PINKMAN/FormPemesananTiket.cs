@@ -19,6 +19,7 @@ namespace CELIKOOR_PINKMAN
             InitializeComponent();
         }
         public Film film;
+        List<string> listCheckedCheckBoxes = new List<string>();
         
         private void FormPemesananTiket_Load(object sender, EventArgs e)
         {
@@ -41,6 +42,8 @@ namespace CELIKOOR_PINKMAN
 
         }
 
+       
+
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
             panelA.Controls.Clear();
@@ -48,6 +51,9 @@ namespace CELIKOOR_PINKMAN
             panelC.Controls.Clear();
 
             Studio s = (Studio)comboBoxStudio.SelectedItem;
+
+            int sisaKursi = Studio.GetSisaKursi(s, film);
+            labelSisaKursi.Text = "Sisa " + sisaKursi + " kursi";
 
             labelKetKursi.Text = s.Kapasitas.ToString();
 
@@ -68,6 +74,9 @@ namespace CELIKOOR_PINKMAN
             GenerateCheckBoxes("A", panelA);
             GenerateCheckBoxes("B", panelB);
             GenerateCheckBoxes("C", panelC);
+            CheckCheckBoxes(panelA);
+            CheckCheckBoxes(panelB);
+            CheckCheckBoxes(panelC);
             
 
 
@@ -96,6 +105,25 @@ namespace CELIKOOR_PINKMAN
             }
         }
 
+        private void CheckCheckBoxes(Panel panel)
+        {
+            Studio s = (Studio)comboBoxCinema.SelectedItem;
+            List<string> listKursi = new List<string>();
+            listKursi = Ticket.GetNomorKursi(s, film);
+
+           foreach(CheckBox checkBox in panel.Controls)
+            {
+                if (listKursi.Contains(checkBox.Name))
+                {
+                    checkBox.Enabled = false;
+                    checkBox.Checked = true;
+                }
+            }
+
+
+
+        }
+
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -117,6 +145,83 @@ namespace CELIKOOR_PINKMAN
             
            
 
+        }
+        private void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+
+            if (checkBox.Checked && checkBox.Enabled == true)
+            {
+                listCheckedCheckBoxes.Add(checkBox.Name);
+
+            }
+            else
+            {
+                listCheckedCheckBoxes.Remove(checkBox.Name);
+
+            }
+            UpdateLabelString();
+
+        }
+
+        private void UpdateLabelString()
+        {
+            string label = string.Join(",", listCheckedCheckBoxes);
+
+            labelKursi.Text = label;
+
+        }
+
+        private void panelA_ControlAdded(object sender, ControlEventArgs e)
+        {
+            if(e.Control is CheckBox checkBox)
+            {
+                checkBox.CheckedChanged += CheckBox_CheckedChanged;
+            }
+        }
+
+        private void panelB_ControlAdded(object sender, ControlEventArgs e)
+        {
+            if (e.Control is CheckBox checkBox)
+            {
+                checkBox.CheckedChanged += CheckBox_CheckedChanged;
+            }
+        }
+
+        private void panelC_ControlAdded(object sender, ControlEventArgs e)
+        {
+            if (e.Control is CheckBox checkBox)
+            {
+                checkBox.CheckedChanged += CheckBox_CheckedChanged;
+            }
+        }
+
+        private void buttonBayar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                /*
+                FormMenu frm = (FormMenu)this.MdiParent;
+                Konsumen konsumen = frm.konsumenLogin;
+
+                Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text),
+                    double.Parse(labelDiskon.Text), konsumen, null , "TERBAYAR");
+                Invoice.InsertData(invoice);
+
+                SesiFilm sesi = new SesiFilm()
+
+                foreach(string kursi in listCheckedCheckBoxes)
+                {
+                    Ticket ticket = new Ticket(kursi, 0, null, double.Parse(labelHarga.Text)
+                }
+                */
+
+
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("Terjadi kesalahan. Pesan kesalahan: " + ex.Message);
+            }
         }
     }
 }

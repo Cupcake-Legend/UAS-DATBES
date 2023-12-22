@@ -199,9 +199,9 @@
             this.labelSisaKursi.ForeColor = System.Drawing.Color.Red;
             this.labelSisaKursi.Location = new System.Drawing.Point(814, 14);
             this.labelSisaKursi.Name = "labelSisaKursi";
-            this.labelSisaKursi.Size = new System.Drawing.Size(118, 25);
+            this.labelSisaKursi.Size = new System.Drawing.Size(125, 25);
             this.labelSisaKursi.TabIndex = 75;
-            this.labelSisaKursi.Text = "(sisa 5 kursi)";
+            this.labelSisaKursi.Text = "Coming Soon";
             this.labelSisaKursi.Click += new System.EventHandler(this.labelSisaKursi_Click);
             // 
             // buttonBayar
@@ -215,6 +215,7 @@
             this.buttonBayar.TabIndex = 77;
             this.buttonBayar.Text = "BAYAR";
             this.buttonBayar.UseVisualStyleBackColor = false;
+            this.buttonBayar.Click += new System.EventHandler(this.buttonBayar_Click);
             // 
             // buttonKeluar
             // 
@@ -473,9 +474,9 @@
             this.labelKursi.ForeColor = System.Drawing.Color.Black;
             this.labelKursi.Location = new System.Drawing.Point(119, 26);
             this.labelKursi.Name = "labelKursi";
-            this.labelKursi.Size = new System.Drawing.Size(148, 25);
+            this.labelKursi.Size = new System.Drawing.Size(50, 25);
             this.labelKursi.TabIndex = 91;
-            this.labelKursi.Text = "B4, B5, B6, B7, B8";
+            this.labelKursi.Text = "Kursi";
             // 
             // labelKeteranganTotal
             // 
@@ -586,6 +587,7 @@
             this.panelB.Name = "panelB";
             this.panelB.Size = new System.Drawing.Size(268, 414);
             this.panelB.TabIndex = 101;
+            this.panelB.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelB_ControlAdded);
             // 
             // panelC
             // 
@@ -593,6 +595,7 @@
             this.panelC.Name = "panelC";
             this.panelC.Size = new System.Drawing.Size(268, 414);
             this.panelC.TabIndex = 101;
+            this.panelC.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelC_ControlAdded);
             // 
             // panelA
             // 
@@ -600,6 +603,7 @@
             this.panelA.Name = "panelA";
             this.panelA.Size = new System.Drawing.Size(268, 414);
             this.panelA.TabIndex = 100;
+            this.panelA.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelA_ControlAdded);
             // 
             // panel7
             // 
