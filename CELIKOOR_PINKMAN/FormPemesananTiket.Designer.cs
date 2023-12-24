@@ -438,9 +438,9 @@
             this.labelTotal.ForeColor = System.Drawing.Color.Black;
             this.labelTotal.Location = new System.Drawing.Point(119, 62);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(114, 25);
+            this.labelTotal.Size = new System.Drawing.Size(22, 25);
             this.labelTotal.TabIndex = 89;
-            this.labelTotal.Text = "Rp 250.000,-";
+            this.labelTotal.Text = "1";
             // 
             // labelTotalAkhir
             // 
@@ -450,9 +450,9 @@
             this.labelTotalAkhir.ForeColor = System.Drawing.Color.Red;
             this.labelTotalAkhir.Location = new System.Drawing.Point(119, 135);
             this.labelTotalAkhir.Name = "labelTotalAkhir";
-            this.labelTotalAkhir.Size = new System.Drawing.Size(114, 25);
+            this.labelTotalAkhir.Size = new System.Drawing.Size(22, 25);
             this.labelTotalAkhir.TabIndex = 93;
-            this.labelTotalAkhir.Text = "Rp 200.000,-";
+            this.labelTotalAkhir.Text = "1";
             // 
             // labelDiskon
             // 
@@ -462,9 +462,9 @@
             this.labelDiskon.ForeColor = System.Drawing.Color.Black;
             this.labelDiskon.Location = new System.Drawing.Point(119, 98);
             this.labelDiskon.Name = "labelDiskon";
-            this.labelDiskon.Size = new System.Drawing.Size(104, 25);
+            this.labelDiskon.Size = new System.Drawing.Size(22, 25);
             this.labelDiskon.TabIndex = 95;
-            this.labelDiskon.Text = "Rp 50.000,-";
+            this.labelDiskon.Text = "1";
             // 
             // labelKursi
             // 
@@ -530,9 +530,9 @@
             this.labelHarga.ForeColor = System.Drawing.Color.Black;
             this.labelHarga.Location = new System.Drawing.Point(734, 54);
             this.labelHarga.Name = "labelHarga";
-            this.labelHarga.Size = new System.Drawing.Size(107, 25);
+            this.labelHarga.Size = new System.Drawing.Size(22, 25);
             this.labelHarga.TabIndex = 77;
-            this.labelHarga.Text = "Rp 50.000,-";
+            this.labelHarga.Text = "1";
             // 
             // labelKeteranganHarga
             // 

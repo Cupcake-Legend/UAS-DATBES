@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,11 +20,17 @@ namespace CELIKOOR_PINKMAN
             InitializeComponent();
         }
         public Film film;
+
         List<string> listCheckedCheckBoxes = new List<string>();
+        CultureInfo indoRP = new CultureInfo("id-ID");
+        int harga;
+        double total;
         
         private void FormPemesananTiket_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            
+            labelDiskon.Text = film.DiskonNominal.ToString("C2", indoRP);
         }
 
         private void labelSisaKursi_Click(object sender, EventArgs e)
@@ -63,12 +70,14 @@ namespace CELIKOOR_PINKMAN
                 dateTimePicker1.Value.DayOfWeek == DayOfWeek.Thursday
                 )
             {
-                labelHarga.Text = s.HargaWeekday.ToString();
+                labelHarga.Text = s.HargaWeekday.ToString("C2",indoRP);
+                harga = s.HargaWeekday;
 
             }
             else if(dateTimePicker1.Value.DayOfWeek == DayOfWeek.Saturday || dateTimePicker1.Value.DayOfWeek == DayOfWeek.Sunday)
             {
-                labelHarga.Text = s.HargaWeekend.ToString();
+                labelHarga.Text = s.HargaWeekend.ToString("C2", indoRP);
+                harga = s.HargaWeekend;
             }
 
             GenerateCheckBoxes("A", panelA);
@@ -110,6 +119,9 @@ namespace CELIKOOR_PINKMAN
             Studio s = (Studio)comboBoxCinema.SelectedItem;
             List<string> listKursi = new List<string>();
             listKursi = Ticket.GetNomorKursi(s, film);
+            
+            
+            
 
            foreach(CheckBox checkBox in panel.Controls)
             {
@@ -123,6 +135,9 @@ namespace CELIKOOR_PINKMAN
 
 
         }
+
+
+
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -153,16 +168,32 @@ namespace CELIKOOR_PINKMAN
             if (checkBox.Checked && checkBox.Enabled == true)
             {
                 listCheckedCheckBoxes.Add(checkBox.Name);
+                if (double.TryParse(labelHarga.Text, NumberStyles.Currency, indoRP, out double totalHarga))
+                {
+
+                    total += totalHarga;
+                    labelTotal.Text = total.ToString("C2", indoRP);
+                    labelTotalAkhir.Text = (total - film.DiskonNominal).ToString("C2", indoRP);
+
+                }
 
             }
             else
             {
                 listCheckedCheckBoxes.Remove(checkBox.Name);
+                if (double.TryParse(labelHarga.Text, NumberStyles.Currency, indoRP, out double totalHarga))
+                {
 
+                    total -= totalHarga;
+                    labelTotal.Text = total.ToString("C2", indoRP);
+                    labelTotalAkhir.Text = (total - film.DiskonNominal).ToString("C2", indoRP);
+
+                }
             }
             UpdateLabelString();
 
         }
+
 
         private void UpdateLabelString()
         {
@@ -200,21 +231,28 @@ namespace CELIKOOR_PINKMAN
         {
             try
             {
-                /*
-                FormMenu frm = (FormMenu)this.MdiParent;
+                
+                FormMenu frm = (FormMenu)this.Owner.MdiParent;
                 Konsumen konsumen = frm.konsumenLogin;
 
-                Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text),
-                    double.Parse(labelDiskon.Text), konsumen, null , "TERBAYAR");
-                Invoice.InsertData(invoice);
+         
+               
 
-                SesiFilm sesi = new SesiFilm()
+                Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text,NumberStyles.Currency, indoRP),
+                    double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), konsumen,null,  "PENDING");
+                Invoice.InsertDataTanpaKasir(invoice);
 
+                /*
                 foreach(string kursi in listCheckedCheckBoxes)
                 {
-                    Ticket ticket = new Ticket(kursi, 0, null, double.Parse(labelHarga.Text)
+                    Ticket ticket = new Ticket(kursi, 0, , double.Parse(labelHarga.Text, NumberStyles.Currency, indoRP)), 
                 }
+
+                MessageBox.Show("Berhasil membeli tiket!");
                 */
+
+                FormPemesananTiket_Load(this, e);
+                
 
 
             }

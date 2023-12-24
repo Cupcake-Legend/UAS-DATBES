@@ -40,7 +40,7 @@ namespace CELIKOOR_PINKMAN
                 Invoice i = new Invoice(0, dateTimePickerTanggal.Value, double.Parse(textBoxGrandTotal.Text),
                     double.Parse(textBoxDiskon.Text), (Konsumen)comboBoxKonsumen.SelectedItem, (Pegawai)comboBoxKasir.SelectedItem,
                     comboBoxStatus.SelectedItem.ToString());
-                bool success = Invoice.InsertData(i);
+                bool success = Invoice.InsertDataDenganKasir(i);
                 if (success)
                 {
                     MessageBox.Show("Data berhasil ditambahkan!");

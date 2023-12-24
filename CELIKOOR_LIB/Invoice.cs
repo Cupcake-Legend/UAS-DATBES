@@ -172,19 +172,59 @@ namespace CELIKOOR_LIB
             ticketList.Add(ticket);
         }
 
-        public static bool InsertData(Invoice invoice)
+        public static bool InsertDataDenganKasir(Invoice invoice)
         {
             bool boolInvoice = false;
             bool boolTicket = false;
 
             string sqlInvoice = "INSERT INTO " +
-                "invoice(tanggal, grand_total, diskon_nominal, konsumens_id, kasir_id, status) " +
+                "invoices(tanggal, grand_total, diskon_nominal, konsumens_id, kasir_id, status) " +
                 "VALUES ('" +
                 invoice.Tanggal.ToString("yyyy-MM-dd") + "', '" +
                 invoice.GrandTotal + "', '" +
                 invoice.DiskonNominal + "', '" +
                 invoice.KonsumenInvoice.Id + "', '" +
                 invoice.Kasir.Id + "', '" +
+            invoice.Status + "')";
+
+            int rowsEffectedInvoice = Koneksi.JalankanPerintahDML(sqlInvoice);
+
+            if (rowsEffectedInvoice == 0) boolInvoice = false;
+            else boolInvoice = true;
+
+            if (boolInvoice)
+            {
+                foreach (Ticket ticket in invoice.TicketList)
+                {
+                    bool tmp = Ticket.InsertData(invoice.Id.ToString(), ticket);
+
+                    if (!tmp)
+                    {
+                        boolTicket = false;
+                        break;
+                    }
+                    else boolTicket = true;
+                }
+            }
+
+            if (boolInvoice && boolTicket)
+            {
+                return true;
+            }
+            else return false;
+        }
+        public static bool InsertDataTanpaKasir(Invoice invoice)
+        {
+            bool boolInvoice = false;
+            bool boolTicket = false;
+
+            string sqlInvoice = "INSERT INTO " +
+                "invoices(tanggal, grand_total, diskon_nominal, konsumens_id, status) " +
+                "VALUES ('" +
+                invoice.Tanggal.ToString("yyyy-MM-dd") + "', '" +
+                invoice.GrandTotal + "', '" +
+                invoice.DiskonNominal + "', '" +
+                invoice.KonsumenInvoice.Id + "', '" +
             invoice.Status + "')";
 
             int rowsEffectedInvoice = Koneksi.JalankanPerintahDML(sqlInvoice);

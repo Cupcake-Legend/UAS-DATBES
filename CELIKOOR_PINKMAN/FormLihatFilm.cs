@@ -136,7 +136,7 @@ namespace CELIKOOR_PINKMAN
             if (e.ColumnIndex == dataGridView1.Columns["btnBeli"].Index && e.RowIndex >= 0)
             {
                 FormPemesananTiket frm = new FormPemesananTiket();
-                frm.MdiParent = this.Owner;
+                frm.Owner = this;
 
                 frm.film = f;
 
