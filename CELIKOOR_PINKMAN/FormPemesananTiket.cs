@@ -83,9 +83,6 @@ namespace CELIKOOR_PINKMAN
             GenerateCheckBoxes("A", panelA);
             GenerateCheckBoxes("B", panelB);
             GenerateCheckBoxes("C", panelC);
-            CheckCheckBoxes(panelA);
-            CheckCheckBoxes(panelB);
-            CheckCheckBoxes(panelC);
             
 
 
@@ -112,11 +109,13 @@ namespace CELIKOOR_PINKMAN
 
                 }
             }
+            CheckCheckBoxes(panel);
         }
 
         private void CheckCheckBoxes(Panel panel)
         {
-            Studio s = (Studio)comboBoxCinema.SelectedItem;
+            Studio s = (Studio)comboBoxStudio.SelectedItem;
+
             List<string> listKursi = new List<string>();
             listKursi = Ticket.GetNomorKursi(s, film);
             
@@ -165,7 +164,7 @@ namespace CELIKOOR_PINKMAN
         {
             CheckBox checkBox = (CheckBox)sender;
 
-            if (checkBox.Checked && checkBox.Enabled == true)
+            if (checkBox.Checked== true && checkBox.Enabled == true)
             {
                 listCheckedCheckBoxes.Add(checkBox.Name);
                 if (double.TryParse(labelHarga.Text, NumberStyles.Currency, indoRP, out double totalHarga))
@@ -178,7 +177,7 @@ namespace CELIKOOR_PINKMAN
                 }
 
             }
-            else
+            else if(checkBox.Checked == false && checkBox.Enabled == true)
             {
                 listCheckedCheckBoxes.Remove(checkBox.Name);
                 if (double.TryParse(labelHarga.Text, NumberStyles.Currency, indoRP, out double totalHarga))

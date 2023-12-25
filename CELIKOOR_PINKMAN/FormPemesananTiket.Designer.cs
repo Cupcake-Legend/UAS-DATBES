@@ -438,9 +438,9 @@
             this.labelTotal.ForeColor = System.Drawing.Color.Black;
             this.labelTotal.Location = new System.Drawing.Point(119, 62);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(22, 25);
+            this.labelTotal.Size = new System.Drawing.Size(68, 25);
             this.labelTotal.TabIndex = 89;
-            this.labelTotal.Text = "1";
+            this.labelTotal.Text = "Rp0,00";
             // 
             // labelTotalAkhir
             // 
@@ -530,9 +530,9 @@
             this.labelHarga.ForeColor = System.Drawing.Color.Black;
             this.labelHarga.Location = new System.Drawing.Point(734, 54);
             this.labelHarga.Name = "labelHarga";
-            this.labelHarga.Size = new System.Drawing.Size(22, 25);
+            this.labelHarga.Size = new System.Drawing.Size(60, 25);
             this.labelHarga.TabIndex = 77;
-            this.labelHarga.Text = "1";
+            this.labelHarga.Text = "Rp0,0";
             // 
             // labelKeteranganHarga
             // 
