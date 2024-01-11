@@ -136,51 +136,47 @@ namespace CELIKOOR_PINKMAN
             if (e.ColumnIndex == dataGridView1.Columns["btnBeli"].Index && e.RowIndex >= 0)
             {
                 FormPemesananTiket frm = new FormPemesananTiket();
-                frm.Owner = this;
+                frm.Owner = this; //form baru
 
-                frm.film = f;
+                frm.film = f;//samakan objek film e dengan  yg d siini
 
                 Bitmap image = new Bitmap(f.CoverImage);
                 frm.pictureBox1.Image = image;
-                frm.labelKelompok.Text = f.KelompokFilm.ToString();
+                frm.labelKelompok.Text = f.KelompokFilm.ToString(); //masuk2 in foto dan label
                 
                 frm.labelDurasi.Text = f.Durasi.ToString() + "  jam";
-                frm.labelSipnosis.Text = f.Sinopsis.ToString();
+                frm.labelSipnosis.Text = f.Sinopsis.ToString(); // ini juga
 
                 string genre = "";
                 
                 foreach(GenreFilm g in f.GenreFilmList)
                 {
-                    genre += g + " ";
+                    genre += g + " "; //masukin genre
                     
 
                 }
                 frm.labelGenre.Text = genre;
-                frm.comboBoxFilm.Text = f.Judul;
+                frm.labelFilm.Text = f.Judul;
 
+/*
+
+                /// 
                 List<FilmStudio> listFilmStudio = new List<FilmStudio>();
-                listFilmStudio = FilmStudio.SelectDataList("films_id", f.Id.ToString());
-
-                frm.comboBoxStudio.SelectedIndex = -1;
+                listFilmStudio = FilmStudio.SelectDataList("films_id", f.Id.ToString());//cari filmstudio , cari studio yg menampilkan film tersebut
 
 
-                frm.comboBoxFilm.DataSource = listFilmStudio;
-                frm.comboBoxFilm.DisplayMember = "Film";
-
-               
-
-                List<FilmStudio> listFS = new List<FilmStudio>();
+                List<SesiFilm> listSF = new List<SesiFilm>();
 
 
-                listFS = FilmStudio.SelectDataList("films_id", f.Id.ToString());
+                listSF = SesiFilm.SelectDataList("films_id", f.Id.ToString()); 
 
 
                 List<Studio> listStudio = new List<Studio>();
 
 
-                foreach (FilmStudio filmStudio in listFS)
+                foreach (SesiFilm sesiFilm in listSF)
                 {
-                    listStudio.Add(filmStudio.Studio);
+                    listStudio.Add(sesiFilm.FilmStudio.Studio);
                 }
 
 
@@ -189,7 +185,7 @@ namespace CELIKOOR_PINKMAN
                 frm.comboBoxCinema.DisplayMember = "cinemaStudio";
 
 
-
+*/
 
                 frm.ShowDialog();
 

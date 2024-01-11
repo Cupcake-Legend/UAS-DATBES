@@ -26,11 +26,25 @@ namespace CELIKOOR_PINKMAN
         int harga;
         double total;
         
+        List<SesiFilm> sesiFilms;
+
         private void FormPemesananTiket_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             
             labelDiskon.Text = film.DiskonNominal.ToString("C2", indoRP);
+
+            sesiFilms = SesiFilm.SelectDataList("films_id", film.Id.ToString());
+
+            List<Studio> studios = new List<Studio>();
+
+            foreach (SesiFilm sesiFilm in sesiFilms)
+            {
+                studios.Add(sesiFilm.FilmStudio.Studio);
+            }
+
+            comboBoxCinema.DataSource = studios;
+            comboBoxCinema.DisplayMember = "cinemaStudio";
         }
 
         private void labelSisaKursi_Click(object sender, EventArgs e)
@@ -38,51 +52,20 @@ namespace CELIKOOR_PINKMAN
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxFilm_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-       
-
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            panelA.Controls.Clear();
-            panelB.Controls.Clear();
-            panelC.Controls.Clear();
-
             Studio s = (Studio)comboBoxStudio.SelectedItem;
 
-            int sisaKursi = Studio.GetSisaKursi(s, film);
-            labelSisaKursi.Text = "Sisa " + sisaKursi + " kursi";
+            FilmStudio fs = new FilmStudio(s, film);
 
-            labelKetKursi.Text = s.Kapasitas.ToString();
+            List<JadwalFilm> listJadwal = new List<JadwalFilm>();
 
-            if(dateTimePicker1.Value.DayOfWeek == DayOfWeek.Monday ||
-                dateTimePicker1.Value.DayOfWeek == DayOfWeek.Tuesday ||
-                dateTimePicker1.Value.DayOfWeek == DayOfWeek.Wednesday ||
-                dateTimePicker1.Value.DayOfWeek == DayOfWeek.Thursday
-                )
-            {
-                labelHarga.Text = s.HargaWeekday.ToString("C2",indoRP);
-                harga = s.HargaWeekday;
+            listJadwal = SesiFilm.FindFilmSchedule(fs);
+            comboBoxJam.DataSource = listJadwal;
+            comboBoxJam.DisplayMember = "JamPemutaran";
 
-            }
-            else if(dateTimePicker1.Value.DayOfWeek == DayOfWeek.Saturday || dateTimePicker1.Value.DayOfWeek == DayOfWeek.Sunday)
-            {
-                labelHarga.Text = s.HargaWeekend.ToString("C2", indoRP);
-                harga = s.HargaWeekend;
-            }
 
-            GenerateCheckBoxes("A", panelA);
-            GenerateCheckBoxes("B", panelB);
-            GenerateCheckBoxes("C", panelC);
+            
             
 
 
@@ -143,11 +126,12 @@ namespace CELIKOOR_PINKMAN
 
             Studio s = (Studio)comboBoxCinema.SelectedItem;
 
-            Cinema cinema = Cinema.SelectDataSingle(s.CinemaStudio.Id.ToString());
 
             List<Studio> listStudio = new List<Studio>();
 
-            listStudio = Studio.SelectDataList("c.id", cinema.Id.ToString());
+            listStudio = SesiFilm.FindStudio(film.Id.ToString(),s.CinemaStudio.Id.ToString());
+                
+ 
 
             comboBoxStudio.DataSource = listStudio;
             comboBoxStudio.DisplayMember = "nama";
@@ -259,6 +243,49 @@ namespace CELIKOOR_PINKMAN
             {
                 MessageBox.Show("Terjadi kesalahan. Pesan kesalahan: " + ex.Message);
             }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void comboBoxJam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            panelA.Controls.Clear();
+            panelB.Controls.Clear();
+            panelC.Controls.Clear();
+
+            Studio s = (Studio)comboBoxStudio.SelectedItem;
+            FilmStudio fs = new FilmStudio(s, film);
+            JadwalFilm jadwal = comboBoxJam.SelectedItem as JadwalFilm;
+
+            SesiFilm sesiFilm = new SesiFilm(jadwal, fs);
+
+            int sisaKursi = Studio.GetSisaKursi(sesiFilm);
+            labelSisaKursi.Text = "Sisa " + sisaKursi + " kursi";
+
+            labelKetKursi.Text = s.Kapasitas.ToString();
+
+            if (dateTimePicker1.Value.DayOfWeek == DayOfWeek.Monday ||
+                dateTimePicker1.Value.DayOfWeek == DayOfWeek.Tuesday ||
+                dateTimePicker1.Value.DayOfWeek == DayOfWeek.Wednesday ||
+                dateTimePicker1.Value.DayOfWeek == DayOfWeek.Thursday
+                )
+            {
+                labelHarga.Text = s.HargaWeekday.ToString("C2", indoRP);
+                harga = s.HargaWeekday;
+
+            }
+            else if (dateTimePicker1.Value.DayOfWeek == DayOfWeek.Saturday || dateTimePicker1.Value.DayOfWeek == DayOfWeek.Sunday)
+            {
+                labelHarga.Text = s.HargaWeekend.ToString("C2", indoRP);
+                harga = s.HargaWeekend;
+            }
+
+            GenerateCheckBoxes("A", panelA);
+            GenerateCheckBoxes("B", panelB);
+            GenerateCheckBoxes("C", panelC);
         }
     }
 }

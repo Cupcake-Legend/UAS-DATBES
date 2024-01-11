@@ -31,7 +31,7 @@ namespace CELIKOOR_LIB
         #region methods
         public static SesiFilm SelectDataSingle(string jadwalFilmID, string studioID, string filmID)
         {
-            string sql = "SELECT * FROM sesi_film " +
+            string sql = "SELECT * FROM sesi_films " +
                 "WHERE jadwal_film_id = '" + jadwalFilmID + "' " +
                 "AND studios_id = '" + studioID + "' " +
                 "AND films_id = '" + filmID;
@@ -57,7 +57,8 @@ namespace CELIKOOR_LIB
 
         public static List<SesiFilm> SelectDataList(string kriteria, string nilaiKriteria)
         {
-            string sql = "SELECT * FROM sesi_film WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";
+            string sql = "SELECT * FROM sesi_films WHERE " + kriteria + " = '" + nilaiKriteria + "' ";
+
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
@@ -78,7 +79,7 @@ namespace CELIKOOR_LIB
 
         public static bool InsertData(JadwalFilm jadwalFilm, SesiFilm sesiFilm)
         {
-            string sql = "INSERT INTO sesi_film " +
+            string sql = "INSERT INTO sesi_films " +
                 "VALUES('" +
                 jadwalFilm.Id + "', '" +
                 sesiFilm.filmStudio.Studio.Id + "', '" +
@@ -147,6 +148,62 @@ namespace CELIKOOR_LIB
             if (rowsEffected == 0) return false;
             else return true;
         }
+
+        public static List<Studio> FindStudio(string filmID, string cinemasID)
+        {
+            string sql = "SELECT studios.id, studios.nama, cinemas.id, cinemas.nama_cabang " +
+                "FROM sesi_films " +
+                "INNER JOIN studios on studios.id = sesi_films.studios_id " +
+                "INNER JOIN cinemas on cinemas.id = studios.cinemas_id " +
+                "WHERE sesi_films.films_id = '" + filmID + "' and cinemas.id = '" + cinemasID + "' ";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+            List<Studio> listStudio = new List<Studio>();
+
+            while (hasil.Read())
+            {
+                Studio s = Studio.SelectDataSingle(hasil.GetValue(0).ToString());
+
+                listStudio.Add(s);  
+
+            }
+            return listStudio;
+
+
+
+
+        }
+
+        public static List<JadwalFilm> FindFilmSchedule(FilmStudio filmStudio)
+        {
+            string sql = "SELECT sesi_films.jadwal_film_id " +
+                "FROM sesi_films " +
+                "INNER JOIN studios on studios.id = sesi_films.studios_id " +
+                "INNER JOIN films on films.id = sesi_films.films_id " +
+                "WHERE sesi_films.films_id = '"+ filmStudio.Film.Id +"' AND sesi_films.studios_id = '"+ filmStudio.Studio.Id +"'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            List<JadwalFilm>listJadwalFilm = new List<JadwalFilm>();
+
+
+            while (hasil.Read())
+            {
+                JadwalFilm jadwal = JadwalFilm.SelectDataSingle(hasil.GetValue(0).ToString());
+                listJadwalFilm.Add(jadwal);
+            }
+            return listJadwalFilm;
+
+
+
+
+        }
+
+
+
+
+
+
         #endregion
     }
 }

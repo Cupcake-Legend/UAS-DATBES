@@ -32,7 +32,6 @@
             this.labelKeteranganTanggal = new System.Windows.Forms.Label();
             this.labelKeteranganCinema = new System.Windows.Forms.Label();
             this.labelKeteranganStudio = new System.Windows.Forms.Label();
-            this.comboBoxFilm = new System.Windows.Forms.ComboBox();
             this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -79,6 +78,9 @@
             this.labelA = new System.Windows.Forms.Label();
             this.panelLayar = new System.Windows.Forms.Panel();
             this.labelLayar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxJam = new System.Windows.Forms.ComboBox();
+            this.labelFilm = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -137,17 +139,6 @@
             this.labelKeteranganStudio.Size = new System.Drawing.Size(78, 28);
             this.labelKeteranganStudio.TabIndex = 69;
             this.labelKeteranganStudio.Text = "Studio:";
-            // 
-            // comboBoxFilm
-            // 
-            this.comboBoxFilm.Enabled = false;
-            this.comboBoxFilm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFilm.FormattingEnabled = true;
-            this.comboBoxFilm.Location = new System.Drawing.Point(116, 11);
-            this.comboBoxFilm.Name = "comboBoxFilm";
-            this.comboBoxFilm.Size = new System.Drawing.Size(317, 31);
-            this.comboBoxFilm.TabIndex = 70;
-            this.comboBoxFilm.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilm_SelectedIndexChanged);
             // 
             // comboBoxStudio
             // 
@@ -228,6 +219,7 @@
             this.buttonKeluar.TabIndex = 78;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // labelKeteranganSinopsis
             // 
@@ -504,11 +496,13 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.labelFilm);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.comboBoxJam);
             this.panel4.Controls.Add(this.labelHarga);
             this.panel4.Controls.Add(this.labelKeteranganHarga);
             this.panel4.Controls.Add(this.labelKetKursi);
             this.panel4.Controls.Add(this.labelSisaKursi);
-            this.panel4.Controls.Add(this.comboBoxFilm);
             this.panel4.Controls.Add(this.labelKeteranganFilm);
             this.panel4.Controls.Add(this.labelStudio);
             this.panel4.Controls.Add(this.labelKeteranganTanggal);
@@ -689,6 +683,41 @@
             this.labelLayar.TabIndex = 97;
             this.labelLayar.Text = "Layar";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(21, 228);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 28);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "Jam:";
+            // 
+            // comboBoxJam
+            // 
+            this.comboBoxJam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJam.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxJam.FormattingEnabled = true;
+            this.comboBoxJam.Location = new System.Drawing.Point(114, 230);
+            this.comboBoxJam.Name = "comboBoxJam";
+            this.comboBoxJam.Size = new System.Drawing.Size(121, 31);
+            this.comboBoxJam.TabIndex = 79;
+            this.comboBoxJam.SelectedIndexChanged += new System.EventHandler(this.comboBoxJam_SelectedIndexChanged);
+            // 
+            // labelFilm
+            // 
+            this.labelFilm.AutoSize = true;
+            this.labelFilm.BackColor = System.Drawing.Color.Transparent;
+            this.labelFilm.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFilm.ForeColor = System.Drawing.Color.Black;
+            this.labelFilm.Location = new System.Drawing.Point(111, 14);
+            this.labelFilm.Name = "labelFilm";
+            this.labelFilm.Size = new System.Drawing.Size(102, 25);
+            this.labelFilm.TabIndex = 80;
+            this.labelFilm.Text = "Nama Film";
+            // 
             // FormPemesananTiket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -762,7 +791,6 @@
         public System.Windows.Forms.Label labelKelompok;
         public System.Windows.Forms.Label labelGenre;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.ComboBox comboBoxFilm;
         public System.Windows.Forms.ComboBox comboBoxStudio;
         public System.Windows.Forms.ComboBox comboBoxCinema;
         private System.Windows.Forms.Panel panel1;
@@ -777,5 +805,8 @@
         private System.Windows.Forms.Label labelA;
         private System.Windows.Forms.Panel panelLayar;
         private System.Windows.Forms.Label labelLayar;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ComboBox comboBoxJam;
+        public System.Windows.Forms.Label labelFilm;
     }
 }

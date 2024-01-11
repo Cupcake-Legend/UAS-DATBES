@@ -189,10 +189,10 @@ namespace CELIKOOR_LIB
             return this.Nama;
         }
 
-        public static int GetSisaKursi(Studio studio, Film film)
+        public static int GetSisaKursi(SesiFilm sesiFilm)
         {
-            string sql = "SELECT cinemas.nama_cabang as 'Nama Cabang', studios.id as 'Studio ID', films.judul, " +
-                "(SELECT SUM(studios.kapasitas) FROM studios WHERE studios.id ='" + studio.Id.ToString() + "') - COUNT(tikets.status_hadir) as Jumlah " +
+            string sql = "SELECT cinemas.nama_cabang as 'Nama Cabang', studios.id as 'Studio ID', films.judul, jadwal_films.id, " +
+                "(SELECT SUM(studios.kapasitas) FROM studios WHERE studios.id ='" + sesiFilm.FilmStudio.Studio.Id.ToString() + "') - COUNT(tikets.status_hadir) as Jumlah " +
                 "FROM invoices " +
                 "INNER JOIN tikets on tikets.invoices_id= invoices.id " +
                 "INNER JOIN sesi_films on sesi_films.films_id = tikets.films_id and sesi_films.jadwal_film_id = tikets.jadwal_film_id and sesi_films.studios_id = tikets.studios_id " +
@@ -200,11 +200,13 @@ namespace CELIKOOR_LIB
                 "INNER JOIN films on films.id = film_studio.films_id " +
                 "INNER JOIN studios on film_studio.studios_id = studios.id " +
                 "INNER JOIN cinemas on cinemas.id = studios.cinemas_id " +
-                "WHERE tikets.status_hadir = '0' and studios.id = '" + studio.Id.ToString() + "' and films.id ='" + film.Id.ToString() + "' " +
+                "INNER JOIN jadwal_films on jadwal_films.id = sesi_films.jadwal_film_id " +
+                "WHERE tikets.status_hadir = '0' and studios.id = '" + sesiFilm.FilmStudio.Studio.Id.ToString() + "' and films.id ='" + sesiFilm.FilmStudio.Film.Id.ToString() + "' AND " +
+                "jadwal_films.id ='" + sesiFilm.JadwalFilm.Id.ToString() + "' " +
                 "GROUP BY cinemas.nama_cabang, studios.id, films.judul";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
-            int sisa = studio.Kapasitas;
+            int sisa = sesiFilm.FilmStudio.Studio.Kapasitas;
 
             try
             {
@@ -217,7 +219,7 @@ namespace CELIKOOR_LIB
                     }
                     else
                     {
-                        sisa = studio.Kapasitas;
+                        sisa = sesiFilm.FilmStudio.Studio.Kapasitas;
                     }
                 }
             }

@@ -57,7 +57,7 @@ namespace CELIKOOR_LIB
             }
             else
             {
-                sql = "SELECT * FROM film_studio WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";
+                sql = "SELECT * FROM film_studio WHERE " + kriteria + " ='" + nilaiKriteria + "'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
