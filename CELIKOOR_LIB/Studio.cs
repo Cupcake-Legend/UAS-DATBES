@@ -213,9 +213,9 @@ namespace CELIKOOR_LIB
 
                 if (hasil.Read())
                 {
-                    if (hasil.GetValue(3) != DBNull.Value)
+                    if (hasil.GetValue(4) != DBNull.Value)
                     {
-                        sisa = int.Parse(hasil.GetValue(3).ToString());
+                        sisa = int.Parse(hasil.GetValue(4).ToString());
                     }
                     else
                     {

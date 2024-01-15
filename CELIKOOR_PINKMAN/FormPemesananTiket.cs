@@ -216,14 +216,45 @@ namespace CELIKOOR_PINKMAN
             {
                 
                 FormMenu frm = (FormMenu)this.Owner.MdiParent;
-                Konsumen konsumen = frm.konsumenLogin;
-
+                Pegawai onlineBot = Pegawai.SelectDataSingle("6");
+                
          
                
+                if(frm.konsumenLogin != null)
+                {
+                    // ada yg kurang katae willy utk status hrs apa gitu ak lupa, jd nnti query hrs d ubah
 
-                Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text,NumberStyles.Currency, indoRP),
-                    double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), konsumen,null,  "PENDING");
-                Invoice.InsertDataTanpaKasir(invoice);
+                    Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text,NumberStyles.Currency, indoRP),
+                    double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), frm.konsumenLogin,null,  "PENDING");
+                    Invoice.InsertDataTanpaKasir(invoice);
+
+
+
+
+
+                }
+                if(frm.pegawaiLogin != null)
+                {
+                    Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text, NumberStyles.Currency, indoRP),
+                    double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), null, frm.pegawaiLogin, "PENDING");
+                    Invoice.InsertDataDenganKasir(invoice);
+
+                }
+
+                Studio s = (Studio)comboBoxStudio.SelectedItem;
+                FilmStudio fs = new FilmStudio(s, film);
+                JadwalFilm jadwal = comboBoxJam.SelectedItem as JadwalFilm;
+
+                SesiFilm sesiFilm = new SesiFilm(jadwal, fs);
+
+                foreach (string kursi in listCheckedCheckBoxes)
+                {
+                    //ak jek ga tau operator e sopo HELEP
+                    Ticket ticket = new Ticket(kursi, false, onlineBot, int.Parse(labelHarga.Text), sesiFilm);
+                }
+
+                MessageBox.Show("Tiket berhasil di beli!");
+
 
                 /*
                 foreach(string kursi in listCheckedCheckBoxes)
