@@ -141,7 +141,7 @@ namespace CELIKOOR_LIB
             else
             {
                 sql = "SELECT * FROM films as f " +
-                "WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%";
+                "WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);

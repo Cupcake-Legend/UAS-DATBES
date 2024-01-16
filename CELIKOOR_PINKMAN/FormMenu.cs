@@ -321,10 +321,16 @@ namespace CELIKOOR_PINKMAN
 
         private void invoiceToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms["FormDaftarInvoice"];
+            
+
+        }
+
+        private void filmToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormLihatFilm"];
             if (frm == null)
             {
-                FormDaftarInvoice frmDaftarFilm = new FormDaftarInvoice();
+                FormLihatFilm frmDaftarFilm = new FormLihatFilm();
                 frmDaftarFilm.MdiParent = this;
                 frmDaftarFilm.Show();
             }
@@ -336,12 +342,29 @@ namespace CELIKOOR_PINKMAN
 
         }
 
-        private void filmToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void studioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms["FormLihatFilm"];
+            Form frm = Application.OpenForms["FormDaftarStudio"];
             if (frm == null)
             {
-                FormLihatFilm frmDaftarFilm = new FormLihatFilm();
+                FormDaftarStudio frmDaftarFilm = new FormDaftarStudio();
+                frmDaftarFilm.MdiParent = this;
+                frmDaftarFilm.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
+
+        }
+
+        private void invoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormDaftarInvoice"];
+            if (frm == null)
+            {
+                FormDaftarInvoice frmDaftarFilm = new FormDaftarInvoice();
                 frmDaftarFilm.MdiParent = this;
                 frmDaftarFilm.Show();
             }

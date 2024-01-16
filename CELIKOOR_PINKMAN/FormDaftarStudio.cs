@@ -149,16 +149,17 @@ namespace CELIKOOR_PINKMAN
         {
             string filter;
             dataGridView1.Columns.Clear();
+            FormatDataGrid();
             listStudio.Clear();
             if (comboBox1.SelectedIndex == 0) //ID
             {
-                filter = "studios.id";
+                filter = "s.id";
                 listStudio = Studio.SelectDataList(filter, textBox1.Text);
                 TampilDataGrid();
             }
             else if (comboBox1.SelectedIndex == 1) //Nama
             {
-                filter = "studios.nama";
+                filter = "s.nama";
                 listStudio = Studio.SelectDataList(filter, textBox1.Text);
                 TampilDataGrid();
             }

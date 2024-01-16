@@ -165,23 +165,24 @@ namespace CELIKOOR_LIB
         {
             string filter;
             dataGridView1.Columns.Clear();
+            FormatDataGrid();
             listFilm.Clear();
 
             if (comboBox1.SelectedIndex == 0) //ID
             {
-                filter = "films.id";
+                filter = "f.id";
                 listFilm = Film.SelectDataList(filter, textBox1.Text);
                 TampilDataGrid();
             }
             else if (comboBox1.SelectedIndex == 1) //judul
             {
-                filter = "films.judul";
+                filter = "f.judul";
                 listFilm = Film.SelectDataList(filter, textBox1.Text);
                 TampilDataGrid();
             }
             else if (comboBox1.SelectedIndex == 2) //Tahun
             {
-                filter = "films.tahun";
+                filter = "f.tahun";
                 listFilm = Film.SelectDataList(filter, textBox1.Text);
                 TampilDataGrid();
             }
