@@ -80,32 +80,28 @@ namespace CELIKOOR_PINKMAN
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridView1.Columns["btnValidasi"].Index && e.RowIndex >= 0)
             {
+                string validasi = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
 
-            }
-            if (e.ColumnIndex == dataGridView1.Columns["btnDeleteGrid"].Index && e.RowIndex >= 0)
-            {
-                string kodeHapus = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
-
-                DialogResult hasil = MessageBox.Show(this, "Anda yakin akan menghapus INVOICE " + kodeHapus +
+                DialogResult hasil = MessageBox.Show(this, "Anda yakin akan memvalidasi INVOICE " + validasi +
                    "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
                 if(hasil == DialogResult.Yes)
                 {
-                    Invoice i = Invoice.SelectDataSingle(kodeHapus);
+                    Invoice invoice = Invoice.SelectDataSingle(validasi);
 
-                    bool success = Invoice.DeleteData(i);
+                    bool success = Invoice.UpdateStatusData(invoice);
 
                     if (success)
                     {
-                        MessageBox.Show("Invoice berhasil dihapus!", "Infomration");
+                        MessageBox.Show("Invoice berhasil divalidasikan!", "Infomration");
 
                     }
                     else
                     {
-                        MessageBox.Show("Invoice gagal dihapus!", "Error");
+                        MessageBox.Show("Invoice gagal divalidasikan!", "Error");
                     }
 
 
