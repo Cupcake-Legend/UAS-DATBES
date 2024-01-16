@@ -125,6 +125,12 @@
     <Compile Include="FormDaftarStudio.Designer.cs">
       <DependentUpon>FormDaftarStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKasir.Designer.cs">
+      <DependentUpon>FormKasir.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLaporan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarStudio.resx">
       <DependentUpon>FormDaftarStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKasir.resx">
+      <DependentUpon>FormKasir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLaporan.resx">
       <DependentUpon>FormLaporan.cs</DependentUpon>

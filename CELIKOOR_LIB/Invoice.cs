@@ -164,7 +164,53 @@ namespace CELIKOOR_LIB
 
             return listInvoices;
         }
+        public static List<Invoice> SelectDataValidasi()
+        {
+            string sql = "SELECT i.*, k.*, p.* FROM invoices AS i" +
+                         " INNER JOIN konsumens AS k ON k.id = i.konsumens_id" +
+                         " INNER JOIN pegawais AS p ON p.id = i.kasir_id" +
+                         " where i.status = 'VALIDASI'";
 
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            List<Invoice> listInvoices = new List<Invoice>();
+
+            while (hasil.Read())
+            {
+                Konsumen konsumen = new Konsumen(
+                    int.Parse(hasil.GetValue(7).ToString()),
+                    hasil.GetValue(8).ToString(),
+                    hasil.GetValue(9).ToString(),
+                    hasil.GetValue(10).ToString(),
+                    char.Parse(hasil.GetValue(11).ToString()),
+                    DateTime.Parse(hasil.GetValue(12).ToString()),
+                    (double)hasil.GetValue(13),
+                    hasil.GetValue(14).ToString(),
+                    ""
+                    );
+
+                Pegawai kasir = new Pegawai(
+                    int.Parse(hasil.GetValue(16).ToString()),
+                    hasil.GetValue(17).ToString(),
+                    hasil.GetValue(18).ToString(),
+                    hasil.GetValue(19).ToString(),
+                    "",
+                    hasil.GetValue(21).ToString()
+                    );
+
+                Invoice invoice = new Invoice(
+                    int.Parse(hasil.GetValue(0).ToString()),
+                    DateTime.Parse(hasil.GetValue(1).ToString()),
+                    double.Parse(hasil.GetValue(2).ToString()),
+                    double.Parse(hasil.GetValue(3).ToString()),
+                    konsumen,
+                    kasir,
+                    hasil.GetValue(6).ToString()
+                    );
+                listInvoices.Add(invoice);
+            }
+            return listInvoices;
+        }
         public void AddTicket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, SesiFilm sesiFilm)
         {
             Ticket ticket = new Ticket(nomorKursi,statusHadir, pegawaiOperator, harga, sesiFilm);
@@ -185,7 +231,7 @@ namespace CELIKOOR_LIB
                 invoice.DiskonNominal + "', '" +
                 invoice.KonsumenInvoice.Id + "', '" +
                 invoice.Kasir.Id + "', '" +
-            invoice.Status + "')";
+                invoice.Status + "')";
 
             int rowsEffectedInvoice = Koneksi.JalankanPerintahDML(sqlInvoice);
 
@@ -263,6 +309,18 @@ namespace CELIKOOR_LIB
                 "konsumens_id = '" + invoice.KonsumenInvoice.Id + "', " +
                 "kasir_id = '" + invoice.Status + "' " +
                 "WHERE id = '" + invoice.Id + "'";
+
+            int rowsEffected = Koneksi.JalankanPerintahDML(sql);
+
+            if (rowsEffected == 0) return false;
+            else return true;
+        }
+
+        public static bool UpdateStatusData(Invoice i)
+        {
+            string sql = "UPDATE Invoices" +
+                         " SET status = 'TERBAYAR'" +
+                         " WHERE id = '" + i.Id + "'";
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);
 

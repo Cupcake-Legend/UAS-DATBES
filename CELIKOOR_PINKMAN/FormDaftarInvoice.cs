@@ -21,7 +21,7 @@ namespace CELIKOOR_PINKMAN
 
         public void FormDaftarInvoice_Load(object sender, EventArgs e)
         {
-            listInvoice = Invoice.SelectDataList("", "");
+            listInvoice = Invoice.SelectDataValidasi();
 
             FormatDataGrid();
             TampilDataGrid();
@@ -49,27 +49,17 @@ namespace CELIKOOR_PINKMAN
                 {
                     dataGridView1.Rows.Add(i.Id, i.Tanggal, i.GrandTotal, i.DiskonNominal, i.KonsumenInvoice, i.DiskonNominal, i.Kasir, i.Status, i.TicketList);
 
-                    if (!dataGridView1.Columns.Contains("btnUbahGrid"))
+                    if (!dataGridView1.Columns.Contains("btnValidasi"))
                     {
 
                         DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
                         bcol.HeaderText = "Aksi";
-                        bcol.Text = "Ubah";
-                        bcol.Name = "btnUbahGrid";
+                        bcol.Text = "Validasi";
+                        bcol.Name = "btnValidasi";
                         bcol.UseColumnTextForButtonValue = true;
                         dataGridView1.Columns.Add(bcol);
                     }
-                    if (!dataGridView1.Columns.Contains("btnDeleteGrid"))
-                    {
-                        DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
-                        bcol1.HeaderText = "Aksi";
-                        bcol1.Text = "Delete";
-                        bcol1.Name = "btnDelete";
-
-                        bcol1.UseColumnTextForButtonValue = true;
-                        dataGridView1.Columns.Add(bcol1);
-                    }
-
+                  
                 }
             }
         }
