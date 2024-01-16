@@ -64,7 +64,7 @@ namespace CELIKOOR_PINKMAN
 
                         if(pegawai != null)
                         {
-                            frm.pegawaiLogin = pegawai; //
+                            frm.pegawaiLogin = pegawai; 
 
                             if (!string.IsNullOrEmpty(pegawai.Roles))
                             {

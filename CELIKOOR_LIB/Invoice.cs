@@ -282,10 +282,10 @@ namespace CELIKOOR_LIB
             else return true;
         }
 
-        public static bool UpdateStatusData(Invoice i)
+        public static bool UpdateStatusData(Invoice i, Pegawai p)
         {
             string sql = "UPDATE Invoices" +
-                         " SET status = 'TERBAYAR'" +
+                         " SET status = 'TERBAYAR', kasir_id='" + p.Id + "'" +
                          " WHERE id = '" + i.Id + "'";
 
             int rowsEffected = Koneksi.JalankanPerintahDML(sql);

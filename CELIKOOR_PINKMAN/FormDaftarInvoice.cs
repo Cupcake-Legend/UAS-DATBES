@@ -38,7 +38,6 @@ namespace CELIKOOR_PINKMAN
             dataGridView1.Columns.Add("colGT", "Grand Total");
             dataGridView1.Columns.Add("colDN", "Diskon Nominal");
             dataGridView1.Columns.Add("colKonsumenInv", "Konsumen Invoice");
-            dataGridView1.Columns.Add("colDN", "Diskon Nominal");
             dataGridView1.Columns.Add("colKasir", "Kasir");
             dataGridView1.Columns.Add("colStatus", "Status");
             dataGridView1.Columns.Add("colTiket", "Tiket");
@@ -52,14 +51,18 @@ namespace CELIKOOR_PINKMAN
                 {
                     List<Ticket> ticketList = Ticket.SelectDataList("invoices_id", i.Id.ToString());
 
-                    string nokursi = "";
+                    //string nokursi = "";
 
-                    foreach (Ticket ticket in ticketList)
-                    {
-                        nokursi += ticket.NomorKursi + ", ";
-                    }
+                    //foreach (Ticket ticket in ticketList)
+                    //{
+                    //    nokursi += string.Join(",", ticket.NomorKursi);
+                    //}
 
-                    dataGridView1.Rows.Add(i.Id, i.Tanggal, i.GrandTotal, i.DiskonNominal, i.KonsumenInvoice, i.DiskonNominal, i.Kasir, i.Status, nokursi);
+                    string nokursi = string.Join(",", ticketList);
+
+
+
+                    dataGridView1.Rows.Add(i.Id, i.Tanggal, i.GrandTotal, i.DiskonNominal, i.KonsumenInvoice, i.Kasir, i.Status, nokursi);
 
                     if (!dataGridView1.Columns.Contains("btnValidasi"))
                     {
@@ -93,9 +96,11 @@ namespace CELIKOOR_PINKMAN
 
                 if(hasil == DialogResult.Yes)
                 {
+                    FormMenu frm = (FormMenu)this.MdiParent;
+
                     Invoice invoice = Invoice.SelectDataSingle(validasi);
 
-                    bool success = Invoice.UpdateStatusData(invoice);
+                    bool success = Invoice.UpdateStatusData(invoice, frm.pegawaiLogin);
 
                     if (success)
                     {

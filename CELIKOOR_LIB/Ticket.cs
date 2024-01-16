@@ -175,6 +175,11 @@ namespace CELIKOOR_LIB
 
         }
 
+        public override string ToString()
+        {
+            return this.NomorKursi;
+        }
+
         #endregion
     }
 }

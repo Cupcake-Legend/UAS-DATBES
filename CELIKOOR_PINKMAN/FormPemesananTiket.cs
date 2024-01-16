@@ -242,7 +242,7 @@ namespace CELIKOOR_PINKMAN
                     }
                 }
 
-                Invoice.InsertDataTanpaKasir(invoice);
+                Invoice.InsertDataDenganKasir(invoice);
 
                 MessageBox.Show("Tiket berhasil di beli!");
 
