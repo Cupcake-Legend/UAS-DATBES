@@ -99,9 +99,13 @@ namespace CELIKOOR_LIB
             return listTIckets;
         }
 
-        internal static bool InsertData(string invoicesID, Ticket ticket)
+        public static bool InsertData(Ticket ticket)
         {
-            string sql = "INSERT INTO tikets(invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id " +
+            string sqlInvoice = "SELECT Max(invoices.id) FROM invoices";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sqlInvoice);
+            int invoicesID = int.Parse(hasil.GetValue(0).ToString());
+
+            string sql = "INSERT INTO tikets(invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id) " +
                         "VALUES('" +
                         invoicesID + "', '" +
                         ticket.NomorKursi + "', '" +
