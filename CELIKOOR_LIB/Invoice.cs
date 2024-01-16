@@ -65,7 +65,12 @@ namespace CELIKOOR_LIB
             {
                 Konsumen konsumen = Konsumen.SelectDataSingle(hasil.GetValue(4).ToString());
 
+                if (hasil.GetValue(5) != null)
+                {
+
+
                 Pegawai kasir = Pegawai.SelectDataSingle(hasil.GetValue(5).ToString());
+                
 
                 Invoice invoice = new Invoice(
                     int.Parse(hasil.GetValue(0).ToString()),
@@ -78,6 +83,20 @@ namespace CELIKOOR_LIB
                     );
 
                 return invoice;
+                }
+                else
+                {
+                    Invoice invoice = new Invoice(
+                    int.Parse(hasil.GetValue(0).ToString()),
+                    DateTime.Parse(hasil.GetValue(1).ToString()),
+                    double.Parse(hasil.GetValue(2).ToString()),
+                    double.Parse(hasil.GetValue(3).ToString()),
+                    konsumen,
+                    null,
+                    hasil.GetValue(6).ToString());
+
+                    return invoice;
+                }
             }
             else throw new Exception("Data tidak ditemukan");
         }
@@ -153,10 +172,6 @@ namespace CELIKOOR_LIB
 
             while (hasil.Read())
             {
-                Konsumen konsumen = Konsumen.SelectDataSingle(hasil.GetValue(4).ToString());
-
-                Pegawai kasir = Pegawai.SelectDataSingle(hasil.GetValue(5).ToString());
-
                 Invoice invoice = Invoice.SelectDataSingle(hasil.GetValue(0).ToString());
                 listInvoices.Add(invoice);
             }

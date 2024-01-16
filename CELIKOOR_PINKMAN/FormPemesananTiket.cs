@@ -220,10 +220,9 @@ namespace CELIKOOR_PINKMAN
                 
          
               
-                    // ada yg kurang katae willy utk status hrs apa gitu ak lupa, jd nnti query hrs d ubah
 
                 Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text,NumberStyles.Currency, indoRP),
-                double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), frm.konsumenLogin,null,  "VALIDASI");
+                double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), frm.konsumenLogin,onlineBot,  "VALIDASI");
 
                 Studio s = (Studio)comboBoxStudio.SelectedItem;
                 FilmStudio fs = new FilmStudio(s, film);
@@ -241,7 +240,6 @@ namespace CELIKOOR_PINKMAN
                         invoice.AddTicket(kursi, false, pegawaiOperator, totalHarga, sesiFilm);
                         
                     }
-                        //ak jek ga tau operator e sopo HELEP
                 }
 
                 Invoice.InsertDataTanpaKasir(invoice);

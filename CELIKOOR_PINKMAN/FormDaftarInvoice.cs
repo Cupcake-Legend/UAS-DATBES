@@ -21,6 +21,9 @@ namespace CELIKOOR_PINKMAN
 
         public void FormDaftarInvoice_Load(object sender, EventArgs e)
         {
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+
             listInvoice = Invoice.SelectDataValidasi();
 
             FormatDataGrid();
@@ -82,7 +85,7 @@ namespace CELIKOOR_PINKMAN
         {
             if (e.ColumnIndex == dataGridView1.Columns["btnValidasi"].Index && e.RowIndex >= 0)
             {
-                string validasi = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+                string validasi = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
 
                 DialogResult hasil = MessageBox.Show(this, "Anda yakin akan memvalidasi INVOICE " + validasi +
                    "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -96,7 +99,8 @@ namespace CELIKOOR_PINKMAN
 
                     if (success)
                     {
-                        MessageBox.Show("Invoice berhasil divalidasikan!", "Infomration");
+                        MessageBox.Show("Invoice berhasil divalidasikan!", "Information");
+                        this.FormDaftarInvoice_Load(sender, e);
 
                     }
                     else
