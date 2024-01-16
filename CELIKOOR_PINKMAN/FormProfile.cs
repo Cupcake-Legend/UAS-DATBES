@@ -38,38 +38,73 @@ namespace CELIKOOR_PINKMAN
 
                 FormMenu frm = (FormMenu)this.Owner;
 
-                Konsumen k = new Konsumen(frm.konsumenLogin.Id, textBoxName.Text, textBoxEmail.Text,
-                    textBoxPhone.Text, Gender, dateTimePickerBirthDate.Value, frm.konsumenLogin.Saldo, textBoxUsername.Text, frm.konsumenLogin.Password);
-
-                Boolean success = Konsumen.UpdateData(k);
-
-                if(success)
+                if (frm.konsumenLogin != null)
                 {
+                    Konsumen k = new Konsumen(frm.konsumenLogin.Id, textBoxName.Text, textBoxEmail.Text,
+                        textBoxPhone.Text, Gender, dateTimePickerBirthDate.Value, frm.konsumenLogin.Saldo, textBoxUsername.Text, frm.konsumenLogin.Password);
+                    Boolean success = Konsumen.UpdateData(k);
 
-                    MessageBox.Show("Data berhasil di update!");
-                    textBoxName.Enabled = false;
-                    textBoxEmail.Enabled = false;
-                    textBoxPhone.Enabled = false;
-                    dateTimePickerBirthDate.Enabled = false;
-                    radioButtonPerempuan.Enabled = false;
-                    radioButtonLaki.Enabled = false;
-                    textBoxUsername.Enabled = false;
+                    if (success)
+                    {
 
+                        MessageBox.Show("Data berhasil di update!");
+                        textBoxName.Enabled = false;
+                        textBoxEmail.Enabled = false;
+                        textBoxPhone.Enabled = false;
+                        dateTimePickerBirthDate.Enabled = false;
+                        radioButtonPerempuan.Enabled = false;
+                        radioButtonLaki.Enabled = false;
+                        textBoxUsername.Enabled = false;
+
+                        frm.konsumenLogin = k;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Terjadi error! Tolong melakukan update ulang");
+                        textBoxName.Enabled = false;
+                        textBoxEmail.Enabled = false;
+                        textBoxPhone.Enabled = false;
+                        dateTimePickerBirthDate.Enabled = false;
+                        radioButtonPerempuan.Enabled = false;
+                        radioButtonLaki.Enabled = false;
+                        textBoxUsername.Enabled = false;
+
+
+                    }
                 }
-                else
+                else if (frm.pegawaiLogin != null) 
                 {
-                    MessageBox.Show("Terjadi error! Tolong melakukan update ulang");
-                    textBoxName.Enabled = false;
-                    textBoxEmail.Enabled = false;
-                    textBoxPhone.Enabled = false;
-                    dateTimePickerBirthDate.Enabled = false;
-                    radioButtonPerempuan.Enabled = false;
-                    radioButtonLaki.Enabled = false;
-                    textBoxUsername.Enabled = false;
+                    Pegawai p = new Pegawai(frm.pegawaiLogin.Id, textBoxName.Text, textBoxEmail.Text, textBoxUsername.Text, frm.pegawaiLogin.Password
+                                , frm.pegawaiLogin.Roles);
+                    Boolean success = Pegawai.UpdateData(p);
 
+                    if (success)
+                    {
 
+                        MessageBox.Show("Data berhasil di update!");
+                        textBoxName.Enabled = false;
+                        textBoxEmail.Enabled = false;
+                        textBoxPhone.Enabled = false;
+                        dateTimePickerBirthDate.Enabled = false;
+                        radioButtonPerempuan.Enabled = false;
+                        radioButtonLaki.Enabled = false;
+                        textBoxUsername.Enabled = false;
+
+                        frm.pegawaiLogin = p;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Terjadi error! Tolong melakukan update ulang");
+                        textBoxName.Enabled = false;
+                        textBoxEmail.Enabled = false;
+                        textBoxPhone.Enabled = false;
+                        dateTimePickerBirthDate.Enabled = false;
+                        radioButtonPerempuan.Enabled = false;
+                        radioButtonLaki.Enabled = false;
+                        textBoxUsername.Enabled = false;
+                    }
                 }
-
+                this.FormProfile_Load(sender, e);
             }
             catch(Exception ex)
             {
@@ -83,19 +118,16 @@ namespace CELIKOOR_PINKMAN
             buttonSimpan.Visible = true;
             textBoxName.Enabled = true;
             textBoxEmail.Enabled = true;
-            textBoxPhone.Enabled = true;
-            textBoxUsername.Enabled = true;
-            dateTimePickerBirthDate.Enabled = true;
-            radioButtonPerempuan.Enabled = true;
-            radioButtonLaki.Enabled = true; 
+            textBoxPhone.Enabled = false;
+            textBoxUsername.Enabled = false;
+            dateTimePickerBirthDate.Enabled = false;
+            radioButtonPerempuan.Enabled = false;
+            radioButtonLaki.Enabled = false; 
         }
 
         private void FormProfile_Load(object sender, EventArgs e)
         {
             FormMenu frm = (FormMenu)this.Owner;
-
-            
-
 
             if(frm.konsumenLogin != null)
             {
@@ -115,6 +147,14 @@ namespace CELIKOOR_PINKMAN
                     radioButtonPerempuan.Checked = true;
                 }
 
+            }
+
+            else if (frm.pegawaiLogin != null)
+            {
+                textBoxName.Text = frm.pegawaiLogin.Nama;
+                textBoxUsername.Text = frm.pegawaiLogin.Username;
+                textBoxEmail.Text = frm.pegawaiLogin.Email;
+                textBoxPhone.Text = "";
             }
             
             
