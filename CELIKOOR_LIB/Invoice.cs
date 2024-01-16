@@ -57,43 +57,21 @@ namespace CELIKOOR_LIB
         #region methods
         public static Invoice SelectDataSingle(string invoicesID)
         {
-            string sql = "SELECT i.*, k.*, p.* FROM invoices AS I " +
-                "INNER JOIN konsumens AS k ON k.id = i.konsumens_id " +
-                "INNER JOIN pegawais AS p ON p.id = i.kasir_id " +
-                "WHERE id = '" + invoicesID + "'";
+            string sql = "SELECT * FROM invoices WHERE id = '" + invoicesID + "'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
-            Invoice invoice;
-
             if (hasil.Read())
             {
-                Konsumen konsumen = new Konsumen(
-                    (int)hasil.GetValue(7),
-                    hasil.GetValue(8).ToString(),
-                    hasil.GetValue(9).ToString(),
-                    hasil.GetValue(10).ToString(),
-                    char.Parse(hasil.GetValue(11).ToString()),
-                    DateTime.Parse(hasil.GetValue(12).ToString()),
-                    (double)hasil.GetValue(13),
-                    hasil.GetValue(14).ToString(),
-                    ""
-                    );
+                Konsumen konsumen = Konsumen.SelectDataSingle(hasil.GetValue(4).ToString());
 
-                Pegawai kasir = new Pegawai(
-                    (int)hasil.GetValue(16),
-                    hasil.GetValue(17).ToString(),
-                    hasil.GetValue(18).ToString(),
-                    hasil.GetValue(19).ToString(),
-                    "",
-                    hasil.GetValue(21).ToString()
-                    );
+                Pegawai kasir = Pegawai.SelectDataSingle(hasil.GetValue(5).ToString());
 
-                invoice = new Invoice(
-                    (int)hasil.GetValue(0),
+                Invoice invoice = new Invoice(
+                    int.Parse(hasil.GetValue(0).ToString()),
                     DateTime.Parse(hasil.GetValue(1).ToString()),
-                    (double)hasil.GetValue(2),
-                    (double)hasil.GetValue(3),
+                    double.Parse(hasil.GetValue(2).ToString()),
+                    double.Parse(hasil.GetValue(3).ToString()),
                     konsumen,
                     kasir,
                     hasil.GetValue(6).ToString()
@@ -166,10 +144,8 @@ namespace CELIKOOR_LIB
         }
         public static List<Invoice> SelectDataValidasi()
         {
-            string sql = "SELECT i.*, k.*, p.* FROM invoices AS i" +
-                         " INNER JOIN konsumens AS k ON k.id = i.konsumens_id" +
-                         " INNER JOIN pegawais AS p ON p.id = i.kasir_id" +
-                         " where i.status = 'VALIDASI'";
+            string sql = "SELECT*FROM invoices " +
+                "WHERE status = 'VALIDASI'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
@@ -177,36 +153,11 @@ namespace CELIKOOR_LIB
 
             while (hasil.Read())
             {
-                Konsumen konsumen = new Konsumen(
-                    int.Parse(hasil.GetValue(7).ToString()),
-                    hasil.GetValue(8).ToString(),
-                    hasil.GetValue(9).ToString(),
-                    hasil.GetValue(10).ToString(),
-                    char.Parse(hasil.GetValue(11).ToString()),
-                    DateTime.Parse(hasil.GetValue(12).ToString()),
-                    (double)hasil.GetValue(13),
-                    hasil.GetValue(14).ToString(),
-                    ""
-                    );
+                Konsumen konsumen = Konsumen.SelectDataSingle(hasil.GetValue(4).ToString());
 
-                Pegawai kasir = new Pegawai(
-                    int.Parse(hasil.GetValue(16).ToString()),
-                    hasil.GetValue(17).ToString(),
-                    hasil.GetValue(18).ToString(),
-                    hasil.GetValue(19).ToString(),
-                    "",
-                    hasil.GetValue(21).ToString()
-                    );
+                Pegawai kasir = Pegawai.SelectDataSingle(hasil.GetValue(5).ToString());
 
-                Invoice invoice = new Invoice(
-                    int.Parse(hasil.GetValue(0).ToString()),
-                    DateTime.Parse(hasil.GetValue(1).ToString()),
-                    double.Parse(hasil.GetValue(2).ToString()),
-                    double.Parse(hasil.GetValue(3).ToString()),
-                    konsumen,
-                    kasir,
-                    hasil.GetValue(6).ToString()
-                    );
+                Invoice invoice = Invoice.SelectDataSingle(hasil.GetValue(0).ToString());
                 listInvoices.Add(invoice);
             }
             return listInvoices;

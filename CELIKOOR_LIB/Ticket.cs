@@ -72,7 +72,7 @@ namespace CELIKOOR_LIB
             }
             else
             {
-                sql = "SELECT * FROM tikets WHERE " + kriteria + " LIKE '%" + nilaiKriteria + "%'";
+                sql = "SELECT * FROM tikets WHERE " + kriteria + " = '" + nilaiKriteria + "'";
             }
             
             List<Ticket> listTIckets = new List<Ticket>();
@@ -87,9 +87,9 @@ namespace CELIKOOR_LIB
 
                 Ticket ticket = new Ticket(
                     hasil.GetValue(1).ToString(),
-                    (int)hasil.GetValue(2) != 0,
+                    int.Parse(hasil.GetValue(2).ToString()) != 0,
                     pegawai,
-                    (double)hasil.GetValue(4),
+                    double.Parse(hasil.GetValue(4).ToString()),
                     sesiFilm
                     );
 
@@ -174,7 +174,6 @@ namespace CELIKOOR_LIB
 
 
         }
-
 
         #endregion
     }

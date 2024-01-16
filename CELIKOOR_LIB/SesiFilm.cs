@@ -34,7 +34,7 @@ namespace CELIKOOR_LIB
             string sql = "SELECT * FROM sesi_films " +
                 "WHERE jadwal_film_id = '" + jadwalFilmID + "' " +
                 "AND studios_id = '" + studioID + "' " +
-                "AND films_id = '" + filmID;
+                "AND films_id = '" + filmID + "'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 

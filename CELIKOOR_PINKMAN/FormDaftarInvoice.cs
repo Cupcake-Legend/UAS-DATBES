@@ -39,15 +39,24 @@ namespace CELIKOOR_PINKMAN
             dataGridView1.Columns.Add("colKasir", "Kasir");
             dataGridView1.Columns.Add("colStatus", "Status");
             dataGridView1.Columns.Add("colTiket", "Tiket");
-
+            dataGridView1.AllowUserToAddRows= false;
         }
         private void TampilDataGrid()
         {
-            if(listInvoice.Count  > 0)
+            if(listInvoice.Count > 0)
             {
                 foreach(Invoice i in listInvoice)
                 {
-                    dataGridView1.Rows.Add(i.Id, i.Tanggal, i.GrandTotal, i.DiskonNominal, i.KonsumenInvoice, i.DiskonNominal, i.Kasir, i.Status, i.TicketList);
+                    List<Ticket> ticketList = Ticket.SelectDataList("invoices_id", i.Id.ToString());
+
+                    string nokursi = "";
+
+                    foreach (Ticket ticket in ticketList)
+                    {
+                        nokursi += ticket.NomorKursi + ", ";
+                    }
+
+                    dataGridView1.Rows.Add(i.Id, i.Tanggal, i.GrandTotal, i.DiskonNominal, i.KonsumenInvoice, i.DiskonNominal, i.Kasir, i.Status, nokursi);
 
                     if (!dataGridView1.Columns.Contains("btnValidasi"))
                     {

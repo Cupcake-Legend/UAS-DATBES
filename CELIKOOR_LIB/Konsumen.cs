@@ -73,7 +73,7 @@ namespace CELIKOOR_LIB
                    hasil.GetValue(1).ToString(),
                    hasil.GetValue(2).ToString(),
                    hasil.GetValue(3).ToString(),
-                   (char)hasil.GetValue(4),
+                   char.Parse(hasil.GetValue(4).ToString()),
                    DateTime.Parse(hasil.GetValue(5).ToString()),
                    (double)hasil.GetValue(6),
                    hasil.GetValue(7).ToString(),
