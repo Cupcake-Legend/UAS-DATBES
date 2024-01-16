@@ -100,32 +100,7 @@ namespace CELIKOOR_PINKMAN
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string kriteria = "";
-            if (comboBox1.Text == "ID")
-            {
-                kriteria = "aktors.id";
-            }
-
-            else if (comboBox1.Text == "Nama")
-            {
-                kriteria = "aktors.Nama";
-            }
             
-            else if (comboBox1.Text =="Negara Asal")
-            {
-                kriteria = "aktors.negara_asal";
-            }
-            
-            listAktor = Aktor.SelectDataList(kriteria, textBox1.Text);
-
-            if (listAktor.Count > 0)
-            {
-                dataGridView1.DataSource = listAktor;
-            }
-            else
-            {
-                dataGridView1.DataSource = null;
-            }
         }
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -208,7 +183,7 @@ namespace CELIKOOR_PINKMAN
         {
             string filter;
             dataGridView1.Columns.Clear();
-            dataGridView1.Rows.Clear();
+            FormatDataGrid();
             listAktor.Clear();
 
             if (comboBox1.SelectedIndex == 0) //ID

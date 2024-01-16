@@ -56,7 +56,7 @@
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(83, 30);
             this.buttonTambah.TabIndex = 86;
-            this.buttonTambah.Text = "Tambah";
+            this.buttonTambah.Text = "Search";
             this.buttonTambah.UseVisualStyleBackColor = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click_1);
             // 
@@ -104,7 +104,7 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.labelCariBerdasarkan);
             this.panel1.Location = new System.Drawing.Point(22, 128);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(359, 113);
             this.panel1.TabIndex = 83;
@@ -112,7 +112,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(20, 62);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 20);
             this.textBox1.TabIndex = 5;
@@ -125,7 +125,7 @@
             "ID",
             "Nama"});
             this.comboBox1.Location = new System.Drawing.Point(20, 28);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(319, 21);
             this.comboBox1.TabIndex = 1;
@@ -145,7 +145,7 @@
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(19, 11);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(95, 93);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +160,7 @@
             this.panel2.Controls.Add(this.pictureBoxLogo);
             this.panel2.Controls.Add(this.labelDaftarKonsumen);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(405, 114);
             this.panel2.TabIndex = 87;
@@ -169,7 +169,7 @@
             // 
             this.panelGarisJudul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panelGarisJudul.Location = new System.Drawing.Point(153, 40);
-            this.panelGarisJudul.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelGarisJudul.Margin = new System.Windows.Forms.Padding(2);
             this.panelGarisJudul.Name = "panelGarisJudul";
             this.panelGarisJudul.Size = new System.Drawing.Size(206, 8);
             this.panelGarisJudul.TabIndex = 74;
@@ -197,7 +197,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDaftarKonsumen";
             this.Text = "Daftar Konsumen";
             this.Load += new System.EventHandler(this.FormDaftarKonsumen_Load);

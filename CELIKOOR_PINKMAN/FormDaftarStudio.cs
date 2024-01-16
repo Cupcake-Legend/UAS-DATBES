@@ -149,7 +149,6 @@ namespace CELIKOOR_PINKMAN
         {
             string filter;
             dataGridView1.Columns.Clear();
-            dataGridView1.Rows.Clear();
             listStudio.Clear();
             if (comboBox1.SelectedIndex == 0) //ID
             {

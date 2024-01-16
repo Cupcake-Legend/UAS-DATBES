@@ -165,7 +165,6 @@ namespace CELIKOOR_LIB
         {
             string filter;
             dataGridView1.Columns.Clear();
-            dataGridView1.Rows.Clear();
             listFilm.Clear();
 
             if (comboBox1.SelectedIndex == 0) //ID
