@@ -103,7 +103,12 @@ namespace CELIKOOR_LIB
         {
             string sqlInvoice = "SELECT Max(invoices.id) FROM invoices";
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sqlInvoice);
-            int invoicesID = int.Parse(hasil.GetValue(0).ToString());
+            int invoicesID =0;
+
+            if (hasil.Read())
+            {
+                invoicesID = int.Parse(hasil.GetValue(0).ToString());
+            }
 
             string sql = "INSERT INTO tikets(invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id) " +
                         "VALUES('" +

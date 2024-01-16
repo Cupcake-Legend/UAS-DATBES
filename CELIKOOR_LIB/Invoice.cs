@@ -196,7 +196,7 @@ namespace CELIKOOR_LIB
             {
                 foreach (Ticket ticket in invoice.TicketList)
                 {
-                    bool tmp = Ticket.InsertData(invoice.Id.ToString(), ticket);
+                    bool tmp = Ticket.InsertData(ticket);
 
                     if (!tmp)
                     {
@@ -236,7 +236,7 @@ namespace CELIKOOR_LIB
             {
                 foreach (Ticket ticket in invoice.TicketList)
                 {
-                    bool tmp = Ticket.InsertData(invoice.Id.ToString(), ticket);
+                    bool tmp = Ticket.InsertData(ticket);
 
                     if (!tmp)
                     {
