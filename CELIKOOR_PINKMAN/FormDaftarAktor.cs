@@ -203,5 +203,26 @@ namespace CELIKOOR_PINKMAN
         {
 
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listAktor.Clear();
+
+            if (comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "aktors.id";
+                listAktor = Aktor.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+            else if (comboBox1.SelectedIndex == 1) //Nama
+            {
+                filter = "aktors.nama";
+                listAktor = Aktor.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+        }
     }
 }

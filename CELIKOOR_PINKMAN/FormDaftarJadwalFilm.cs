@@ -131,5 +131,21 @@ namespace CELIKOOR_PINKMAN
         {
             this.Close();
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listJadwalFilm.Clear();
+
+            if (comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "jadwal_films.id";
+                listJadwalFilm = JadwalFilm.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+            
+        }
     }
 }

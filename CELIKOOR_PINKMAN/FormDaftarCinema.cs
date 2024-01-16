@@ -156,6 +156,39 @@ namespace CELIKOOR_PINKMAN
         {
             this.Close();
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listCinema.Clear();
+
+            if (comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "cinemas.id";
+                listCinema = Cinema.SelectDataList(filter, textBox1.Text);
+                dataGridView1.DataSource = listCinema;
+            }
+            else if (comboBox1.SelectedIndex == 1) //Nama cabang
+            {
+                filter = "cinemas.nama_cabang";
+                listCinema = Cinema.SelectDataList(filter, textBox1.Text);
+                dataGridView1.DataSource = listCinema;
+            }
+            else if (comboBox1.SelectedIndex == 2) //alamat
+            {
+                filter = "cinemas.alamat";
+                listCinema = Cinema.SelectDataList(filter, textBox1.Text);
+                dataGridView1.DataSource = listCinema;
+            }
+            else if (comboBox1.SelectedIndex == 3) //Kota
+            {
+                filter = "cinemas.kota";
+                listCinema = Cinema.SelectDataList(filter, textBox1.Text);
+                dataGridView1.DataSource = listCinema;
+            }
+        }
     }
 }
 

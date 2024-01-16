@@ -177,5 +177,33 @@ namespace CELIKOOR_PINKMAN
         {
             this.Close();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTambah_Click_1(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listPegawai.Clear();
+
+            if(comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "pegawais.id";
+                listPegawai = Pegawai.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+            else if(comboBox1.SelectedIndex == 1) //Nama
+            {
+                filter = "pegawais.nama";
+                listPegawai = Pegawai.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+           
+
+        }
     }
 }

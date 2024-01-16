@@ -121,5 +121,20 @@ namespace CELIKOOR_PINKMAN
 
             }
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listInvoice.Clear();
+
+            if (comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "invoice.id";
+                listInvoice = Invoice.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+        }
     }
 }

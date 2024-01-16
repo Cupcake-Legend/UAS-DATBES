@@ -120,5 +120,26 @@ namespace CELIKOOR_PINKMAN
         {
             this.Close();
         }
+
+        private void buttonTambah_Click_1(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listKonsumen.Clear();
+            if (comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "konsumens.id";
+                listKonsumen = Konsumen.SelectDataList(filter, textBox1.Text);
+                dataGridView1.DataSource = listKonsumen;
+                
+            }
+            else if (comboBox1.SelectedIndex == 1) //Nama
+            {
+                filter = "konsumens.nama";
+                listKonsumen = Konsumen.SelectDataList(filter, textBox1.Text);
+                dataGridView1.DataSource = listKonsumen;
+            }
+        }
     }
 }

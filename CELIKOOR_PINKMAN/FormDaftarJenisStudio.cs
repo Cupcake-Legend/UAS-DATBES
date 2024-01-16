@@ -150,5 +150,26 @@ namespace CELIKOOR_PINKMAN
         {
             this.Close();
         }
+
+        private void buttonTambah_Click_1(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listJenisStudio.Clear();
+            if (comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "jenis_studio.id";
+                listJenisStudio = JenisStudio.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+
+            }
+            else if (comboBox1.SelectedIndex == 1) //Nama
+            {
+                filter = "jenis_studio.nama";
+                listJenisStudio = JenisStudio.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+        }
     }
 }

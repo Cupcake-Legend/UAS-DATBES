@@ -160,5 +160,32 @@ namespace CELIKOOR_LIB
         {
             this.Close();
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string filter;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listFilm.Clear();
+
+            if (comboBox1.SelectedIndex == 0) //ID
+            {
+                filter = "films.id";
+                listFilm = Film.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+            else if (comboBox1.SelectedIndex == 1) //judul
+            {
+                filter = "films.judul";
+                listFilm = Film.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+            else if (comboBox1.SelectedIndex == 2) //Tahun
+            {
+                filter = "films.tahun";
+                listFilm = Film.SelectDataList(filter, textBox1.Text);
+                TampilDataGrid();
+            }
+        }
     }
 }
