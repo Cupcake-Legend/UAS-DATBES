@@ -36,13 +36,9 @@
             this.labelJudul = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelHistory = new System.Windows.Forms.Label();
-            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonHapus
@@ -62,10 +58,10 @@
             // 
             this.dataGridViewInfo.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInfo.Location = new System.Drawing.Point(22, 216);
+            this.dataGridViewInfo.Location = new System.Drawing.Point(22, 143);
             this.dataGridViewInfo.Name = "dataGridViewInfo";
             this.dataGridViewInfo.RowHeadersWidth = 51;
-            this.dataGridViewInfo.Size = new System.Drawing.Size(359, 206);
+            this.dataGridViewInfo.Size = new System.Drawing.Size(359, 279);
             this.dataGridViewInfo.TabIndex = 89;
             this.dataGridViewInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInfo_CellContentClick);
             // 
@@ -128,41 +124,6 @@
             this.labelHistory.Text = "PURCHASE HISTORY";
             this.labelHistory.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // comboBoxFilter
-            // 
-            this.comboBoxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.Items.AddRange(new object[] {
-            "Active Tickets",
-            "Past Tickets"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(20, 30);
-            this.comboBoxFilter.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(319, 21);
-            this.comboBoxFilter.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.comboBoxFilter);
-            this.panel1.Controls.Add(this.labelCariBerdasarkan);
-            this.panel1.Location = new System.Drawing.Point(22, 137);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(359, 74);
-            this.panel1.TabIndex = 88;
-            // 
-            // labelCariBerdasarkan
-            // 
-            this.labelCariBerdasarkan.AutoSize = true;
-            this.labelCariBerdasarkan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCariBerdasarkan.Location = new System.Drawing.Point(9, 1);
-            this.labelCariBerdasarkan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelCariBerdasarkan.Name = "labelCariBerdasarkan";
-            this.labelCariBerdasarkan.Size = new System.Drawing.Size(148, 20);
-            this.labelCariBerdasarkan.TabIndex = 0;
-            this.labelCariBerdasarkan.Text = "Filter Berdasarkan : ";
-            // 
             // FormHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,7 +132,6 @@
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.dataGridViewInfo);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "FormHistory";
             this.Text = "Purchase History";
             this.Load += new System.EventHandler(this.FormHistory_Load);
@@ -179,8 +139,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -193,8 +151,5 @@
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelHistory;
-        private System.Windows.Forms.ComboBox comboBoxFilter;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelCariBerdasarkan;
     }
 }

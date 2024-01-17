@@ -176,26 +176,29 @@ namespace CELIKOOR_LIB
 
         }
 
-        public static int UpdateStatusHadir(string barcode)
+        public static bool UpdateStatusHadir(string barcode)
         {
-            if(barcode.Length == 6)
+            if (barcode.Length == 6)
             {
                 string invoice = barcode.Substring(0, 3);
-                string seat = barcode.Substring(3, 3);
+                string kolom = barcode.Substring(3, 1);
+                string kursi = barcode.Substring(4, 2);
 
 
-            string sql = "UPDATE tikets " +
+
+                string sql = "UPDATE tikets " +
                 "SET status_hadir = '1' " +
-                "WHERE tikets.invoices_id = '"+invoice+"' and tikets.nomor_kursi = '"+seat+"'";
+                "WHERE tikets.invoices_id = '" + int.Parse(invoice).ToString() + "' and tikets.nomor_kursi = '" +
+                kolom + int.Parse(kursi).ToString() + "'";
 
-                int rows = Koneksi.JalankanPerintahDML(sql);
-                return rows;
-            
+                int rowsEffected = Koneksi.JalankanPerintahDML(sql);
 
+                if (rowsEffected == 0) return false;
+                else return true;
             }
             else
             {
-                return 0;
+                return false;
             }
 
         }
