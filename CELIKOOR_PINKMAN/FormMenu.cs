@@ -45,7 +45,7 @@ namespace CELIKOOR_PINKMAN
                     kasirToolStripMenuItem.Visible = false;
                     masterToolStripMenuItem.Visible = false;
                     filmToolStripMenuItem1.Visible = false;
-
+                    historyToolStripMenuItem.Visible = false;
 
                 }
                 else if (pegawaiLogin.Roles == "KASIR")
@@ -57,7 +57,7 @@ namespace CELIKOOR_PINKMAN
                     kasirToolStripMenuItem.Visible = true;
                     masterToolStripMenuItem.Visible = false;
                     filmToolStripMenuItem1.Visible = false;
-
+                    historyToolStripMenuItem.Visible = false;
 
                 }
                 else if (pegawaiLogin.Roles == "ADMIN")
@@ -69,6 +69,7 @@ namespace CELIKOOR_PINKMAN
                     kasirToolStripMenuItem.Visible = false;
                     masterToolStripMenuItem.Visible = true;
                     filmToolStripMenuItem1.Visible = false;
+                    historyToolStripMenuItem.Visible = false;
 
                 }
             }
