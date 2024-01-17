@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLihatFilm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAktor = new System.Windows.Forms.TextBox();
             this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             this.labelStudio = new System.Windows.Forms.Label();
             this.comboBoxJam = new System.Windows.Forms.ComboBox();
@@ -69,7 +69,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxAktor);
             this.panel1.Controls.Add(this.comboBoxStudio);
             this.panel1.Controls.Add(this.labelStudio);
             this.panel1.Controls.Add(this.comboBoxJam);
@@ -86,13 +86,13 @@
             this.panel1.Size = new System.Drawing.Size(370, 387);
             this.panel1.TabIndex = 70;
             // 
-            // textBox1
+            // textBoxAktor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(125, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 25);
-            this.textBox1.TabIndex = 21;
+            this.textBoxAktor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAktor.Location = new System.Drawing.Point(125, 53);
+            this.textBoxAktor.Name = "textBoxAktor";
+            this.textBoxAktor.Size = new System.Drawing.Size(227, 25);
+            this.textBoxAktor.TabIndex = 21;
             // 
             // comboBoxStudio
             // 
@@ -122,10 +122,6 @@
             // 
             this.comboBoxJam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJam.FormattingEnabled = true;
-            this.comboBoxJam.Items.AddRange(new object[] {
-            "ID",
-            "Nama",
-            "Negara Asal"});
             this.comboBoxJam.Location = new System.Drawing.Point(125, 171);
             this.comboBoxJam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJam.Name = "comboBoxJam";
@@ -325,7 +321,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelTanggal;
         private System.Windows.Forms.ComboBox comboBoxStudio;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAktor;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;

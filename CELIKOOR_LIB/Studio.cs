@@ -201,7 +201,7 @@ namespace CELIKOOR_LIB
                 "INNER JOIN studios on film_studio.studios_id = studios.id " +
                 "INNER JOIN cinemas on cinemas.id = studios.cinemas_id " +
                 "INNER JOIN jadwal_films on jadwal_films.id = sesi_films.jadwal_film_id " +
-                "WHERE (INVOICES.status ='TERBAYAR' or INVOICES.status = 'VALIDASI') and studios.id = '" + sesiFilm.FilmStudio.Studio.Id.ToString() + "' and films.id ='" + sesiFilm.FilmStudio.Film.Id.ToString() + "' AND " +
+                "WHERE (INVOICES.status ='TERBAYAR' or INVOICES.status = 'PENDING') and studios.id = '" + sesiFilm.FilmStudio.Studio.Id.ToString() + "' and films.id ='" + sesiFilm.FilmStudio.Film.Id.ToString() + "' AND " +
                 "jadwal_films.id ='" + sesiFilm.JadwalFilm.Id.ToString() + "' " +
                 "GROUP BY cinemas.nama_cabang, studios.id, films.judul";
 

@@ -222,7 +222,7 @@ namespace CELIKOOR_PINKMAN
               
 
                 Invoice invoice = new Invoice(0, DateTime.Now, double.Parse(labelTotal.Text,NumberStyles.Currency, indoRP),
-                double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), frm.konsumenLogin,onlineBot,  "VALIDASI");
+                double.Parse(labelDiskon.Text, NumberStyles.Currency, indoRP), frm.konsumenLogin,onlineBot,  "PENDING");
 
                 Studio s = (Studio)comboBoxStudio.SelectedItem;
                 FilmStudio fs = new FilmStudio(s, film);

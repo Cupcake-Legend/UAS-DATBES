@@ -171,6 +171,50 @@ namespace CELIKOOR_LIB
             return listFilms;
         }
 
+        public static List<Film>SelectDataListFilter(string aktor, string genre, DateTime tanggal, string jam, string studios)
+        {
+            string sql = "SELECT films.* " +
+                "FROM films " +
+                "INNER JOIN aktor_film on aktor_film.films_id = films.id " +
+                "INNER JOIN aktors on aktors.id = aktor_film.aktors_id " +
+                "INNER JOIN genre_film on genre_film.films_id = films.id " +
+                "INNER JOIN genres on genres.id = genre_film.genres_id " +
+                "INNER JOIN film_studio on film_studio.films_id = films.id " +
+                "INNER JOIN studios on studios.id = film_studio.studios_id " +
+                "INNER JOIN cinemas on cinemas.id = studios.cinemas_id " +
+                "INNER JOIN sesi_films on sesi_films.films_id and sesi_films.studios_id = film_studio.films_id and film_studio.studios_id " +
+                "INNER JOIN jadwal_films on jadwal_films.id = sesi_films.jadwal_film_id " +
+                "WHERE aktors.nama LIKE '%"+aktor+"%' and genres.nama LIKE '%"+genre+"%' and jadwal_films.tanggal LIKE '%"+tanggal+"%' and " +
+                "jadwal_films.jam_pemutaran LIKE '%"+jam+"%' and studios.nama LIKE '%"+studios+"%'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            List<Film> listFilms = new List<Film>();
+
+            while (hasil.Read())
+            {
+
+                Kelompok kelompok = Kelompok.SelectDataSingle(hasil.GetValue(5).ToString());
+
+                Film film = new Film(
+                    int.Parse(hasil.GetValue(0).ToString()),
+                    hasil.GetValue(1).ToString(),
+                    hasil.GetValue(2).ToString(),
+                    int.Parse(hasil.GetValue(3).ToString()),
+                    int.Parse(hasil.GetValue(4).ToString()),
+                    kelompok,
+                    hasil.GetValue(6).ToString(),
+                    int.Parse(hasil.GetValue(7).ToString()) != 0,
+                    hasil.GetValue(8).ToString(),
+                    double.Parse((hasil.GetValue(9).ToString())));
+
+                listFilms.Add(film);
+            }
+
+            return listFilms;
+        }
+
+
         public void AddGenreFilm(Genre genre)
         {
             GenreFilm genreFilm = new GenreFilm(genre);
@@ -275,10 +319,13 @@ namespace CELIKOOR_LIB
             else return true;
         }
 
+        
+
         public override string ToString()
         {
             return this.Judul;
         }
+
 
         #endregion
     }
