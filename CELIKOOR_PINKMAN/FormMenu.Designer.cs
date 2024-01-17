@@ -36,6 +36,7 @@
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.studioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pencatatanKedatanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
             this.panel1.Location = new System.Drawing.Point(0, 98);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(612, 8);
             this.panel1.TabIndex = 1;
@@ -144,6 +145,13 @@
             this.filmToolStripMenuItem1.Text = "Film";
             this.filmToolStripMenuItem1.Click += new System.EventHandler(this.filmToolStripMenuItem1_Click);
             // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historyToolStripMenuItem.Text = "History";
+            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
+            // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
@@ -160,6 +168,8 @@
             // 
             // operatorToolStripMenuItem
             // 
+            this.operatorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pencatatanKedatanganToolStripMenuItem});
             this.operatorToolStripMenuItem.Name = "operatorToolStripMenuItem";
             this.operatorToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.operatorToolStripMenuItem.Text = "Operator";
@@ -274,19 +284,19 @@
             // 
             this.pictureBox1.Image = global::CELIKOOR_PINKMAN.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(9, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // historyToolStripMenuItem
+            // pencatatanKedatanganToolStripMenuItem
             // 
-            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            this.historyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.historyToolStripMenuItem.Text = "History";
-            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
+            this.pencatatanKedatanganToolStripMenuItem.Name = "pencatatanKedatanganToolStripMenuItem";
+            this.pencatatanKedatanganToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.pencatatanKedatanganToolStripMenuItem.Text = "Pencatatan Kedatangan";
+            this.pencatatanKedatanganToolStripMenuItem.Click += new System.EventHandler(this.pencatatanKedatanganToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -301,7 +311,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelJudul);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenu";
             this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
@@ -341,6 +351,7 @@
         private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem filmToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pencatatanKedatanganToolStripMenuItem;
     }
 }
 

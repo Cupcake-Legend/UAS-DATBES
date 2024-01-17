@@ -94,43 +94,51 @@ namespace CELIKOOR_PINKMAN
         {
             if (e.ColumnIndex == dataGridViewInfo.Columns["btnPrint"].Index && e.RowIndex >= 0)
             {
-                string invoiceID = dataGridViewInfo.CurrentRow.Cells["colID"].Value.ToString();
-
-                List<Ticket> ticketList = Ticket.SelectDataList("invoices_id", invoiceID);
-
-                string outputPath = "cinema_ticket.pdf";
-
-                using (var writer = new PdfWriter(outputPath))
+                if (dataGridViewInfo.CurrentRow.Cells["colStatus"].Value.ToString() == "TERBAYAR")
                 {
-                    using (var pdf = new PdfDocument(writer))
+                    string invoiceID = dataGridViewInfo.CurrentRow.Cells["colID"].Value.ToString();
+
+                    List<Ticket> ticketList = Ticket.SelectDataList("invoices_id", invoiceID);
+
+                    string outputPath = "cinema_ticket.pdf";
+
+                    using (var writer = new PdfWriter(outputPath))
                     {
-                        var document = new Document(pdf);
-
-                        document.Add(new Paragraph("===================================================="));
-
-                        foreach (var ticket in ticketList)
+                        using (var pdf = new PdfDocument(writer))
                         {
-                            document.Add(new Paragraph("Celikoor Ticket"));
-                            document.Add(new Paragraph("Movie: " + ticket.SesiFilm.FilmStudio.Film.Judul));
-                            document.Add(new Paragraph("Date: " + Invoice.SelectDataSingle(invoiceID).Tanggal.ToString("dd MMMM yyyy")));
-                            document.Add(new Paragraph("Seat: " + ticket.NomorKursi));
+                            var document = new Document(pdf);
 
-                            string barcode = invoiceID.PadLeft(3, '0') + ticket.NomorKursi;
-
-                            BarcodeWriter barcodeWriter = new BarcodeWriter();
-                            barcodeWriter.Format = BarcodeFormat.CODE_128;
-                            var barcodeBitmap = barcodeWriter.Write(barcode);
-
-                            // Convert barcode to iText Image
-                            using (var stream = new MemoryStream())
-                            {
-                                barcodeBitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-                                var pdfImage = new PdfImage(ImageDataFactory.Create(stream.ToArray()));
-                                document.Add(pdfImage);
-                            }
                             document.Add(new Paragraph("===================================================="));
+
+                            foreach (var ticket in ticketList)
+                            {
+                                document.Add(new Paragraph("Celikoor Ticket"));
+                                document.Add(new Paragraph("Movie: " + ticket.SesiFilm.FilmStudio.Film.Judul));
+                                document.Add(new Paragraph("Date: " + Invoice.SelectDataSingle(invoiceID).Tanggal.ToString("dd MMMM yyyy")));
+                                document.Add(new Paragraph("Seat: " + ticket.NomorKursi));
+
+                                string barcode = invoiceID.PadLeft(3, '0') + ticket.NomorKursi;
+
+                                BarcodeWriter barcodeWriter = new BarcodeWriter();
+                                barcodeWriter.Format = BarcodeFormat.CODE_128;
+                                var barcodeBitmap = barcodeWriter.Write(barcode);
+
+                                // Convert barcode to iText Image
+                                using (var stream = new MemoryStream())
+                                {
+                                    barcodeBitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                                    var pdfImage = new PdfImage(ImageDataFactory.Create(stream.ToArray()));
+                                    document.Add(pdfImage);
+                                }
+                                document.Add(new Paragraph("===================================================="));
+                            }
                         }
                     }
+                    MessageBox.Show("Tiket berhasil di print");
+                }
+                else
+                {
+                    MessageBox.Show("Invoice masih belum dibayar");
                 }
             }
         }
