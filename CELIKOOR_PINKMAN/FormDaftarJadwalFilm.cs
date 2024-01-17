@@ -34,7 +34,7 @@ namespace CELIKOOR_PINKMAN
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 

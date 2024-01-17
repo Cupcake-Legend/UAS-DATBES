@@ -135,5 +135,50 @@ namespace CELIKOOR_PINKMAN
                 TampilDataGrid();
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelGarisJudul_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelJudul_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDaftarInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelCariBerdasarkan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

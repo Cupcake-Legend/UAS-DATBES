@@ -177,6 +177,23 @@ namespace CELIKOOR_LIB
             }
             return listInvoices;
         }
+
+        public static List<Invoice> SelectPurchaseHistory(string konsumenID)
+        {
+            string sql = "SELECT * FROM invoices WHERE konsumens_id = '" + konsumenID + "'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            List<Invoice> listInvoices = new List<Invoice>();
+
+            while (hasil.Read())
+            {
+                Invoice invoice = Invoice.SelectDataSingle(hasil.GetValue(0).ToString());
+                listInvoices.Add(invoice);
+            }
+            return listInvoices;
+        }
+
         public void AddTicket(string nomorKursi, bool statusHadir, Pegawai pegawaiOperator, double harga, SesiFilm sesiFilm)
         {
             Ticket ticket = new Ticket(nomorKursi,statusHadir, pegawaiOperator, harga, sesiFilm);
@@ -225,46 +242,47 @@ namespace CELIKOOR_LIB
             }
             else return false;
         }
-        public static bool InsertDataTanpaKasir(Invoice invoice)
-        {
-            bool boolInvoice = false;
-            bool boolTicket = false;
 
-            string sqlInvoice = "INSERT INTO " +
-                "invoices(tanggal, grand_total, diskon_nominal, konsumens_id, status) " +
-                "VALUES ('" +
-                invoice.Tanggal.ToString("yyyy-MM-dd") + "', '" +
-                invoice.GrandTotal + "', '" +
-                invoice.DiskonNominal + "', '" +
-                invoice.KonsumenInvoice.Id + "', '" +
-            invoice.Status + "')";
+        //public static bool InsertDataTanpaKasir(Invoice invoice)
+        //{
+        //    bool boolInvoice = false;
+        //    bool boolTicket = false;
 
-            int rowsEffectedInvoice = Koneksi.JalankanPerintahDML(sqlInvoice);
+        //    string sqlInvoice = "INSERT INTO " +
+        //        "invoices(tanggal, grand_total, diskon_nominal, konsumens_id, status) " +
+        //        "VALUES ('" +
+        //        invoice.Tanggal.ToString("yyyy-MM-dd") + "', '" +
+        //        invoice.GrandTotal + "', '" +
+        //        invoice.DiskonNominal + "', '" +
+        //        invoice.KonsumenInvoice.Id + "', '" +
+        //    invoice.Status + "')";
 
-            if (rowsEffectedInvoice == 0) boolInvoice = false;
-            else boolInvoice = true;
+        //    int rowsEffectedInvoice = Koneksi.JalankanPerintahDML(sqlInvoice);
 
-            if (boolInvoice)
-            {
-                foreach (Ticket ticket in invoice.TicketList)
-                {
-                    bool tmp = Ticket.InsertData(ticket);
+        //    if (rowsEffectedInvoice == 0) boolInvoice = false;
+        //    else boolInvoice = true;
 
-                    if (!tmp)
-                    {
-                        boolTicket = false;
-                        break;
-                    }
-                    else boolTicket = true;
-                }
-            }
+        //    if (boolInvoice)
+        //    {
+        //        foreach (Ticket ticket in invoice.TicketList)
+        //        {
+        //            bool tmp = Ticket.InsertData(ticket);
 
-            if (boolInvoice && boolTicket)
-            {
-                return true;
-            }
-            else return false;
-        }
+        //            if (!tmp)
+        //            {
+        //                boolTicket = false;
+        //                break;
+        //            }
+        //            else boolTicket = true;
+        //        }
+        //    }
+
+        //    if (boolInvoice && boolTicket)
+        //    {
+        //        return true;
+        //    }
+        //    else return false;
+        //}
 
         public static bool UpdateData(Invoice invoice)
         {

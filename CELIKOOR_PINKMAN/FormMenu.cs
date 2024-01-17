@@ -32,6 +32,7 @@ namespace CELIKOOR_PINKMAN
                 kasirToolStripMenuItem.Visible=false;
                 masterToolStripMenuItem.Visible=false;
                 filmToolStripMenuItem1.Visible = true;
+                historyToolStripMenuItem.Visible = true;
             }
             else if (konsumenLogin == null && pegawaiLogin != null)
             {
@@ -113,16 +114,6 @@ namespace CELIKOOR_PINKMAN
             {
                 MessageBox.Show("Connection failed. Error message: " + ex.Message);
             }
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelJudul_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void labelDontHaveAnAccount_Click(object sender, EventArgs e)
@@ -374,6 +365,22 @@ namespace CELIKOOR_PINKMAN
                 frm.BringToFront();
             }
 
+        }
+
+        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormHistory"];
+            if (frm == null)
+            {
+                FormHistory frmHistory = new FormHistory();
+                frmHistory.MdiParent = this;
+                frmHistory.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
     }
 }

@@ -99,6 +99,55 @@ namespace CELIKOOR_LIB
             return listTIckets;
         }
 
+
+        public static List<Ticket> SelectTicketHistory(string konsumenID, string hadirTidak)
+        {
+            string sql = "";
+            if (hadirTidak == "")
+            {
+                sql = "SELECT * FROM tikets as t " +
+                    "INNER JOIN invoices as i on i.id = t.invoices_id " +
+                    "WHERE i.konsumens_id = '" + konsumenID + "'";
+            }
+            else if (hadirTidak == "hadir")
+            {
+                sql = "SELECT * FROM tikets as t " +
+                    "INNER JOIN invoices as i on i.id = t.invoices_id " +
+                    "WHERE i.konsumens_id = '" + konsumenID + "' " +
+                    "AND AND t.status_hadir = 1";
+            }
+            else if (hadirTidak == "tidak")
+            {
+                sql = "SELECT * FROM tikets as t " +
+                    "INNER JOIN invoices as i on i.id = t.invoices_id " +
+                    "WHERE i.konsumens_id = '" + konsumenID + "' " +
+                    "AND AND t.status_hadir = 0";
+            }
+
+            List<Ticket> listTIckets = new List<Ticket>();
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            while (hasil.Read())
+            {
+                Pegawai pegawai = Pegawai.SelectDataSingle(hasil.GetValue(3).ToString());
+
+                SesiFilm sesiFilm = SesiFilm.SelectDataSingle(hasil.GetValue(5).ToString(), hasil.GetValue(6).ToString(), hasil.GetValue(7).ToString());
+
+                Ticket ticket = new Ticket(
+                    hasil.GetValue(1).ToString(),
+                    int.Parse(hasil.GetValue(2).ToString()) != 0,
+                    pegawai,
+                    double.Parse(hasil.GetValue(4).ToString()),
+                    sesiFilm
+                    );
+
+                listTIckets.Add(ticket);
+            }
+
+            return listTIckets;
+        }
+
         public static bool InsertData(Ticket ticket)
         {
             string sqlInvoice = "SELECT Max(invoices.id) FROM invoices";
