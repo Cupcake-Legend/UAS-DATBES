@@ -19,6 +19,8 @@ namespace CELIKOOR_PINKMAN
         }
         List<Kelompok> listKelompok = new List<Kelompok>();
         List<Genre>listGenre = new List<Genre>();
+        List<Aktor> listAktor = new List<Aktor>();
+        Film f;
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
@@ -35,9 +37,14 @@ namespace CELIKOOR_PINKMAN
                     subindo = false;
                 }
 
-                Film f = new Film(0, textBoxJudul.Text, textBoxSinopsis.Text,
-                    (int)numericUpDown1.Value, int.Parse(textBoxDurasi.Text), (Kelompok)comboBoxKelompok.SelectedItem, comboBox2.Text, subindo, textBoxCover.Text, double.Parse(textBoxDiskon.Text));
-            
+                f = new Film(0, textBoxJudul.Text, textBoxSinopsis.Text,
+                    (int)numericUpDown1.Value, int.Parse(textBoxDurasi.Text), (Kelompok)comboBoxKelompok.SelectedItem, comboBoxBahasa.Text, subindo, textBoxCover.Text, double.Parse(textBoxDiskon.Text));
+
+
+                GenreFilm genreFilm = new GenreFilm(comboBoxGenre.SelectedItem as Genre);
+                f.GenreFilmList.Add(genreFilm);
+
+
                 bool success = Film.InsertData(f);
 
                 if (success)
@@ -70,9 +77,27 @@ namespace CELIKOOR_PINKMAN
             comboBoxKelompok.DisplayMember = "nama";
 
             listGenre = Genre.SelectDataList("", "");
-            comboBox1.DataSource = listGenre;
-            comboBox1.DisplayMember = "nama";
+            comboBoxGenre.DataSource = listGenre;
+            comboBoxGenre.DisplayMember = "nama";
 
+            listAktor = Aktor.SelectDataList("", "");
+            comboBoxAktor.DataSource = listAktor;
+            comboBoxAktor.DisplayMember = "nama";
+
+
+        }
+
+        private void buttonAddAktor_Click(object sender, EventArgs e)
+        {
+            f = new Film(0, textBoxJudul.Text, textBoxSinopsis.Text,
+                   (int)numericUpDown1.Value, int.Parse(textBoxDurasi.Text), (Kelompok)comboBoxKelompok.SelectedItem, comboBoxBahasa.Text, false, textBoxCover.Text, double.Parse(textBoxDiskon.Text));
+
+            
+
+            AktorFilm aktorFilm = new AktorFilm(comboBoxAktor.SelectedItem as Aktor, comboBoxPeran.Text);
+
+
+            f.AktorFilmList.Add(aktorFilm);
 
         }
     }

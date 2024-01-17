@@ -55,9 +55,14 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelTambahFilm = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxBahasa = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxAktor = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonAddAktor = new System.Windows.Forms.Button();
+            this.comboBoxPeran = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -350,13 +355,13 @@
             this.panel2.Size = new System.Drawing.Size(540, 140);
             this.panel2.TabIndex = 104;
             // 
-            // comboBox1
+            // comboBoxGenre
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 610);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 105;
+            this.comboBoxGenre.FormattingEnabled = true;
+            this.comboBoxGenre.Location = new System.Drawing.Point(167, 610);
+            this.comboBoxGenre.Name = "comboBoxGenre";
+            this.comboBoxGenre.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxGenre.TabIndex = 105;
             // 
             // label2
             // 
@@ -369,29 +374,89 @@
             this.label2.TabIndex = 106;
             this.label2.Text = "Genre:";
             // 
-            // comboBox2
+            // comboBoxBahasa
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxBahasa.FormattingEnabled = true;
+            this.comboBoxBahasa.Items.AddRange(new object[] {
             "EN",
             "ID",
             "CHN",
             "KOR",
             "JPN",
             "OTH"});
-            this.comboBox2.Location = new System.Drawing.Point(167, 424);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 107;
+            this.comboBoxBahasa.Location = new System.Drawing.Point(167, 424);
+            this.comboBoxBahasa.Name = "comboBoxBahasa";
+            this.comboBoxBahasa.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxBahasa.TabIndex = 107;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(41, 651);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 25);
+            this.label3.TabIndex = 108;
+            this.label3.Text = "Aktor:";
+            // 
+            // comboBoxAktor
+            // 
+            this.comboBoxAktor.FormattingEnabled = true;
+            this.comboBoxAktor.Location = new System.Drawing.Point(167, 651);
+            this.comboBoxAktor.Name = "comboBoxAktor";
+            this.comboBoxAktor.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxAktor.TabIndex = 109;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 688);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 25);
+            this.label4.TabIndex = 113;
+            this.label4.Text = "Peran:";
+            // 
+            // buttonAddAktor
+            // 
+            this.buttonAddAktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.buttonAddAktor.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddAktor.ForeColor = System.Drawing.Color.White;
+            this.buttonAddAktor.Location = new System.Drawing.Point(384, 681);
+            this.buttonAddAktor.Name = "buttonAddAktor";
+            this.buttonAddAktor.Size = new System.Drawing.Size(63, 35);
+            this.buttonAddAktor.TabIndex = 114;
+            this.buttonAddAktor.Text = "Add";
+            this.buttonAddAktor.UseVisualStyleBackColor = false;
+            this.buttonAddAktor.Click += new System.EventHandler(this.buttonAddAktor_Click);
+            // 
+            // comboBoxPeran
+            // 
+            this.comboBoxPeran.FormattingEnabled = true;
+            this.comboBoxPeran.Items.AddRange(new object[] {
+            "UTAMA",
+            "PEMBANTU",
+            "FIGURAN"});
+            this.comboBoxPeran.Location = new System.Drawing.Point(167, 692);
+            this.comboBoxPeran.Name = "comboBoxPeran";
+            this.comboBoxPeran.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPeran.TabIndex = 115;
             // 
             // FormTambahFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 820);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxPeran);
+            this.Controls.Add(this.buttonAddAktor);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxAktor);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBoxBahasa);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxGenre);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.textBoxCover);
@@ -415,7 +480,7 @@
             this.Controls.Add(this.textBoxJudul);
             this.Controls.Add(this.labelJudul);
             this.Name = "FormTambahFilm";
-            this.Text = "A";
+            this.Text = "Tambah Film";
             this.Load += new System.EventHandler(this.FormTambahFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -453,8 +518,13 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelTambahFilm;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxGenre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxBahasa;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxAktor;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonAddAktor;
+        private System.Windows.Forms.ComboBox comboBoxPeran;
     }
 }

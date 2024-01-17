@@ -187,5 +187,12 @@ namespace CELIKOOR_LIB
                 TampilDataGrid();
             }
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormTambahFilm frm = new FormTambahFilm();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
     }
 }

@@ -241,6 +241,7 @@ namespace CELIKOOR_LIB
                 film.Judul + "', '" +
                 film.Sinopsis + "', '" +
                 film.tahun + "', '" +
+                film.Durasi + "' , '" +
                 film.KelompokFilm.Id + "', '" +
                 film.Bahasa + "', '" +
                 Convert.ToInt32(film.IsSubIndo) + "', '" +
