@@ -83,19 +83,7 @@ namespace CELIKOOR_PINKMAN
                     dataGridView1.Rows.Add(f.Id, image, f.Judul, f.Sinopsis);
                     
 
-                    if (!dataGridView1.Columns.Contains("btnDetails"))
-                    {
-                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                        //nama header
-                        bcol.HeaderText = "Aksi";
-                        //nama tombol
-                        bcol.Text = "Lihat Detail";
-                        bcol.Name = "btnDetails";
-
-                        bcol.UseColumnTextForButtonValue = true;
-                        dataGridView1.Columns.Add(bcol);
-
-                    }
+                   
                     if (!dataGridView1.Columns.Contains("btnBeli"))
                     {
                         DataGridViewButtonColumn bcol1 = new DataGridViewButtonColumn();
@@ -121,6 +109,12 @@ namespace CELIKOOR_PINKMAN
 
         private void buttonCari_Click(object sender, EventArgs e)
         {
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            listFilm.Clear();
+            FormatDataGrid();
+            listFilm = Film.SelectDataListFilter(textBoxAktor.Text, comboBoxGenre.Text, dateTimePicker1.Value, comboBoxJam.Text, comboBoxStudio.Text);
+            TampilDataGrid();
 
         }
 
@@ -129,10 +123,7 @@ namespace CELIKOOR_PINKMAN
             string pKodeKategori = dataGridView1.CurrentRow.Cells["colID"].Value.ToString();
             Film f = Film.SelectDataSingle(pKodeKategori);
 
-            if (e.ColumnIndex == dataGridView1.Columns["btnDetails"].Index && e.RowIndex >= 0)
-            {
-
-            }
+            
             if (e.ColumnIndex == dataGridView1.Columns["btnBeli"].Index && e.RowIndex >= 0)
             {
                 FormPemesananTiket frm = new FormPemesananTiket();
