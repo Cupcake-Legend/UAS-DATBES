@@ -164,7 +164,7 @@ namespace CELIKOOR_LIB
         public static List<Invoice> SelectDataValidasi()
         {
             string sql = "SELECT*FROM invoices " +
-                "WHERE status = 'VALIDASI'";
+                "WHERE status = 'PENDING'";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
