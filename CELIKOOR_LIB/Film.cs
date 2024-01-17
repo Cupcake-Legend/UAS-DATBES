@@ -253,11 +253,22 @@ namespace CELIKOOR_LIB
             if (rowsEffected == 0) boolFilm = false;
             else boolFilm = true;
 
+            string sqlID = "SELECT Max(films.id) FROM films";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sqlID);
+
+            string filmID = "";
+
+            if (hasil.Read())
+            {
+                filmID = hasil.GetValue(0).ToString();
+            }
+
             if (boolFilm)
             {
                 foreach (var genrefilm in film.GenreFilmList)
                 {
-                    bool tmp = GenreFilm.InsertData(film.Id.ToString(), genrefilm);
+                    bool tmp = GenreFilm.InsertData(filmID, genrefilm);
 
                     if (!tmp)
                     {
@@ -272,7 +283,7 @@ namespace CELIKOOR_LIB
             {
                 foreach (var aktorFilm in film.AktorFilmList)
                 {
-                    bool tmp = AktorFilm.InsertData(film.Id.ToString(), aktorFilm);
+                    bool tmp = AktorFilm.InsertData(filmID, aktorFilm);
 
                     if (!tmp)
                     {
