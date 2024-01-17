@@ -178,12 +178,14 @@ namespace CELIKOOR_LIB
 
         public static bool UpdateStatusHadir(string barcode)
         {
-            if (barcode.Length == 6)
+            if (barcode.Length == 5 || barcode.Length == 6)
             {
                 string invoice = barcode.Substring(0, 3);
                 string kolom = barcode.Substring(3, 1);
-                string kursi = barcode.Substring(4, 2);
+                string kursi = "";
 
+                if (barcode.Length == 5) kursi = barcode.Substring(4, 1);
+                else kursi = barcode.Substring(4, 2);
 
 
                 string sql = "UPDATE tikets " +

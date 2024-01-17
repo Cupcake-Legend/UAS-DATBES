@@ -46,6 +46,7 @@ namespace CELIKOOR_PINKMAN
                     masterToolStripMenuItem.Visible = false;
                     filmToolStripMenuItem1.Visible = false;
                     historyToolStripMenuItem.Visible = false;
+                    
 
                 }
                 else if (pegawaiLogin.Roles == "KASIR")
@@ -387,6 +388,22 @@ namespace CELIKOOR_PINKMAN
                 FormHistory frmHistory = new FormHistory();
                 frmHistory.MdiParent = this;
                 frmHistory.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
+        }
+
+        private void pencatatanKedatanganToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["FormHistory"];
+            if (frm == null)
+            {
+                FormPencatatanKedatangan frmpencatatan = new FormPencatatanKedatangan();
+                frmpencatatan.MdiParent = this;
+                frmpencatatan.Show();
             }
             else
             {
