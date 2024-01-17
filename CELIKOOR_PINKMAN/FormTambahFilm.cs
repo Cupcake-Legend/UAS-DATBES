@@ -18,6 +18,7 @@ namespace CELIKOOR_PINKMAN
             InitializeComponent();
         }
         List<Kelompok> listKelompok = new List<Kelompok>();
+        List<Genre>listGenre = new List<Genre>();
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
@@ -35,7 +36,7 @@ namespace CELIKOOR_PINKMAN
                 }
 
                 Film f = new Film(0, textBoxJudul.Text, textBoxSinopsis.Text,
-                    (int)numericUpDown1.Value, int.Parse(textBoxDurasi.Text), (Kelompok)comboBoxKelompok.SelectedItem, textBoxBahasa.Text, subindo, textBoxCover.Text, double.Parse(textBoxDiskon.Text));
+                    (int)numericUpDown1.Value, int.Parse(textBoxDurasi.Text), (Kelompok)comboBoxKelompok.SelectedItem, comboBox2.Text, subindo, textBoxCover.Text, double.Parse(textBoxDiskon.Text));
             
                 bool success = Film.InsertData(f);
 
@@ -66,7 +67,13 @@ namespace CELIKOOR_PINKMAN
         {
             listKelompok = Kelompok.SelectDataKelompok("", "");
             comboBoxKelompok.DataSource = listKelompok;
-            comboBoxKelompok.DisplayMember = "nama"; 
+            comboBoxKelompok.DisplayMember = "nama";
+
+            listGenre = Genre.SelectDataList("", "");
+            comboBox1.DataSource = listGenre;
+            comboBox1.DisplayMember = "nama";
+
+
         }
     }
 }

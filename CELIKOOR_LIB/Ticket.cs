@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iText.IO.Source;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -172,6 +173,30 @@ namespace CELIKOOR_LIB
 
 
 
+
+        }
+
+        public static int UpdateStatusHadir(string barcode)
+        {
+            if(barcode.Length == 6)
+            {
+                string invoice = barcode.Substring(0, 3);
+                string seat = barcode.Substring(3, 3);
+
+
+            string sql = "UPDATE tikets " +
+                "SET status_hadir = '1' " +
+                "WHERE tikets.invoices_id = '"+invoice+"' and tikets.nomor_kursi = '"+seat+"'";
+
+                int rows = Koneksi.JalankanPerintahDML(sql);
+                return rows;
+            
+
+            }
+            else
+            {
+                return 0;
+            }
 
         }
 

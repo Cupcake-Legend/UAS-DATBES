@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTambahFilm));
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.textBoxBahasa = new System.Windows.Forms.TextBox();
             this.labelBahasa = new System.Windows.Forms.Label();
             this.labelTahun = new System.Windows.Forms.Label();
             this.textBoxSinopsis = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,14 +89,6 @@
             this.buttonKeluar.TabIndex = 86;
             this.buttonKeluar.Text = "Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
-            // 
-            // textBoxBahasa
-            // 
-            this.textBoxBahasa.Location = new System.Drawing.Point(167, 423);
-            this.textBoxBahasa.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxBahasa.Name = "textBoxBahasa";
-            this.textBoxBahasa.Size = new System.Drawing.Size(239, 22);
-            this.textBoxBahasa.TabIndex = 85;
             // 
             // labelBahasa
             // 
@@ -377,11 +369,27 @@
             this.label2.TabIndex = 106;
             this.label2.Text = "Genre:";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "EN",
+            "ID",
+            "CHN",
+            "KOR",
+            "JPN",
+            "OTH"});
+            this.comboBox2.Location = new System.Drawing.Point(167, 424);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 107;
+            // 
             // FormTambahFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 820);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
@@ -400,7 +408,6 @@
             this.Controls.Add(this.labelDurasi);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonKeluar);
-            this.Controls.Add(this.textBoxBahasa);
             this.Controls.Add(this.labelBahasa);
             this.Controls.Add(this.labelTahun);
             this.Controls.Add(this.textBoxSinopsis);
@@ -408,7 +415,7 @@
             this.Controls.Add(this.textBoxJudul);
             this.Controls.Add(this.labelJudul);
             this.Name = "FormTambahFilm";
-            this.Text = "Tambah Film";
+            this.Text = "A";
             this.Load += new System.EventHandler(this.FormTambahFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -422,7 +429,6 @@
         #endregion
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.TextBox textBoxBahasa;
         private System.Windows.Forms.Label labelBahasa;
         private System.Windows.Forms.Label labelTahun;
         private System.Windows.Forms.TextBox textBoxSinopsis;
@@ -449,5 +455,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
