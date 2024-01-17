@@ -8,6 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iText.Layout;
+using iText.Layout.Element;
+using ZXing;
+using iText.Kernel.Pdf;
+using System.IO;
+using DrawingImage = System.Drawing.Image;
+using PdfImage = iText.Layout.Element.Image;
+using iText.IO.Image;
 
 namespace CELIKOOR_PINKMAN
 {
@@ -80,6 +88,51 @@ namespace CELIKOOR_PINKMAN
         private void buttonHapus_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridViewInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridViewInfo.Columns["btnPrint"].Index && e.RowIndex >= 0)
+            {
+                string invoiceID = dataGridViewInfo.CurrentRow.Cells["colID"].Value.ToString();
+
+                List<Ticket> ticketList = Ticket.SelectDataList("invoices_id", invoiceID);
+
+                string outputPath = "cinema_ticket.pdf";
+
+                using (var writer = new PdfWriter(outputPath))
+                {
+                    using (var pdf = new PdfDocument(writer))
+                    {
+                        var document = new Document(pdf);
+
+                        document.Add(new Paragraph("===================================================="));
+
+                        foreach (var ticket in ticketList)
+                        {
+                            document.Add(new Paragraph("Celikoor Ticket"));
+                            document.Add(new Paragraph("Movie: " + ticket.SesiFilm.FilmStudio.Film.Judul));
+                            document.Add(new Paragraph("Date: " + Invoice.SelectDataSingle(invoiceID).Tanggal.ToString("dd MMMM yyyy")));
+                            document.Add(new Paragraph("Seat: " + ticket.NomorKursi));
+
+                            string barcode = invoiceID.PadLeft(3, '0') + ticket.NomorKursi;
+
+                            BarcodeWriter barcodeWriter = new BarcodeWriter();
+                            barcodeWriter.Format = BarcodeFormat.CODE_128;
+                            var barcodeBitmap = barcodeWriter.Write(barcode);
+
+                            // Convert barcode to iText Image
+                            using (var stream = new MemoryStream())
+                            {
+                                barcodeBitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                                var pdfImage = new PdfImage(ImageDataFactory.Create(stream.ToArray()));
+                                document.Add(pdfImage);
+                            }
+                            document.Add(new Paragraph("===================================================="));
+                        }
+                    }
+                }
+            }
         }
     }
 }

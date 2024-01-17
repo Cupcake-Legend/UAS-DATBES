@@ -67,6 +67,7 @@
             this.dataGridViewInfo.RowHeadersWidth = 51;
             this.dataGridViewInfo.Size = new System.Drawing.Size(359, 206);
             this.dataGridViewInfo.TabIndex = 89;
+            this.dataGridViewInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInfo_CellContentClick);
             // 
             // panel2
             // 
