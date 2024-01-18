@@ -73,6 +73,16 @@ namespace CELIKOOR_PINKMAN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Barbie {
+            get {
+                object obj = ResourceManager.GetObject("Barbie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
@@ -163,9 +173,29 @@ namespace CELIKOOR_PINKMAN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Napoleon {
+            get {
+                object obj = ResourceManager.GetObject("Napoleon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap number {
             get {
                 object obj = ResourceManager.GetObject("number", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oppenheimer {
+            get {
+                object obj = ResourceManager.GetObject("Oppenheimer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +246,16 @@ namespace CELIKOOR_PINKMAN.Properties {
         internal static System.Drawing.Bitmap telephone {
             get {
                 object obj = ResourceManager.GetObject("telephone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_marvels {
+            get {
+                object obj = ResourceManager.GetObject("The_marvels", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +316,16 @@ namespace CELIKOOR_PINKMAN.Properties {
         internal static System.Drawing.Bitmap welcome_back_3 {
             get {
                 object obj = ResourceManager.GetObject("welcome_back_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wonka {
+            get {
+                object obj = ResourceManager.GetObject("Wonka", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

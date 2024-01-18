@@ -79,7 +79,7 @@ namespace CELIKOOR_PINKMAN
                 foreach(Film f in listFilm)
                 {
                     string imagePath = f.CoverImage;
-                    Bitmap image = new Bitmap(imagePath);
+                    Image image = (Image)CELIKOOR_PINKMAN.Properties.Resources.ResourceManager.GetObject(imagePath);
                     dataGridView1.Rows.Add(f.Id, image, f.Judul, f.Sinopsis);
                     
 

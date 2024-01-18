@@ -1,4 +1,6 @@
 ﻿using CELIKOOR_PINKMAN;
+using CELIKOOR_PINKMAN.Properties;
+using iText.Commons.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,7 +76,7 @@ namespace CELIKOOR_LIB
                 foreach (Film f in listFilm)
                 {
                     string imagePath = f.CoverImage;
-                    Bitmap image = new Bitmap(imagePath);
+                    Image image = (Image)CELIKOOR_PINKMAN.Properties.Resources.ResourceManager.GetObject(imagePath);
                     dataGridView1.Rows.Add(image, f.Id, f.Judul, f.Sinopsis, f.Tahun, f.Durasi, f.KelompokFilm, f.Bahasa, f.IsSubIndo,f.DiskonNominal);
 
                     if (!dataGridView1.Columns.Contains("btnUbahGrid"))

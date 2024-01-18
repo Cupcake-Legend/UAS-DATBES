@@ -121,6 +121,9 @@
   <data name="attack_of_the_50th_woman_iconic_sexy_film_poster__1406735273_view_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\attack-of-the-50th-woman-iconic-sexy-film-poster--1406735273-view-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Barbie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Barbie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,8 +151,14 @@
   <data name="matey_welcome_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\matey-welcome-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Napoleon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Napoleon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="number" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\number.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oppenheimer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oppenheimer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="padlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\padlock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,6 +174,9 @@
   </data>
   <data name="telephone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\telephone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_marvels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The marvels.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toilet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toilet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,5 +195,8 @@
   </data>
   <data name="welcome_back_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\welcome-back 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wonka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wonka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
